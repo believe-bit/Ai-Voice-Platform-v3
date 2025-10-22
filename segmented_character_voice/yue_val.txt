@@ -1,0 +1,288 @@
+custom_character_voice/speaker0/common_voice_yue_32302204.wav|0|man6 zi6 ci4 ji3 ji6 zung6 hai6 ho2 ji5 ge3
+custom_character_voice/speaker0/common_voice_yue_31730378.wav|0|hoi1 m4 hoi1 din6 waa2 wui6 ji5 nei5 zau6 zoi3 syun2 zaak6 laak3
+custom_character_voice/speaker0/common_voice_yue_31744812.wav|0|bat1 gwo3 m4 sai2 gam3 daai6 pin1 fuk1 gaa3
+custom_character_voice/speaker0/common_voice_yue_31210436.wav|0|dong1 gei1 laap6 dyun6 zau6 jiu3 tek3 di1 goi1 tek3 ge3 jan4
+custom_character_voice/speaker0/common_voice_yue_31199613.wav|0|jat1 go3 lin4 zi6 gei2 man4 zi6 dou1 m4 sik1 se2 ge3 jan4
+custom_character_voice/speaker0/common_voice_yue_31946906.wav|0|daan6 zau6 mou5 gam3 jik6 nau1 zyu1 gam3 jik6 nam2 do1 zo2
+custom_character_voice/speaker0/common_voice_yue_31211510.wav|0|ngo5 gap1 si2 jiu3 heoi3 o1 si2
+custom_character_voice/speaker0/common_voice_yue_31738251.wav|0|heoi3 m4 heoi3 dak1 dou3 dou1 sing4 man6 tai4
+custom_character_voice/speaker0/common_voice_yue_31842022.wav|0|baau1 zin2 dam1 jeng4 zo2 ge3 ceot1 tai4 sin1
+custom_character_voice/speaker0/common_voice_yue_31212214.wav|0|lai6 jyu4 ng4 jyu5 dang2 hon3 jyu5 dou1 hai6 hou2 do1 bin3 diu6
+custom_character_voice/speaker0/common_voice_yue_31221574.wav|0|ngo5 bou6 on1 coek3 sau2 gei1 jung6 zo2 loeng5 nin4 zau6 kaa1 dou2 gwai2 gam2
+custom_character_voice/speaker0/common_voice_yue_31733219.wav|0|man6 haa6 keoi5 dim2 joeng2 gaai2 kyut3
+custom_character_voice/speaker0/common_voice_yue_33080659.wav|0|gam2 gang2 hai6 gam3 do1 jan4 hok6 ping3 jam1 wo3 gang2 hai6 hoi1 sam1 laa1
+custom_character_voice/speaker0/common_voice_yue_31483324.wav|0|ngo5 m4 zung1 ji3 zi6 paak3 waak6 ze2 leoi6 ci5 ge3 je5
+custom_character_voice/speaker0/common_voice_yue_32302062.wav|0|hai6 mai6 zi6 gei2 pin1 cing4 ge3
+custom_character_voice/speaker0/common_voice_yue_31219726.wav|0|zi1 hau6 jap6 zou2 heoi3 zou6 jam6 mou6
+custom_character_voice/speaker0/common_voice_yue_31713811.wav|0|ngo5 dou1 waa6 m4 hou2 zoek3 zyu6 lo1
+custom_character_voice/speaker0/common_voice_yue_31504253.wav|0|ngo5 nam2 keoi5 dou3 zo2
+custom_character_voice/speaker0/common_voice_yue_31206831.wav|0|jau5 mat1 je5 gaan2 aa1
+custom_character_voice/speaker0/common_voice_yue_31483300.wav|0|keoi5 hai6 zan1 hai6 hou2 gin1 ci4 gaa3
+custom_character_voice/speaker0/common_voice_yue_31865691.wav|0|nei5 nei4 go3 gong2 faat3 hou2 min5 koeng5 wo3
+custom_character_voice/speaker0/common_voice_yue_31690140.wav|0|jung6 jat1 faai3 saa1 bou3 baau1 hou2 di1 wu4 ziu1 zi2 绹 sat6 keoi5
+custom_character_voice/speaker0/common_voice_yue_31758337.wav|0|li1 dou6 gei2 do1 ngoi6 saang2 pang4 jau5
+custom_character_voice/speaker0/common_voice_yue_32085807.wav|0|jam6 ho4 jan4 mou4 leon6 nei5 cam4 jat6 gei2 fung1 gwong1 gam1 jat6 dou1 ho2 nang4 san1 baai6 ming4 lit6
+custom_character_voice/speaker0/common_voice_yue_31471859.wav|0|jyu4 gwo2 nei5 gok3 dak1 gam3 do1 go3 jan4 zyu6 maai4 jat1 cai4 hou2 kei4 gwaai3
+custom_character_voice/speaker0/common_voice_yue_33271852.wav|0|jan4 dei6 lo2 zing3 paai4 zou6 je5 ceoi1 keoi5 m4 zoeng3 maang1 keoi5 m4 coeng4 ngaau5 keoi5 m4 jap6
+custom_character_voice/speaker0/common_voice_yue_32145768.wav|0|nei5 dei6 gam3 ting1 baan1 seoi1 jan4 zi1 dek6 zou6 mat1 gwai2 aa3
+custom_character_voice/speaker0/common_voice_yue_31213147.wav|0|gong2 zo2 luk6 nin4 dou1 mei6 jau5 zeon3 zin2
+custom_character_voice/speaker0/common_voice_yue_31738158.wav|0|zan1 hai6 hou2 nam4 aa1
+custom_character_voice/speaker0/common_voice_yue_32428195.wav|0|mau6 jik6 zin3 taam4 pun3
+custom_character_voice/speaker0/common_voice_yue_31206682.wav|0|cyun4 jung6 gaan2 tai2 zi6 hai6 hang2 ding6 m4 ngaam1 ge3
+custom_character_voice/speaker0/common_voice_yue_31206300.wav|0|hou2 waai4 nim6 sai3 go3 go2 zan6 si4
+custom_character_voice/speaker0/common_voice_yue_31234575.wav|0|nei4 go3 hai6 ling6 ngoi6 hei2 ge3 kwan4
+custom_character_voice/speaker0/common_voice_yue_31730457.wav|0|ngo5 gin3 nei5 dei6 jat1 cai4 lei4
+custom_character_voice/speaker0/common_voice_yue_32967318.wav|0|gam2 ging2 tang4 gwong2 coeng4 ji5 ging1 sau1 zo2 pei4 hou2 do1 nin4 laa1
+custom_character_voice/speaker0/common_voice_yue_31714063.wav|0|jyu4 gwo2 nei5 co3 gwo3 zo2 je6 maan5 sap6 jat1 dim2 ho2 ji5 hai2 din6 si6 tai2 faan2
+custom_character_voice/speaker0/common_voice_yue_31744808.wav|0|keoi5 jau5 si4 gaan3 maai5 je5 gam2 jing1 goi1 jau5 si4 gaan3 fuk1 ngo5 gei1
+custom_character_voice/speaker0/common_voice_yue_31754509.wav|0|sik6 zo2 maan5 faan6 mei6
+custom_character_voice/speaker0/common_voice_yue_32434498.wav|0|ngo5 bong1 nei5 zoeng1 keoi5 fong3 jap6 nai4 tou2 jap6 bin1
+custom_character_voice/speaker0/common_voice_yue_31211921.wav|0|nei4 dou3 dai2 hai6 mat1 je5 mou4 beng6
+custom_character_voice/speaker0/common_voice_yue_31471703.wav|0|m4 zi1 ngo5 hai2 uk1 kei2 ji5 ging1 nam2 ding6 m4 seon3 keoi5 dai6 jat1 go3 gu3 si6
+custom_character_voice/speaker0/common_voice_yue_31221396.wav|0|ngo5 soeng2 man6 nei5 dei6 ping4 si4 heoi3 jam2 caa4 zeoi3 zung1 ji3 dim2 me1 gaa3
+custom_character_voice/speaker0/common_voice_yue_31990752.wav|0|ngo5 faat3 jin6 ou3 mun2 jau5 go3 hou2 zit3 muk6
+custom_character_voice/speaker0/common_voice_yue_31804578.wav|0|nei4 tou3 hai6 m4 hai6
+custom_character_voice/speaker0/common_voice_yue_31246158.wav|0|gok3 dak1 hou2 maa4 faan4 so2 ji5 mou5 on1 zong1
+custom_character_voice/speaker0/common_voice_yue_31452273.wav|0|daan6 hai6 nei5 m4 hai6 tung4 uk1 kei2 jan4 jat1 cai4 zyu6 me1 zou6 me1 m4 tung4 keoi5 dei6 gong2 je5 aa1
+custom_character_voice/speaker0/common_voice_yue_31688483.wav|0|daan6 kei4 sat6 ngo5 fan6 jan4 dou1 gei2 cam4 zoek6
+custom_character_voice/speaker0/common_voice_yue_31739642.wav|0|sei2 jyun4 mai5 sang1 lo1
+custom_character_voice/speaker0/common_voice_yue_31690266.wav|0|hou2 ci5 cam4 jat6 keoi5 baan6 neoi5 jan4 gam2
+custom_character_voice/speaker0/common_voice_yue_31283373.wav|0|ji4 gaa1 ho2 ji5 daa2 bei2 ngo5
+custom_character_voice/speaker0/common_voice_yue_31428852.wav|0|m4 hai6 waa6 dai6 jat1 go3 jyut6 m4 sai2 zyu6 ge3 me1
+custom_character_voice/speaker0/common_voice_yue_32302296.wav|0|nei5 dei6 ji4 gaa1 dou1 hai2 daai6 luk6
+custom_character_voice/speaker0/common_voice_yue_31221650.wav|0|seon3 fei1 syu1 jap6 faat3 hin2 si6 jyu5 sau2 gei1 mou4 faat3 lin4 zip3
+custom_character_voice/speaker0/common_voice_yue_32302283.wav|0|so2 ji5 mong6 lok6 zung6 hou2 san1 zing6
+custom_character_voice/speaker0/common_voice_yue_31263584.wav|0|goi2 go3 ming4 wun6 haa6 ze1
+custom_character_voice/speaker0/common_voice_yue_32185403.wav|0|gam2 zau6 ji3 mei6 zyu6 gam1 maan5 tai2 m4 dou3 din6 si6
+custom_character_voice/speaker0/common_voice_yue_31759166.wav|0|maa4 faan4 nei5 daa2 lei5 hou2 nei4 go3 uk1 jap6 min6 ge3 je5
+custom_character_voice/speaker0/common_voice_yue_32302244.wav|0|keoi5 zi2 hai6 gei1 haai6 jan4
+custom_character_voice/speaker0/common_voice_yue_31758470.wav|0|tung4 jat1 tiu4 dou6 lei5 ngaam1 ding6 m4 ngaam1 hai6 tai2 keoi5 heoi3 dou3 me1 si4 gei1 me1 waan4 ging2
+custom_character_voice/speaker0/common_voice_yue_31282275.wav|0|zeoi3 do1 go2 ci3 ge3 jau4 hang4 si6 wai1 jan4 sou3 hai6 loeng5 baak3 maan6
+custom_character_voice/speaker0/common_voice_yue_31455813.wav|0|jiu3 se2 gaa1 ze2 go3 ming4 aa1 maa3
+custom_character_voice/speaker0/common_voice_yue_31443505.wav|0|waa6 m4 ding6 hai6 keoi5 nei4
+custom_character_voice/speaker0/common_voice_yue_31484054.wav|0|dim2 gaai2 nei5 di1 si2 gam3 nan2 cau3
+custom_character_voice/speaker0/common_voice_yue_31263217.wav|0|hou2 laa1 mou5 man6 tai4
+custom_character_voice/speaker0/common_voice_yue_31865725.wav|0|zi1 so2 ji5 dim2 gaai2 nei5 gam3 man5 gam2 lo1
+custom_character_voice/speaker0/common_voice_yue_31738192.wav|0|dou1 m4 hai6 hou2 daai6 seng1 ze1
+custom_character_voice/speaker0/common_voice_yue_31865928.wav|0|go2 go3 lou1 hai1 baai2 ming4 hai6 tung4 nei5 coeng3 deoi3 toi4
+custom_character_voice/speaker0/common_voice_yue_33396444.wav|0|soeng6 fan1 faa3 jyut6 jyu5
+custom_character_voice/speaker0/common_voice_yue_33090858.wav|0|lou5 lou5 sat6 sat6 keoi5 m4 ceot1 ge3 waa6 gam1 maan5 ge3 je5 baak6 gaau2
+custom_character_voice/speaker0/common_voice_yue_31688556.wav|0|zou2 caan1 hai6 hou2 zung6 jiu3 gaa3
+custom_character_voice/speaker0/common_voice_yue_32410774.wav|0|ngo5 dei6 jyun4 cyun4 m4 tung4 lo1
+custom_character_voice/speaker0/common_voice_yue_32962371.wav|0|nei4 joeng6 hai6 mat1 je5
+custom_character_voice/speaker0/common_voice_yue_31240680.wav|0|seoi1 jin4 ngo5 dou1 m4 zung1 ji3
+custom_character_voice/speaker0/common_voice_yue_31688650.wav|0|sik6 m4 sik6 zou2 caan1
+custom_character_voice/speaker0/common_voice_yue_31804497.wav|0|ngo5 dou1 hai6 jan1 wai6 keoi5 sin1 lei4 nei4 dou6 duk6 syu1
+custom_character_voice/speaker0/common_voice_yue_31471754.wav|0|zung6 soeng2 wun6 hai6 mai5
+custom_character_voice/speaker0/common_voice_yue_31272479.wav|0|zung6 jau5 hou2 do1 jin2 jyun4 dou1 mou5 laan5 jam1 gaa3
+custom_character_voice/speaker0/common_voice_yue_31207027.wav|0|ho2 ji5 man6 kwan4 zyu2 gaa1 mei4 seon3 kwan4 wui2 jau5 gaang1 do1 jan4 gaau3 nei5
+custom_character_voice/speaker0/common_voice_yue_31744248.wav|0|nei5 mou5 hai2 lo4 ding6 sang1 wut6 gwo3
+custom_character_voice/speaker0/common_voice_yue_32286953.wav|0|jin4 leon6 jiu3 ping4 hang4
+custom_character_voice/speaker0/common_voice_yue_31173430.wav|0|ngo5 zan1 hai6 gok3 dak1 nei5 tin1 zan1 dou3 hou2 ci5 go3 sai3 lou6 zai2 gam2
+custom_character_voice/speaker0/common_voice_yue_32408635.wav|0|nei5 zung1 m4 zung1 ji3 naam4 zai2
+custom_character_voice/speaker0/common_voice_yue_31734374.wav|0|nei5 zi1 gam1 ci3 wun6 daai6 zo2 lo1 嗬
+custom_character_voice/speaker0/common_voice_yue_32944225.wav|0|gik1 m4 gik1 sei2 jan4
+custom_character_voice/speaker0/common_voice_yue_31213150.wav|0|bat1 gwo3 ngo5 mou5 tung4 keoi5 king1 gwo3 lo1
+custom_character_voice/speaker0/common_voice_yue_33421634.wav|0|ngo5 dou1 m4 zi1 wo3
+custom_character_voice/speaker0/common_voice_yue_32302281.wav|0|nei5 hai6 mai5 zan1 hai6 m4 sai2 ngo5 daa2 bei2 nei5 king1 haa6
+custom_character_voice/speaker0/common_voice_yue_31784828.wav|0|heoi3 zo6 joeng5 jat1 go3 fei1 zau1 ji4 tung4
+custom_character_voice/speaker0/common_voice_yue_31483396.wav|0|ngo5 sing4 jat6 dou1 geoi2 gou1 si6 daan6 bin1 zi2 sau2
+custom_character_voice/speaker0/common_voice_yue_31451858.wav|0|keoi5 hai6 ngo5 gaan2 lei4 nei4 dou6 ge3 jyun4 jan1
+custom_character_voice/speaker0/common_voice_yue_31472126.wav|0|jyu4 gwo2 nei5 jiu3 ngo5 gaan2 gwai2 uk1 ding6 hai6 fan3 fan4 coeng4 ngo5 gok3 dak1 fan3 fan4 coeng4 wui2 zi6 zoi6 di1
+custom_character_voice/speaker0/common_voice_yue_31913097.wav|0|zung6 hai2 m4 hai2 dou6 aa3
+custom_character_voice/speaker0/common_voice_yue_31430878.wav|0|lou5 baan2 gang3 gaa1 m4 wui2 caau2 jan4
+custom_character_voice/speaker0/common_voice_yue_31690253.wav|0|ngo5 zuk1 nei5 hou2 si6 lin4 lin4
+custom_character_voice/speaker0/common_voice_yue_31688918.wav|0|so2 ji5 nei5 m4 sai2 daam1 sam1
+custom_character_voice/speaker0/common_voice_yue_31496541.wav|0|nei5 zeoi3 fei4 go2 zan6 gei2 cung5
+custom_character_voice/speaker0/common_voice_yue_31754531.wav|0|so4 zai2 faai3 di1 gong2 laa1 mat1 tiu4 gin2
+custom_character_voice/speaker0/common_voice_yue_31225618.wav|0|nei5 ge3 tyun4 deoi2 jik6 dou1 ho2 ji5 zeon3 jap6
+custom_character_voice/speaker0/common_voice_yue_31206258.wav|0|gam1 jat6 hai6 sap6 jyut6 sap6 gau2 hou6
+custom_character_voice/speaker0/common_voice_yue_32359314.wav|0|hou2 ci5 ngo5 dei6 gam3 sai3 ge3 gaa1 ting4
+custom_character_voice/speaker0/common_voice_yue_31730296.wav|0|jat1 dou3 ng5 baak3 go3 gun1 zung3 ngo5 zau6 wui2 gaau2 go3 cau1 zoeng2 laa1
+custom_character_voice/speaker0/common_voice_yue_31207001.wav|0|ngo5 hei1 mong6 gwong2 zau1 jan4 jau5 jat1 fo2 tyun4 git3 zi1 sam1
+custom_character_voice/speaker0/common_voice_yue_31733071.wav|0|ngo5 jau5 kyun4 ceoi4 si4 gon2 nei5 dei6 zau2
+custom_character_voice/speaker0/common_voice_yue_32414688.wav|0|zoi3 gong2 do1 ci3
+custom_character_voice/speaker0/common_voice_yue_31211631.wav|0|ngo5 hou2 hou3 kei4 gau3 ging2 faat3 sang1 zo2 mat1 je5 si6
+custom_character_voice/speaker0/common_voice_yue_32351690.wav|0|ng5 saan1 seoi2 cong2 ho2 ji5 gong2 hai6 mui5 go3 sei3 jap1 gau2 sap6 hau6 hau6 sang1 zai2 ge3 gaau2 siu3 wui4 jik1
+custom_character_voice/speaker0/common_voice_yue_31203791.wav|0|maa4 faan4 bong1 sau2 teoi1 gwong2 jat1 haa6 nei4 go3 tau4 piu3
+custom_character_voice/speaker0/common_voice_yue_31263527.wav|0|faat3 ming4 taai3 do1 mou4 wai6 ge3 kwai1 geoi2 zaan2 bong2 sei2 zi6 gei2
+custom_character_voice/speaker0/common_voice_yue_31744892.wav|0|tung4 ngo5 zeoi3 zung1 ji3 ge3 waan4 gaa1
+custom_character_voice/speaker0/common_voice_yue_32201420.wav|0|ngo5 tai2 m4 ming4 nei5 dei6 gong2 gan2 mat1 je5
+custom_character_voice/speaker0/common_voice_yue_31744809.wav|0|soeng6 min6 nei4 di1 waa6 dou1 hai6 ngo5 lyun6 zok3 ge3
+custom_character_voice/speaker0/common_voice_yue_32434438.wav|0|ngo5 gaan2 can4 zi3 wang4
+custom_character_voice/speaker0/common_voice_yue_31234583.wav|0|si6 baa1 naa4
+custom_character_voice/speaker0/common_voice_yue_32315987.wav|0|dong1 jin4 laa1 cung1 zo2 wui2 bei2 faan2 cin2 nei5
+custom_character_voice/speaker0/common_voice_yue_31430542.wav|0|hou2 do1 nei4 di1 hou2 zung6 jiu3 ge3 je5 dou1 hou2 buk6 gaai1
+custom_character_voice/speaker0/common_voice_yue_31240652.wav|0|faat3 mai4 seon3 jin4 leon6
+custom_character_voice/speaker0/common_voice_yue_31504283.wav|0|gam2 nei4 gaan1 hok6 haau6 ge3 lou5 si1 keoi5 dei6 mou5 jan4 zou6 je5 gaa3
+custom_character_voice/speaker0/common_voice_yue_31219822.wav|0|nei5 hai6 zi6 gei2 zou6 ding6 hai6
+custom_character_voice/speaker0/common_voice_yue_31212096.wav|0|ngo5 jing1 man4 hou2 caa1
+custom_character_voice/speaker0/common_voice_yue_33090771.wav|0|gam2 caak3 zi6 ji4 jin4 sam6 zi3 bei2 ng5 bat1 zung6 jiu3 fong1 bin6
+custom_character_voice/speaker0/common_voice_yue_31471757.wav|0|ngo5 zing6 hai6 m4 soeng2 nei5 jau5 go3 waai6 jan3 zoeng6
+custom_character_voice/speaker0/common_voice_yue_31222356.wav|0|man5 naam4 fong1 jin4 hou2 naan4 teng1 ge3 ming4
+custom_character_voice/speaker0/common_voice_yue_31444007.wav|0|m4 gwaai3 dak1 gam3 meng6 fu2 laa1
+custom_character_voice/speaker0/common_voice_yue_31865741.wav|0|jyu4 gwo2 ho2 ji5 ge3 waa6 zeoi3 hou2 paau1 hei3 nei4 zung2 si1 wai4
+custom_character_voice/speaker0/common_voice_yue_31744708.wav|0|keoi5 dei6 dou1 ho2 nang4 wui2 tai2 ngo5 dei6 tou3 kek6
+custom_character_voice/speaker0/common_voice_yue_32410792.wav|0|sai2 m4 sai2 zo6 dou3 sap6 cek3 jyun5
+custom_character_voice/speaker0/common_voice_yue_31224966.wav|0|gaa2 gaa2 dei6 dou1 giu3 zou6 hai6 gun2 lei5 jyun4
+custom_character_voice/speaker0/common_voice_yue_31206919.wav|0|m4 gin3 jung6 wu6 tai2 jim6 caa1
+custom_character_voice/speaker0/common_voice_yue_31739124.wav|0|jing1 goi1 hai6 jau4 mei5 gwok3 faan2 lei4 go2 zan6
+custom_character_voice/speaker0/common_voice_yue_31212082.wav|0|gam6 jau6 soeng6 gok3 pin1 cap1 saan1 ceoi4 kei4 taa1 do1 jyu4 ge3 gin6 pun4
+custom_character_voice/speaker0/common_voice_yue_31426554.wav|0|nei5 sik1 m4 sik1
+custom_character_voice/speaker0/common_voice_yue_31754565.wav|0|ngo5 dei6 zung1 ji3 zou6 tung4 jat1 joeng6 je5 zung1 ji3 heoi3 tung4 jat1 go3 dei6 fong1
+custom_character_voice/speaker0/common_voice_yue_31283513.wav|0|nei4 loeng5 gin6 si6 bun2 san1 zau6 mou5 拏 naai6
+custom_character_voice/speaker0/common_voice_yue_31496429.wav|0|nei5 dei6 gau3 ging2 ci1 zo2 bin1 tiu4 gan1
+custom_character_voice/speaker0/common_voice_yue_31180210.wav|0|ngo5 dou1 m4 zi1 dim2 haa6 zoi3 nei5 si3 haa6
+custom_character_voice/speaker0/common_voice_yue_31865838.wav|0|keoi5 dei6 soeng2 saam1 jyut6 dai2 cin4 gaau2 dim6
+custom_character_voice/speaker0/common_voice_yue_31580277.wav|0|daan6 nei5 jiu3 sing4 jing6 keoi5 zan1 hai6 gei2 zeon2
+custom_character_voice/speaker0/common_voice_yue_32372843.wav|0|jan1 wai6 keoi5 soeng2 bou3 sau4 so2 ji5 lau4 dai1 keoi5 hai2 dou6 tai4 seng2 gan2 ngo5
+custom_character_voice/speaker0/common_voice_yue_31795022.wav|0|dong1 ngo5 mou5 gong2 gwo3
+custom_character_voice/speaker0/common_voice_yue_31190620.wav|0|ngo5 zing6 hai6 hai2 laap6 faat3 wui2 go3 waang4 fuk1 dou6 gin3 gwo3
+custom_character_voice/speaker0/common_voice_yue_31212863.wav|0|jiu3 m4 jiu3 gam6 nei4 go3 nei4 ngo5 nam2
+custom_character_voice/speaker0/common_voice_yue_31939268.wav|0|dou1 m4 bong1 haa6 hau2 ge3
+custom_character_voice/speaker0/common_voice_yue_31213286.wav|0|kei4 sat6 ngo5 gok3 dak1 jyut6 jyu5 hai6 hon3 jyu5 ge3 jat1 go3 fan1 zi1 nei4 go3 m4 seoi1 jiu3 zing3 ming4
+custom_character_voice/speaker0/common_voice_yue_31207059.wav|0|dak1 laa1 ngo5 gin3 dou3
+custom_character_voice/speaker0/common_voice_yue_31754356.wav|0|tai2 haa6 mat1 je5 joeng6 ge3 zi6
+custom_character_voice/speaker0/common_voice_yue_32302211.wav|0|nei5 ngaam1 sin1 sei2 hou2 coi2 zaa3
+custom_character_voice/speaker0/common_voice_yue_31173697.wav|0|daa2 m4 ceot1 zi2 zi6 mou5 baan6 faat3
+custom_character_voice/speaker0/common_voice_yue_32222675.wav|0|san1 wui3 tung4 gong1 mun4 ge3 maau4 teon5   sat6 cing4 hai6 zai3 dou6   ging1 zai3 dei6 wai6 tung4 man4 faa3 jing6 tung4 ge3 maau4 teon5   m4 hai6 jat1 geoi3 syut3 waa6 ho2 ji5 gong2 dak1 saai3
+custom_character_voice/speaker0/common_voice_yue_31213366.wav|0|gam2 ngo5 teoi1 zin3 nei5 jung6 jyut6 ping3
+custom_character_voice/speaker0/common_voice_yue_31730283.wav|0|tai2 ngo5 gei2 jau5 nei5 sam1
+custom_character_voice/speaker0/common_voice_yue_32410794.wav|0|sau2 tai4 din6 waa2 jung6 wu6 hou2 seoi1 jiu3 gau2 gung1 gaak3 gin6 pun4 gaa3
+custom_character_voice/speaker0/common_voice_yue_31483448.wav|0|neoi5 ting1 aa3 baa1 gong2
+custom_character_voice/speaker0/common_voice_yue_32302149.wav|0|nei4 go3 jan4 sin1 hai6 uk1 zyu2
+custom_character_voice/speaker0/common_voice_yue_31272605.wav|0|gu2 gai3 tung4 soeng1 jip6 jau5 gwaan1
+custom_character_voice/speaker0/common_voice_yue_31223980.wav|0|daai6 gaa1 sik6 zo2 faan6 mei6 aa1
+custom_character_voice/speaker0/common_voice_yue_31738103.wav|0|gan6 gu2 gun1 waa6 jam1
+custom_character_voice/speaker0/common_voice_yue_31190326.wav|0|jau6 m4 hai6 baak3 fan6 baak3 zeon2 ge3
+custom_character_voice/speaker0/common_voice_yue_31223610.wav|0|keoi5 dei6 waa6 wui2 zou6 soeng6 bun3 nin4 wui2 jyun4 sing4 co1 kei4 baan2 bun2
+custom_character_voice/speaker0/common_voice_yue_31484115.wav|0|zeoi3 gan2 jiu3 gun1 zung3 tai2 dak1 hoi1 sam1
+custom_character_voice/speaker0/common_voice_yue_31211577.wav|0|nei4 go3 jan4 jau6 zyu1 jau6 deon6 m4 dim6
+custom_character_voice/speaker0/common_voice_yue_31179954.wav|0|ngo5 zaap6 gwaan3 jyu4 ci2
+custom_character_voice/speaker0/common_voice_yue_31180167.wav|0|m4 goi1 saai3 dang2 ngo5 si3 haa6 sin1
+custom_character_voice/speaker0/common_voice_yue_31207513.wav|0|gei3 jin4 nei5 waa6 gam3 naan4 se2 gam2 nei5 se2 ceot1 lei4 bei2 ngo5 dei6 tai2 haa6 aa1 maa3
+custom_character_voice/speaker0/common_voice_yue_31206240.wav|0|jyun4 loi4 zan1 hai6 jau5 jan4 din6 nou5 jung6 ng5 bat1 waa2
+custom_character_voice/speaker0/common_voice_yue_31730305.wav|0|tung4 ngo5 dei6 jat1 cai4 sik6 zou2 caan1 laa1 ngo5 zyu2 zo2 di1 zuk1
+custom_character_voice/speaker0/common_voice_yue_31484960.wav|0|so2 ji5 nei5 zau6 sing4 jat6 dou1 gam3 maau4 teon5
+custom_character_voice/speaker0/common_voice_yue_32322211.wav|0|ji5 hau6 wui2 tung1 zi1 nei5 ge3
+custom_character_voice/speaker0/common_voice_yue_31224955.wav|0|mat1 je5 caan2 ban2 bun3 gaa3 gam3 seon2 aa3 ngo5 dou1 maai5 faan2 gin2 sin1
+custom_character_voice/speaker0/common_voice_yue_31223609.wav|0|fei2 ceoi3 toi4 wui2 gam2
+custom_character_voice/speaker0/common_voice_yue_31206063.wav|0|zi6 cung4 keoi5 dei6 gaau2 zo2 sat6 ming4 zai3 zi1 hau6
+custom_character_voice/speaker0/common_voice_yue_31212905.wav|0|zau6 syun3 ngo5 se2 dou1 hai6 caa1 m4 do1 ge3
+custom_character_voice/speaker0/common_voice_yue_32967467.wav|0|nei4 go3 kwan4 hou2 ci5 saan3 zo2
+custom_character_voice/speaker0/common_voice_yue_31471677.wav|0|jyu4 gwo2 ngo5 hai2 dou6 ngo5 jat1 ding6 wui2 gwaak3 nei5 jat1 baa1
+custom_character_voice/speaker0/common_voice_yue_31173637.wav|0|maai5 zo2 fu3 mei5 gwan1 ngaan5 geng2
+custom_character_voice/speaker0/common_voice_yue_31744924.wav|0|cin4 gei2 jat6 sin1 hoeng3 daai6 gaa1 cing2 gaau3 sau1 goi2 jyun4
+custom_character_voice/speaker0/common_voice_yue_31223635.wav|0|wan2 m4 dou3 sin1 jung6 nei4 go3 baan6 faat3
+custom_character_voice/speaker0/common_voice_yue_31471598.wav|0|dang2 zan6 sin1
+custom_character_voice/speaker0/common_voice_yue_31807853.wav|0|tai2 haa6 ji4 gaa1 go3 sai3 gaai3 aat3 jik1 dou3 sei2
+custom_character_voice/speaker0/common_voice_yue_31219701.wav|0|ngo5 dou1 mei6 sau1 dou3 gwo3
+custom_character_voice/speaker0/common_voice_yue_31739149.wav|0|m4 zi1 wo3 ngo5 gu2 jing1 goi1 mou5 mat1 gei1 wui6 ho2 ji5 gwo3 lei4 wun6 laak3
+custom_character_voice/speaker0/common_voice_yue_32967532.wav|0|biu2 si6 bat1 cing4 jyun6
+custom_character_voice/speaker0/common_voice_yue_33223472.wav|0|zau6 zoeng6 bak1 fong1 waa2 jiu3 hok6 ping3 jam1 jat1 joeng6
+custom_character_voice/speaker0/common_voice_yue_32302295.wav|0|nei4 go3 zi6 mat1 ji3 si1
+custom_character_voice/speaker0/common_voice_yue_31180062.wav|0|nei5 kok3 ding6 jiu3 heoi3 saa2 taai3 gik6
+custom_character_voice/speaker0/common_voice_yue_31888433.wav|0|bun3 je6 hoi1 zoek6 lou4 tau4 zyu2 je5 sik6
+custom_character_voice/speaker0/common_voice_yue_31344089.wav|0|sik6 dou3 zai6 saai3 heoi3 zou6 je5 hou2 gwo3
+custom_character_voice/speaker0/common_voice_yue_31745017.wav|0|nei5 soeng2 zau2 heoi3 jing1 dak1 faat3 ji3 mei5 gaa1 ou3 nau2 waak6 ze2 jat6 hon4 toi4 zau6 dong1 jin4 hou2 naan4
+custom_character_voice/speaker0/common_voice_yue_31734537.wav|0|jau5 jat1 jat6 nei4 kei4 zung1 jat1 go3 gaa1 ze2 zau6 zing2 gu2 ngo5
+custom_character_voice/speaker0/common_voice_yue_33090714.wav|0|bui3 haa6 jyut6 jyu5 ping3 jam1 ge3 wan5 mou5
+custom_character_voice/speaker0/common_voice_yue_31203378.wav|0|sik6 si2 laa1 nei5
+custom_character_voice/speaker0/common_voice_yue_31713836.wav|0|tai2 gan2 san1 man4 ze1
+custom_character_voice/speaker0/common_voice_yue_32299516.wav|0|bat1 jyu4 gam2 ngo5 dei6 zyun1 zyu3 hok6 jip6
+custom_character_voice/speaker0/common_voice_yue_31283857.wav|0|zi2 hai6 nei5 dei6 baan1 jan4 m4 zou6 je5
+custom_character_voice/speaker0/common_voice_yue_32867155.wav|0|ngo5 hai6 jan1 wai6 bui3 do1 fan1 ge3 ming6 wan6 gaau1 hoeng2 kuk1 ji4 zung1 ji3 zo2 ting1 gu2 din2 jam1 ngok6
+custom_character_voice/speaker0/common_voice_yue_31688371.wav|0|dim2 gaai2 nei5 gam3 ging1 neoi5 jan4 ge3
+custom_character_voice/speaker0/common_voice_yue_31739759.wav|0|zung6 hai6 loeng5 go3 dou1 ho2 ji5
+custom_character_voice/speaker0/common_voice_yue_31734573.wav|0|mui5 ci3 ngo5 waa6 soeng2 gin3 keoi5 dou1 jau5 ze3 hau2
+custom_character_voice/speaker0/common_voice_yue_31851849.wav|0|ting4 aa1 nei5 sik6 dou3 㗱 㗱 sing1
+custom_character_voice/speaker0/common_voice_yue_32315853.wav|0|gaap3 mai5 dei6 hai6 fei1 leot6 ban1 jat1 go3 saang2 fan6
+custom_character_voice/speaker0/common_voice_yue_32200069.wav|0|mong6 lok6 hou2 ci5 jyu4 lou6 nei5 man4 haa6
+custom_character_voice/speaker0/common_voice_yue_31371813.wav|0|kei4 sat6 hou2 do1 ngo5 dou1 zung1 ji3
+custom_character_voice/speaker0/common_voice_yue_31734260.wav|0|ji5 hau6 keoi5 ge3 mong5 zaam6 zip3 mun5 ping4 gwong2 gou3
+custom_character_voice/speaker0/common_voice_yue_32302166.wav|0|ci4 loeng6 sik1 zung1 wui2 hou2 di1
+custom_character_voice/speaker0/common_voice_yue_31272238.wav|0|joeng4 hei3 cung1 zuk1 m4 paa3
+custom_character_voice/speaker0/common_voice_yue_31226218.wav|0|bei2 nei5 ji4 gaa1 go2 zoeng1 mei5 ngan4 seon3 jung6 kaat1 hou2 dak1 do1
+custom_character_voice/speaker0/common_voice_yue_31730212.wav|0|haau1 aap3 gaa2 faan6   sing6 wai6 sap6 gau2 man4
+custom_character_voice/speaker0/common_voice_yue_33080655.wav|0|bat1 gwo3 ngo5 wui2 hai2 din6 si6 dong1 zung1 cam4 zaau2 hou2 waan2 ge3 je5
+custom_character_voice/speaker0/common_voice_yue_31224644.wav|0|tung4 baak3 dou6 bei2 gaau3 bin1 go3 hou2 di1
+custom_character_voice/speaker0/common_voice_yue_31240532.wav|0|dou1 zung6 hai6 zi1 cin4 ge3 baan2 bun2 fong1 bin6 di1
+custom_character_voice/speaker0/common_voice_yue_31206410.wav|0|loeng5 go3 zi6 ji3 si1 jung6 faat3 dou1 jat1 joeng6
+custom_character_voice/speaker0/common_voice_yue_31219732.wav|0|tai2 bong1 m4 bong1 dou3 nei5
+custom_character_voice/speaker0/common_voice_yue_31206276.wav|0|mei6 heoi3 gwo3 daan6 hai6 jau5 dak1 kei4 doi6 aa1 maa3
+custom_character_voice/speaker0/common_voice_yue_33059371.wav|0|hai6 aa3 hai6 aa3 mou5 man6 tai4
+custom_character_voice/speaker0/common_voice_yue_31888534.wav|0|mou5 jan4 king1 gai2 aa3
+custom_character_voice/speaker0/common_voice_yue_32342063.wav|0|m4 hou2 zoi3 zoek3 laa1 hou2 cou4
+custom_character_voice/speaker0/common_voice_yue_32408561.wav|0|mou5 jung6 ge3 zi2 hak1 sau2 hou2 hak1
+custom_character_voice/speaker0/common_voice_yue_32367096.wav|0|keoi5 ho2 m4 ho2 ji5 faat3 maai4 soeng6 haa6 man4
+custom_character_voice/speaker0/common_voice_yue_31221856.wav|0|wu6 lyun4 mong5 jau5 si4 zau6 hai6 jat1 go3 syun1 sit3 go3 jan4 gam2 sau6 ge3 dei6 fong1
+custom_character_voice/speaker0/common_voice_yue_32448232.wav|0|m4 hai6 aa1 hai6 mong4 cou2 lei4
+custom_character_voice/speaker0/common_voice_yue_31223595.wav|0|nei4 dou6 seoi1 jiu3 hoi1 fong1 so2 ji5 ngo5 gik6 siu2 gam3 jin4
+custom_character_voice/speaker0/common_voice_yue_32686954.wav|0|ngo5 gin3 ji5 nei5 cit3 zo2 zoeng1 tou4 hou2 di1
+custom_character_voice/speaker0/common_voice_yue_32967682.wav|0|dyun2 man4 long5 duk6 hoi1 ci2 laa1
+custom_character_voice/speaker0/common_voice_yue_31744557.wav|0|hai6 lou5 si1 ge3 sam1 gon1 bou2 bui3
+custom_character_voice/speaker0/common_voice_yue_32324671.wav|0|ngo5 dim2 dou1 zau2 m4 lat1 gaa3 laa1
+custom_character_voice/speaker0/common_voice_yue_31206130.wav|0|lok6 baan1 faan1 heoi3 zoi3 heoi3 tai2 tai2
+custom_character_voice/speaker0/common_voice_yue_31179552.wav|0|dak1 hing3 waa6 tung4 gwong2 zau1 waa2 faat3 jam1 caa1 m4 do1
+custom_character_voice/speaker0/common_voice_yue_31219709.wav|0|jan4 dei6 fu2 dai2 cau1 san1 nei5 mai5 jau6 sei2
+custom_character_voice/speaker0/common_voice_yue_32377591.wav|0|m4 zi1 daai6 luk6 gong2 ge3 se5 tyun4 hoeng1 gong2 dim2 gong2 nei4
+custom_character_voice/speaker0/common_voice_yue_32367025.wav|0|wun6 sat6 mat6 do1 di1 lo1 syun2 zaak6 dou1 wui2 do1 jat1 di1 go2 go3 nin4 doi6
+custom_character_voice/speaker0/common_voice_yue_32367026.wav|0|ngo5 hai6 gwong2 zau1 jan4 laa1 mou5 hoeng1 gong2 jan4 waa2 gwo3 ngo5 jau5 mat1 je5 daai6 luk6 hau2 jam1
+custom_character_voice/speaker0/common_voice_yue_31471830.wav|0|jam6 ho4 je5 ceot1 jin6 hai2 m4 sik1 dong3 ge3 dei6 fong1 zau6 jing1 goi1 wan2 jan4 cyu2 lei5 zo2 keoi5
+custom_character_voice/speaker0/common_voice_yue_31223622.wav|0|jau5 gei1 wui6 wui2 bin3 sing4 baak6 sik1
+custom_character_voice/speaker0/common_voice_yue_31219649.wav|0|faan2 zing3 jau6 m4 hai6 faan1 hok6 se2 zok3 man4 gaau1 lou5 si1
+custom_character_voice/speaker0/common_voice_yue_31179655.wav|0|dou3 si4 jau6 goi2 zau6 buk6 gaai1
+custom_character_voice/speaker0/common_voice_yue_31754507.wav|0|daan6 mei6 gwo3 sang1 jat6
+custom_character_voice/speaker0/common_voice_yue_32302245.wav|0|bei2 do1 ci3 gei1 wui6 ngo5
+custom_character_voice/speaker0/common_voice_yue_32967411.wav|0|sing1 gaa3 bo1 hai6 go3 bat1 on1 hou2 sam1 ge3 gwok3 gaa1
+custom_character_voice/speaker0/common_voice_yue_31910441.wav|0|dong1 caai1 jiu3 zing3 sam2 hang4 gu2 waak6 jiu3 siu1 wong4 zi2
+custom_character_voice/speaker0/common_voice_yue_31401556.wav|0|zung6 jau5 gam3 do1
+custom_character_voice/speaker0/common_voice_yue_31219681.wav|0|saai1 saai3 ngo5 dei6 di1 si4 gaan3
+custom_character_voice/speaker0/common_voice_yue_31223977.wav|0|sau2 se2 se2 m4 ceot1 bei2 gaau3 ho2 sik1
+custom_character_voice/speaker0/common_voice_yue_31580139.wav|0|daan6 hai6 zan1 hai6 hou2 hou2 mei6
+custom_character_voice/speaker0/common_voice_yue_31852226.wav|0|go2 di1 hau6 sang1 zai2 zung1 ji3 tai2
+custom_character_voice/speaker0/common_voice_yue_31471790.wav|0|dong1 si4 ngo5 zeoi3 zung1 ji3 zau6 hai6 daa2 gei1 ceoi4 zo2 duk6 syu1 ngo5 kei4 jyu4 si4 gaan3 zau6 hai6 daa2 gei1
+custom_character_voice/speaker0/common_voice_yue_31730231.wav|0|so4 zai2 sin1 wui2 lok6 dip6
+custom_character_voice/speaker0/common_voice_yue_32085843.wav|0|nei4 taan4 je5 hai6 cin4 zau3 nei4 go3 ngo5 gei3 dak1
+custom_character_voice/speaker0/common_voice_yue_31739243.wav|0|gam2 jau6 m4 hai6 ge3 dou1 m4 tung4 zung2 leoi6 ge3 ngo5 dei6
+custom_character_voice/speaker0/common_voice_yue_31807466.wav|0|ngo5 lou5 dau6 dou1 hai6 gwong2 fu2 jan4
+custom_character_voice/speaker0/common_voice_yue_31407239.wav|0|waa6 zi1 keoi5 laa1 ji4 gaa1
+custom_character_voice/speaker0/common_voice_yue_31744579.wav|0|wui2 do1 hou2 do1 hau6 syun2
+custom_character_voice/speaker0/common_voice_yue_32303064.wav|0|dim2 gaai2 ngo5 haa6 zoi3 jau4 hei3 gam3 maan6 ge3
+custom_character_voice/speaker0/common_voice_yue_32302277.wav|0|gung1 zai2 pin2 hou2 siu2 tai2
+custom_character_voice/speaker0/common_voice_yue_32249503.wav|0|ceoi1 di1 daa2 dit3 lei6 si6   saai1 hei3
+custom_character_voice/speaker0/common_voice_yue_32063888.wav|0|ji4 gaa1 ngo5 m4 fong1 bin6 wo3 aan3 di1 dak1 m4 dak1
+custom_character_voice/speaker0/common_voice_yue_31206217.wav|0|aa3 zau1 gwok3 gaa1 sang1 wut6 aat3 lik6 hou2 daai6
+custom_character_voice/speaker0/common_voice_yue_32239317.wav|0|ho2 ji5 fong3 zo2 sin1 dou1 hou2
+custom_character_voice/speaker0/common_voice_yue_33184406.wav|0|gok3 wai2 maan5 soeng6 hou2
+custom_character_voice/speaker0/common_voice_yue_31690396.wav|0|me1 sing1 aa3 jing1 mou5 ze1
+custom_character_voice/speaker0/common_voice_yue_31219808.wav|0|tai2 go3 jan4 hei2 hou3
+custom_character_voice/speaker0/common_voice_yue_32342546.wav|0|sai3 bei2 mut6 jat6 ge3 waa6 dim2 gaai2 ngo5 mui5 ci3 gin3 dou3 nei5 dou1 gam3 hoi1 sam1 nei4
+custom_character_voice/speaker0/common_voice_yue_31206434.wav|0|bin1 dou6 m4 hap6 sik1
+custom_character_voice/speaker0/common_voice_yue_31990266.wav|0|bat1 lau4 dou1 hai6 jung6 ge3 ze1
+custom_character_voice/speaker0/common_voice_yue_31471704.wav|0|ngo5 ji5 ging1 daa2 bei2 keoi5 daan6 keoi5 dou1 mou5 ting1 lo1
+custom_character_voice/speaker0/common_voice_yue_32408676.wav|0|hou2 faai3 cung4 kai2 jat1 daai3 jat1 lou6
+custom_character_voice/speaker0/common_voice_yue_31206579.wav|0|saan1 zo2 tung4 man4 syu1 jap6 faat3
+custom_character_voice/speaker0/common_voice_yue_32886554.wav|0|m4 hai6 man6 lai4 zou6 me1
+custom_character_voice/speaker0/common_voice_yue_31190974.wav|0|nau2 gai2 zaap6 paai4 gwan1
+custom_character_voice/speaker0/common_voice_yue_31212954.wav|0|ngo5 zi1 cin4 si3 gwo3 m4 dak1
+custom_character_voice/speaker0/common_voice_yue_31483330.wav|0|ngo5 dou1 m4 zi1 dim2 gaai2 keoi5 jiu3 faan4 zyu6 ngo5
+custom_character_voice/speaker0/common_voice_yue_31939477.wav|0|nei5 zing6 hai6 soeng2 cou4 zyu6 ngo5 hou2 mong4 gaa3 ngo5
+custom_character_voice/speaker0/common_voice_yue_31206795.wav|0|ngo5 gang2 hai6 m4 wui2 ceoi4 bin2 luk6 jam1 laa1
+custom_character_voice/speaker0/common_voice_yue_31207356.wav|0|jau5 si4 wui2 zyun2 m4 cit3
+custom_character_voice/speaker0/common_voice_yue_32448440.wav|0|dou3 zo2 ji4 gaa1 ngo5 gin3 dou3 jat1 go3 keoi5 sing4 zoeng2 zo2 hou2 do1
+custom_character_voice/speaker0/common_voice_yue_31939437.wav|0|ngo5 dai6 jat1 go3 mung6 soeng2 hai6 sing4 wai4 taai3 hung1 jan4
+custom_character_voice/speaker0/common_voice_yue_31401557.wav|0|gaan2 zi6 go2 dou6 mou5 aa3
+custom_character_voice/speaker0/common_voice_yue_31744383.wav|0|fuk1 zo2 jau6 m4 ngaam1
+custom_character_voice/speaker0/common_voice_yue_32085905.wav|0|syun3 laa1 faan2 zing3 ngo5 hai2 dou6 dou1 gei2 hoi1 sam1
+custom_character_voice/speaker0/common_voice_yue_32185286.wav|0|dai6 jat1 bou6 hai6 jiu3 hou2 hou2 bou2 wu6 zi6 gei2
+custom_character_voice/speaker0/common_voice_yue_32315770.wav|0|nei4 loeng5 zung2 jyu5 faat3 hai6 soeng1 faan2 ge3
+custom_character_voice/speaker0/common_voice_yue_31271989.wav|0|jan1 wai6 nei4 go3 jyun4 jan1 so2 ji5 wan2 m4 dou3
+custom_character_voice/speaker0/common_voice_yue_31372591.wav|0|zau1 paak3 hou4 faat3 jing4 ho2 ji5 laa1
+custom_character_voice/speaker0/common_voice_yue_31744457.wav|0|daan6 si3 gwo3 gei2 coeng4 mou6 him2 zi1 hau6 zau6 faat3 gwat6 dou3 lok6 ceoi3
+custom_character_voice/speaker0/common_voice_yue_31754444.wav|0|ceoi4 ji3 tai2 tai2 zau6 hou2
+custom_character_voice/speaker0/common_voice_yue_31223839.wav|0|zi6 zi2 bat1 gwo3 hai6 jat1 go3 fu6 zo6
+custom_character_voice/speaker0/common_voice_yue_31946826.wav|0|jin4 hau6 man4 zyu6 nei5 ge3 mei6 dou6
+custom_character_voice/speaker0/common_voice_yue_31851877.wav|0|daan6 hai6 ngo5 m4 zi1 hai6 bin1 wai2 tung4 ngo5 pin1 man4 zoeng1 faan1 jik6 sing4 jing1 jyu5 ge3
+custom_character_voice/speaker0/common_voice_yue_31504348.wav|0|ho2 ji5 ceoi2 doi6 dou3 ji4 gaa1 po3 waai6 gan2 dei6 kau4 ge3 je5
+custom_character_voice/speaker0/common_voice_yue_31730350.wav|0|nei5 dei6 zau6 dong1 hai6 ting1 zo2 jat1 coeng4 jin2 gong2
