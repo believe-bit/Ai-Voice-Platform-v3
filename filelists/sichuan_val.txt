@@ -1,0 +1,522 @@
+custom_character_voice/sichuan/G0001_0157.wav|0|cong2 zhang1 dian4 zen3 me qu4 zi1 chuan1
+custom_character_voice/sichuan/G1100_0235.wav|0|yi4 zhong1 tian1 nian2 qing1 shi2 de zhao4 pian1
+custom_character_voice/sichuan/G1105_0520.wav|0|you3 na3 xie1 ge1 qu3 shi4 you2 shi1 gai3 bian1 de
+custom_character_voice/sichuan/G0003_0451.wav|0|mei3 mei3 de xiao3 wu1 wei4 sha2 you3 shi2 lou4 yu3 you3 shi2 bu4 lou4
+custom_character_voice/sichuan/G1106_0694.wav|0|wo3 xiang3 mai3 yi1 tai2 dian4 nao3 xiang3 fen1 qi1 fu4 kuan3 tui1 jian4 yi2 ge4
+custom_character_voice/sichuan/G1105_0348.wav|0|yi2 dong4 ying4 pan2 de gong1 neng2 ni3 zhi1 dao4 duo1 shao3
+custom_character_voice/sichuan/G1100_0047.wav|0|fu1 qi1 ben3 shi4 tong2 lin2 niao3 de xia4 yi1 ju4 shi4 shen2 me
+custom_character_voice/sichuan/G1100_0637.wav|0|xian4 zai4 bai2 shou3 qi3 jia1 zen3 me zhuan4 di4 yi1 tong3 jin1
+custom_character_voice/sichuan/G0008_0244.wav|0|cheng2 long2 de zhen1 ming2 zi4
+custom_character_voice/sichuan/G1106_0112.wav|0|fa1 xian4 you3 gan1 xi1 chong2 yuan2 yin1 wei4 he2 ji2 ying1 ru2 he2 zhi4 yi1 liao2
+custom_character_voice/sichuan/G0051_0648.wav|0|na3 xie1 xue2 xiao4 ke3 yi3 qu4 xue2 chu2 shi1 xu1 yao4 ke3 kao4 de
+custom_character_voice/sichuan/G0007_0160.wav|0|mai3 shou3 ji1 mai3 shen2 me pai2 zi de hao3
+custom_character_voice/sichuan/G0003_0216.wav|0|su4 ye4 wei2 yin2 zhi2 zai1 wei2 qing1 shi4 xia4 chao2 na3 ge ren2 shuo1 de
+custom_character_voice/sichuan/G0051_0163.wav|0|zhi1 dao4 xian4 zai4 de shui3 chu4 li3 ji4 da4 gai4 shen2 me jia4 ge2
+custom_character_voice/sichuan/G1100_0499.wav|0|bei3 jing1 chu2 le kao3 ya1 hai2 you3 shen2 me te4 chan3 a
+custom_character_voice/sichuan/G0001_0210.wav|0|chang3 jia1 ba3 wo3 de shou3 ji1 xiu1 huai4 le wo3 neng2 yao1 qiu2 huan4 ji1 ma
+custom_character_voice/sichuan/G1103_0536.wav|0|kong1 qi4 zhong1 han2 liang4 zui4 duo1 de jin1 shu3 yuan2 su4 shi4 shen2 me
+custom_character_voice/sichuan/G1105_0529.wav|0|dian4 nao3 li3 de gong1 ju4 zai4 na3 li3 a
+custom_character_voice/sichuan/G0001_0630.wav|0|bian4 ya1 qi4 li2 ju1 min2 lou2 you3 duo1 yuan3 you3 he2 gui1 ding4
+custom_character_voice/sichuan/G1103_0051.wav|0|shen2 me jiao4 zuo4 lou4 dou3 xiong1
+custom_character_voice/sichuan/G0008_0248.wav|0|pao4 pao4 long2 zhe4 ge you2 xi4 zai4 na3 xia4 zai4 ma
+custom_character_voice/sichuan/G0003_0265.wav|0|zhi4 liao2 er2 tong2 sha1 yan3 ying1 gai1 yong4 sha2 yan3 yao4 shui3
+custom_character_voice/sichuan/G1106_0070.wav|0|ru2 he2 qing1 chu2 deng1 lu4 xin4 xi1
+custom_character_voice/sichuan/G1108_0365.wav|0|xue2 guo4 ce4 kong4 tong2 zhi4 zai4 he2 fang1 gong4 zhi2
+custom_character_voice/sichuan/G1106_0439.wav|0|qin1 ai4 de bu2 yao4 li2 kai1 wo3
+custom_character_voice/sichuan/G1103_0606.wav|0|zui4 re4 men2 de she4 ji4 lei4 zhuan1 ye4
+custom_character_voice/sichuan/G1108_0463.wav|0|wo3 xiang3 yao4 qian1 jin1 bai3 fen1 bai3 li3 de suo3 you3 ge1 qu3
+custom_character_voice/sichuan/G1105_0249.wav|0|gao4 su4 wo3 zen3 yang4 shi3 ni3 ai4 de ren2 hen3 hen3 ai4 ni3
+custom_character_voice/sichuan/G1103_0342.wav|0|se4 cai3 guan3 li3 qi4 de gong1 neng2 shi4 shen2 me
+custom_character_voice/sichuan/G0003_0683.wav|0|hua4 zhuang1 pin3 gang3 huo4 he2 zhuan1 gui4 huo4 you3 shen2 me bu4 tong2
+custom_character_voice/sichuan/G1103_0192.wav|0|nan2 sheng1 yao4 xiang3 bian4 qiang2 zhuang4 ying1 gai1 zen3 me ban4
+custom_character_voice/sichuan/G0051_0209.wav|0|xia4 zai4 hao3 de dong4 hua4 zhi4 zuo4 ruan3 jian4 zen3 me yong4 ya
+custom_character_voice/sichuan/G1103_0488.wav|0|ka3 te4 he2 na4 shen2 can1 jia1 shi4 jin3 sai4 ma
+custom_character_voice/sichuan/G0051_0332.wav|0|zen3 me zuo4 ke3 yi3 yan2 chang2 fang2 shi4 de shi2 jian1 ne
+custom_character_voice/sichuan/G1100_0276.wav|0|tou2 fa4 zhang3 you3 hao3 chu4 ma
+custom_character_voice/sichuan/G0003_0618.wav|0|du4 bang1 di2 lun2 shi4 shen2 me du4 bang1 lai2 ka3 ji4 shu4 ne
+custom_character_voice/sichuan/G1103_0596.wav|0|nan2 jing1 di4 qu1 you3 zuo4 wu2 ta3 gong1 shui3 qi4 de ma
+custom_character_voice/sichuan/G0003_0597.wav|0|ru2 he2 rang4 da3 kai1 de wang3 ye4 zui4 xiao3 hua4 bian4 cheng2 hou4 tai2 yun4 xing2
+custom_character_voice/sichuan/G1108_0682.wav|0|na3 ge tian1 qi4 yu4 bao4 wang3 zhan4 zui4 zhun3 que4 ai1
+custom_character_voice/sichuan/G1100_0571.wav|0|tai2 mei4 er2 shi4 hen3 ku4 de n3 hai2 er2 ma
+custom_character_voice/sichuan/G1108_0452.wav|0|fu4 ju4 he2 dan1 ju4 lang1 ge4 zen3 me fen1
+custom_character_voice/sichuan/G0003_0481.wav|0|mai3 huo3 che1 piao4 ma2 fan2 ma zuo4 huo3 che1 xu1 yao4 zhu4 yi4 na3 xie1 wen4 ti2
+custom_character_voice/sichuan/G0003_0218.wav|0|huan2 jing4 chao2 shi1 neng2 yin3 qi3 ji4 suan4 ji1 qi3 dong4 gu4 zhang4 ma
+custom_character_voice/sichuan/G1103_0377.wav|0|nan2 sheng1 xi3 huan1 n3 sheng1 de hun1 sha1 zheng4 chang2 ma
+custom_character_voice/sichuan/G1100_0323.wav|0|neng2 gao4 su4 wo3 zai4 na3 er2 ke3 fa1 biao3 wen2 zhang1
+custom_character_voice/sichuan/G1106_0276.wav|0|jin4 yue4 tuan2 mi4 ma3 zen3 me gai3
+custom_character_voice/sichuan/G0001_0678.wav|0|shang4 hai3 tui4 xiu1 jin1 ling3 qu3 yong4 na3 zhong3 ban4 fa3 hao3
+custom_character_voice/sichuan/G0001_0594.wav|0|shen2 me shi4 sheng1 chen2 gang1
+custom_character_voice/sichuan/G1108_0302.wav|0|jin4 wu3 tuan2 de hui1 xing1 zai4 na3 er2 xia4 zai4
+custom_character_voice/sichuan/G0007_0527.wav|0|ru2 guo3 wo3 ai4 ta1 shi4 fou3 gan3 fang4 qi4 ta1
+custom_character_voice/sichuan/G0001_0638.wav|0|na3 li3 you3 xia4 long2 zhi1 jue2 qi3 de wan2 quan2 ban3
+custom_character_voice/sichuan/G1106_0381.wav|0|ke3 yi3 gei3 wo3 zhang1 shui3 jing3 de tu2 pian4 er2 ma
+custom_character_voice/sichuan/G1100_0162.wav|0|wei4 shen2 me bu3 gai4 neng2 zhang3 gao1
+custom_character_voice/sichuan/G1106_0562.wav|0|ao2 zhong1 yao4 ke3 yi3 yong4 sha1 guo1 fang4 zai4 dian4 ci2 lu2 shang4 ao2 ma
+custom_character_voice/sichuan/G0007_0664.wav|0|hang2 zhou1 na3 li3 you3 di4 fang1 shi4 he2 fu4 xi2 gong1 ke4
+custom_character_voice/sichuan/G0001_0425.wav|0|xin1 ao4 er3 liang2 zai4 na3
+custom_character_voice/sichuan/G0008_0563.wav|0|ju2 yu4 wang3 diao4 xian4 shi4 fou3 zhen1 shi2 wang3 ka3 zuo4 sui4 ke3 neng2
+custom_character_voice/sichuan/G0008_0551.wav|0|duo1 jiu3 cai2 zhi1 dao4 shi4 fou3 huai2 yun4 a
+custom_character_voice/sichuan/G0007_0430.wav|0|nan2 xing4 yin1 jing1 shang4 qi3 xiao3 mi3 zhuang4 tu1 qi3 shi4 zen3 me hui2 shi4
+custom_character_voice/sichuan/G0007_0087.wav|0|cong2 bao3 shan1 dao4 si4 ji4 gong1 yuan2 zen3 me zou3
+custom_character_voice/sichuan/G0003_0516.wav|0|na3 li3 you3 ying1 wen2 zhuan1 ji2 de xia4 zai4 huo4 zhe3 xian4 zai4 shi4 ting1
+custom_character_voice/sichuan/G0001_0585.wav|0|zong3 xian4 kong4 zhi4 qi4 shi4 shen2 me ne
+custom_character_voice/sichuan/G1103_0229.wav|0|na3 yi1 zhong3 dong1 xi1 shi4 zuo4 tu2 pian4 zuo4 mu2 ban3 bi3 jiao4 hao3 de
+custom_character_voice/sichuan/G1106_0472.wav|0|zhou1 peng2 zhao3 shen2 me de ge1 ci2
+custom_character_voice/sichuan/G1103_0531.wav|0|wang3 luo4 shu4 ju4 ku4 zhong1 qian2 tai2 hou4 tai2 zhi3 de shi4 shen2 me
+custom_character_voice/sichuan/G0008_0158.wav|0|tan3 ke4 de ying1 wen2 zen3 me xie3 ya
+custom_character_voice/sichuan/G1106_0413.wav|0|zen3 yang4 ba3 re4 xue4 jiang1 hu2 diao4 cheng2 chuang1 kou3 mo2 shi4
+custom_character_voice/sichuan/G0007_0170.wav|0|tai4 yang2 wei4 shen2 me na4 me ke3 ai4
+custom_character_voice/sichuan/G0003_0460.wav|0|li3 qiang2 shi4 li3 xiao3 zui3 ma
+custom_character_voice/sichuan/G0051_0106.wav|0|hun1 sha1 she4 ji4 xue2 yuan2 xu1 yao4 xie1 shen2 me
+custom_character_voice/sichuan/G1108_0052.wav|0|kui2 mei2 you3 cao3 zi4 tou2 de zi4 nian4 sha2 zi shen2 me
+custom_character_voice/sichuan/G1106_0672.wav|0|bai3 du4 shen2 me shi2 hou4 zai4 mei3 guo2 gu3 shi4 shang4 shi4 de
+custom_character_voice/sichuan/G1108_0404.wav|0|qing3 wen4 la1 tiao4 gong1 de ji4 qiao3
+custom_character_voice/sichuan/G1108_0103.wav|0|ni3 xiao3 de zai4 na3 er2 you3 mian3 fei4 de dong4 man4 zai4 xian4 wang3 zhan4 ma
+custom_character_voice/sichuan/G0001_0571.wav|0|jiu1 jing4 zen3 me zuo4
+custom_character_voice/sichuan/G0007_0552.wav|0|you3 li3 shu4 wei4 shen2 me jiao4 you3 li3 shu4 er2 bu4 jiao4 wu2 li3 shu4
+custom_character_voice/sichuan/G0051_0549.wav|0|zai4 kong4 zhi4 mian4 ban3 li3 mei2 you3 de cheng2 xu4 zen3 me xie4 a
+custom_character_voice/sichuan/G1108_0566.wav|0|shui3 ping2 zuo4 de n3 sheng1 he2 shuang1 zi zuo4 de nan2 sheng1 he2 shi4 ma
+custom_character_voice/sichuan/G1103_0213.wav|0|zhu4 li3 zhi2 ye4 yi1 shi1 cheng2 ji4 xia4 lai2 le ma
+custom_character_voice/sichuan/G0008_0394.wav|0|wei4 shen2 me wo3 zai4 wang3 shang4 de dian4 ying3 you3 sheng1 yin1 mei2 ying3 xiang3
+custom_character_voice/sichuan/G1105_0023.wav|0|quan2 qiu2 you3 duo1 shao3 zhong3 zhu4 ming2 de yin1 le4 jiang3
+custom_character_voice/sichuan/G1103_0203.wav|0|qing3 wen4 mu4 qian2 liu2 xing2 de bing4 du2 shi4 shen2 me a
+custom_character_voice/sichuan/G1103_0320.wav|0|jie2 hun1 mei2 tong2 ju1 wo3 zen3 me ban4
+custom_character_voice/sichuan/G0008_0676.wav|0|zen3 me qu4 wu4 hua2 lu4 zou3 shen2 me lu4 xian4
+custom_character_voice/sichuan/G0008_0195.wav|0|xi2 guan4 shang4 chang2 jiang1 kang4 sheng1 su4 fen1 wei2 na3 wu3 lei4
+custom_character_voice/sichuan/G1103_0440.wav|0|wu3 zi qi2 hai2 fen1 kai1 ju2
+custom_character_voice/sichuan/G0003_0436.wav|0|ji3 ci4 bei4 ai4 shang1 hai4 le yi3 hou4 shi4 fou3 ying1 gai1 dui4 ai4 ma2 mu4
+custom_character_voice/sichuan/G1103_0293.wav|0|quan3 ye4 cha1 you3 duo1 shao3 ji2
+custom_character_voice/sichuan/G1105_0015.wav|0|xia4 men2 wu3 yi2 shan1 dou1 you3 na3 xie1 jing3 dian3 na4 xie1 gou4 wu4 dian3
+custom_character_voice/sichuan/G0008_0242.wav|0|nan2 ren2 wei4 shen2 me yi1 ge4 yang4
+custom_character_voice/sichuan/G0007_0464.wav|0|dian4 shi4 li3 de yang2 guang1 guang1 xian4 wei4 shen2 me shi4 lu3 jia1 xing4 de
+custom_character_voice/sichuan/G1106_0331.wav|0|wang3 lian4 yi1 nian2 duo1 le ni3 xiang1 xin4 ma
+custom_character_voice/sichuan/G1106_0296.wav|0|jie2 he2 sheng1 ming4 ke1 xue2 zhi1 shi2 lun4 ru2 he2 bao3 chi2 shen1 ti3 jian4 kang1
+custom_character_voice/sichuan/G1108_0598.wav|0|wei4 sha2 zi si4 she3 wu3 ru4 jie4 xian4 shi4 wu3
+custom_character_voice/sichuan/G0008_0400.wav|0|n3 fang1 jia4 zhuang1 ying1 gai1 zhun3 bei4 shen2 me
+custom_character_voice/sichuan/G1105_0103.wav|0|guan1 dian4 nao3 you3 na3 ji3 zhong3 fang1 fa3
+custom_character_voice/sichuan/G0003_0520.wav|0|zhi4 liao2 jiao3 qi4 you3 shen2 me hao3 ban4 fa3 ma
+custom_character_voice/sichuan/G1100_0345.wav|0|jun1 xun4 qi1 jian1 you3 mei2 you3 shen2 me hao3 de fang2 shai4 fang1 fa3
+custom_character_voice/sichuan/G0007_0246.wav|0|ji1 qi4 ren2 de yong4 tu2 shi4 shen2 me
+custom_character_voice/sichuan/G0008_0595.wav|0|xiao3 mao1 jiu4 xiang4 nian1 le yi1 yang4 zen3 me hui2 shi4
+custom_character_voice/sichuan/G0008_0590.wav|0|ni3 ren4 wei2 tian1 wai4 fei1 xian1 zhong1 na3 ge n3 jue2 se4 zui4 piao4 liang4
+custom_character_voice/sichuan/G1108_0531.wav|0|shi4 bu2 shi4 you3 de kun1 chong2 dou1 you3 hen3 duo1 xin1 zang4
+custom_character_voice/sichuan/G1108_0094.wav|0|jing1 chang2 ting1 ren2 shuo1 re4 liang4 re4 liang4 shi4 sha2 zi
+custom_character_voice/sichuan/G0008_0048.wav|0|wei4 shen2 me yao4 you3 cheng2 nuo4
+custom_character_voice/sichuan/G1103_0294.wav|0|liang2 shan1 zhou1 you3 ji1 chang3 ma
+custom_character_voice/sichuan/G1108_0164.wav|0|wei4 sha2 zi huang2 di4 cheng1 wei2 jiu3 wu3 zhi1 zun1
+custom_character_voice/sichuan/G0001_0295.wav|0|nan2 shi4 pi2 fu1 kong4 you2 mei3 bai2 yong4 na3 xie1 chan3 pin3
+custom_character_voice/sichuan/G1103_0386.wav|0|na3 li3 you3 mai4 ou1 lai2 ya3 si1 quan2 xi4 lie4 fa1 mo2 de
+custom_character_voice/sichuan/G0051_0640.wav|0|nei4 cun2 cun2 chu3 he2 ying4 pan2 cun2 chu3 you3 he2 qu1 bie2
+custom_character_voice/sichuan/G0007_0384.wav|0|da4 zhuan1 men2 li3 you3 han2 wen2 fan1 yi4 de xiao3 zi4 jiao4 shen2 me ming2
+custom_character_voice/sichuan/G0008_0632.wav|0|chou1 yan1 he2 ji4 yi4 li4 xia4 jiang4 you3 mei2 you3 guan1 xi4 you3 duo1 da4 guan1 xi4
+custom_character_voice/sichuan/G1100_0538.wav|0|fu4 zhi4 yu3 zhan1 tie1 de kuai4 jie2 jian4 shi4 shen2 me
+custom_character_voice/sichuan/G1100_0092.wav|0|you3 bing4 du2 shan1 bu4 liao3 zhong4 zhuang1 zai4 sha1 du2 xing2 ma
+custom_character_voice/sichuan/G1108_0499.wav|0|zai4 ai4 zhong1 ni3 shuo1 sha2 zi shi4 shi4 yang4 cai2 neng2 jiao4 zuo4 man3 zu2 ne
+custom_character_voice/sichuan/G0051_0574.wav|0|tian1 sheng1 de hei1 yan3 quan1 zen3 me ban4
+custom_character_voice/sichuan/G0008_0251.wav|0|wo3 biao3 jie3 guo4 sheng1 ri4 song4 shen2 me li3 wu4
+custom_character_voice/sichuan/G0051_0341.wav|0|qu3 ge4 shen2 me yang4 de gong1 si1 ming2 zi4
+custom_character_voice/sichuan/G0001_0438.wav|0|kuan1 dai4 you3 an1 zhuang1 shen2 me de bi3 jiao4 hao3
+custom_character_voice/sichuan/G1106_0260.wav|0|xiao4 zhong1 you3 lei4 de ying1 wen2 zen3 me pin1 na4 wei4 gao1 shou3 pin1 yi1 xia4
+custom_character_voice/sichuan/G1106_0628.wav|0|wo3 xiang3 kai1 jian1 chong3 wu4 yi1 yuan4
+custom_character_voice/sichuan/G0007_0085.wav|0|yi2 ge4 gong1 si1 de fa3 ren2 dai4 biao3 shi4 bu2 shi4 zhi3 neng2 you3 yi2 ge4 ren2
+custom_character_voice/sichuan/G1108_0248.wav|0|wen2 yan2 wen2 di4 wang2 jie1 wei4 zei2 fan1 yi4
+custom_character_voice/sichuan/G1103_0029.wav|0|zen3 me wo3 de dian4 nao3 you3 xie1 wang3 ye4 da3 bu4 kai1
+custom_character_voice/sichuan/G0007_0281.wav|0|nei4 yi1 gong1 si1 de nei4 yi1 yao4 fu4 shu4 ma
+custom_character_voice/sichuan/G0008_0028.wav|0|dian4 nao3 yu3 ren2 nao3 you3 shen2 me bu4 tong2
+custom_character_voice/sichuan/G0001_0030.wav|0|ren2 wei4 shen2 me zong3 hui4 shuo1 wei4 shen2 me
+custom_character_voice/sichuan/G1103_0286.wav|0|dian4 dao3 l4 de gai4 nian4 dan1 wei4 shi4 ru2 he2 ding4 yi4 de
+custom_character_voice/sichuan/G1106_0452.wav|0|wei4 shen2 me bi2 zi shang4 hui4 you3 xiao3 hei1 dian3 er2 zen3 yang4 qu1 chu2
+custom_character_voice/sichuan/G1100_0483.wav|0|ren2 si3 le zhen1 de neng2 sheng1 tian1 ma ren2 si3 hou4 you3 lun2 hui2 ma
+custom_character_voice/sichuan/G1103_0157.wav|0|qing3 wen4 hu2 nan2 xiang1 xi1 you3 mei2 you3 shou4 dao4 hong2 shui3 de ying3 xiang3 ne
+custom_character_voice/sichuan/G0051_0363.wav|0|ru2 he2 yang3 zhi2 xiang1 cao3 ji1
+custom_character_voice/sichuan/G0007_0014.wav|0|jia1 li3 you3 hong2 se4 ma3 yi3 pa2 lai2 pa2 qu4 zen3 me ban4
+custom_character_voice/sichuan/G0007_0293.wav|0|wei4 shen2 me peng2 you3 dou1 bu4 li3 wo3
+custom_character_voice/sichuan/G1103_0460.wav|0|zhen1 de hui4 you3 lan2 yan2 zhi1 ji3 ma
+custom_character_voice/sichuan/G0003_0614.wav|0|qing3 wen4 wu3 han4 zhe4 xie1 zao3 dian3 na3 li3 zuo4 de hao3
+custom_character_voice/sichuan/G1105_0622.wav|0|wei4 shen2 me wo3 dian4 nao3 bu4 ding4 qi1 de xiang3 yin1 yue4
+custom_character_voice/sichuan/G1105_0411.wav|0|she2 tou de te4 dian3 he2 gong1 neng2 shi4 shen2 me
+custom_character_voice/sichuan/G1103_0402.wav|0|fu2 wa2 you3 shen2 me han2 yi4
+custom_character_voice/sichuan/G0051_0292.wav|0|xiao3 hai2 er2 tai4 zao3 shang4 you4 er2 yuan2 hao3 ma
+custom_character_voice/sichuan/G1106_0697.wav|0|you3 shen2 me fang1 fa3 ke3 yi3 ti2 gao1 zi4 ji3 kuai4 su4 ying4 bian4 de neng2 li4
+custom_character_voice/sichuan/G0003_0533.wav|0|wei4 shen2 me you3 de n3 sheng1 xi3 huan1 ma4 jie1
+custom_character_voice/sichuan/G1103_0150.wav|0|zen3 yang4 mian4 dui4 yi2 ge4 ni3 zhi3 xi3 huan1 que4 you4 bu4 ai4 de ren2
+custom_character_voice/sichuan/G1108_0515.wav|0|xing1 ji4 zheng1 ba4 shi4 pin2 lu4 xiang4
+custom_character_voice/sichuan/G0001_0279.wav|0|zen3 me shuai3 yi2 ge4 n3 sheng1
+custom_character_voice/sichuan/G0001_0655.wav|0|wu3 bi3 zi4 gen1 lian4 xi2 xia4 zai4 de ruan3 jian4 ne
+custom_character_voice/sichuan/G0007_0415.wav|0|fu2 zhou1 na3 xie1 wang3 zhan4 ke3 yi3 fa1 bu4 er4 shou3 xin4 xi1
+custom_character_voice/sichuan/G0007_0481.wav|0|tian1 jin1 shi4 qu1 na3 you3 mai4 da4 kou3 pa4 de
+custom_character_voice/sichuan/G0051_0698.wav|0|zen3 me guan1 bi4 sheng1 ka3 qu1 dong4 cheng2 xu4
+custom_character_voice/sichuan/G1108_0259.wav|0|lang1 ge4 zen3 me cai2 neng2 he2 nan2 sheng1 xiang1 chu3
+custom_character_voice/sichuan/G0007_0593.wav|0|shuang1 xiu1 ri4 neng2 bu4 neng2 mai3 dao4 huo3 che1 piao4
+custom_character_voice/sichuan/G0051_0438.wav|0|qing3 wen4 he2 nan2 sheng3 zhao1 jing3 kao3 shi4 cheng2 ji4 he2 shi2 gong1 bu4
+custom_character_voice/sichuan/G0001_0386.wav|0|qiang1 si1 qiang1 si1 ban4 zou4 na3 li3 xia4 zai4
+custom_character_voice/sichuan/G0001_0056.wav|0|shen2 me yang4 de n3 sheng1 tao3 nan2 sheng1 xi3 huan1
+custom_character_voice/sichuan/G1103_0329.wav|0|you3 guan1 yu2 yue4 guang1 de wen2 zhang1 ma
+custom_character_voice/sichuan/G1108_0519.wav|0|lang1 ge4 zen3 me zuo4 yi2 ge4 zhong1 xiao4 liang3 quan2 de ren2
+custom_character_voice/sichuan/G1106_0338.wav|0|na3 li3 you3 dan1 che1 mai4
+custom_character_voice/sichuan/G0051_0671.wav|0|bo2 ke4 shi4 shen2 me you3 shen2 me yong4
+custom_character_voice/sichuan/G1106_0335.wav|0|fa3 l4 gu3 li4 wo3 men zuo4 de xing2 wei2 shi4 shen2 me
+custom_character_voice/sichuan/G0003_0152.wav|0|kao3 sha2 yang4 de zheng4 shu1 shi4 he2 wo3
+custom_character_voice/sichuan/G0051_0149.wav|0|zhong1 tou2 zheng4 quan4 wang3 zong3 zhan4 wang3 zhi3 shi4 shen2 me
+custom_character_voice/sichuan/G1103_0245.wav|0|zen3 me cai2 ke3 yi3 sheng1 huo2 bu4 wu2 liao2 a
+custom_character_voice/sichuan/G1103_0529.wav|0|zhi4 liao2 huang2 ya2 you3 shen2 me te4 bie2 you3 xiao4 de fang1 fa3 ma
+custom_character_voice/sichuan/G0008_0265.wav|0|da4 pin1 tu2 de hua4 zen3 me you2 ji4
+custom_character_voice/sichuan/G0003_0024.wav|0|tian1 na2 shui3 shi4 sha2 dong1 xi1
+custom_character_voice/sichuan/G1106_0416.wav|0|kong4 zhi4 you4 ban4 zhang1 lian3 de shi4 you4 nao3 hai2 shi4 zuo3 nao3
+custom_character_voice/sichuan/G0008_0308.wav|0|ju3 bai2 qi2 biao3 shi4 tou2 xiang2 hai2 biao3 shi4 shen2 me
+custom_character_voice/sichuan/G0008_0643.wav|0|zen3 yang4 neng2 shi3 zi4 ji3 zai4 shi4 ye4 shang4 you3 suo3 cheng2 jiu4
+custom_character_voice/sichuan/G0007_0282.wav|0|pou1 fu4 chan3 dui4 ying1 er2 you3 shen2 me bu4 li4
+custom_character_voice/sichuan/G0008_0405.wav|0|cong2 shen1 zhen4 fu2 tian2 qu4 guang3 zhou1 dong1 zhan4 zen3 yang4 cheng2 che1 zui4 bian4 jie2
+custom_character_voice/sichuan/G1105_0189.wav|0|bei3 jing1 wu3 dao3 xue2 yuan4 fu4 jin4 you3 fang2 zi ke3 yi3 zu1 zhu4 ma
+custom_character_voice/sichuan/G0001_0196.wav|0|wei4 shen2 me wo3 you3 shi2 hou4 you3 xiao3 du4 zi you3 shi2 hou4 mei2 you3
+custom_character_voice/sichuan/G0003_0413.wav|0|yi2 ge4 lao3 tai4 tai4 shang4 le gong1 che1 wei4 shen2 me wu2 ren2 rang4 zuo4
+custom_character_voice/sichuan/G0008_0577.wav|0|zen3 me kuai4 su4 du4 guo4 jian3 fei2 ping2 tai2 qi1
+custom_character_voice/sichuan/G0051_0618.wav|0|na3 li3 ke3 yi3 zhao3 dao4 zai4 xian4 cai2 jian3 tu2 pian4 da4 xiao3 de cheng2 xu4
+custom_character_voice/sichuan/G0001_0140.wav|0|jiang1 zhi4 huan4 de nian2 ling2 shi4 duo1 shao3
+custom_character_voice/sichuan/G1100_0148.wav|0|you3 shen2 me zhi2 wu4 shi4 you3 du2 de
+custom_character_voice/sichuan/G1106_0658.wav|0|zi4 ran2 shu4 de ping2 fang1 dou1 shi4 he2 shu4 ma
+custom_character_voice/sichuan/G0008_0661.wav|0|na3 li3 ke3 yi3 mian3 fei4 xia4 zai4 huo4 shou1 kan4 ji2 ta1 shi4 pin2 jiao4 cheng2
+custom_character_voice/sichuan/G1100_0687.wav|0|gan3 lan3 you2 zai4 na3 li3 you3 mai4 de
+custom_character_voice/sichuan/G1103_0078.wav|0|li4 shi3 shang4 you3 lei4 si4 de shi4 qing2 ma
+custom_character_voice/sichuan/G0003_0319.wav|0|na3 li3 you3 dian4 shi4 you2 xi4 xia4 zai4
+custom_character_voice/sichuan/G0008_0029.wav|0|bei4 jia1 de ying1 tao2 ban1 na3 li3 ke3 yi3 zai4 xian4 kan4
+custom_character_voice/sichuan/G0003_0305.wav|0|zhong1 guo2 shen1 ao4 duan3 pian4 dao3 yan3 shi4 shui2
+custom_character_voice/sichuan/G0008_0325.wav|0|quan2 shen1 wu2 li4 qing1 du4 fu4 xie4 shi4 zen3 me le
+custom_character_voice/sichuan/G1103_0646.wav|0|mu4 qian2 zui4 zhuan4 qian2 de hang2 ye4 shi4 shen2 me
+custom_character_voice/sichuan/G1103_0308.wav|0|shang4 hai3 kuai4 ji4 chu1 ji2 kao3 shi4 bao4 le ma
+custom_character_voice/sichuan/G1103_0509.wav|0|can1 jia1 kong1 jing3 ti3 neng2 ce4 shi4 duo1 shao3 fen1 suan4 he2 ge2
+custom_character_voice/sichuan/G0001_0111.wav|0|zhong1 guo2 si4 shen2 shou4 zhi3 shen2 me
+custom_character_voice/sichuan/G0008_0296.wav|0|chong1 zhi2 de yue4 piao4 ka3 yong4 bu4 wan2 de qian2 neng2 tui4 ma
+custom_character_voice/sichuan/G1103_0426.wav|0|shen1 yong3 hao4 shi4 na3 bu4 han2 guo2 dian4 shi4 ju4 zhong1 zhu3 jue2
+custom_character_voice/sichuan/G1100_0350.wav|0|han4 mao2 hui4 yue4 ti4 yue4 zhang3 ma zen3 yang4 yong3 jiu3 chu2 mao2
+custom_character_voice/sichuan/G1103_0066.wav|0|cong2 dai4 shu4 shang4 zen3 yang4 zhi1 dao4 han2 shu4 mou3 yi1 ji2 xian4 bu4 ke3 dao3
+custom_character_voice/sichuan/G1100_0627.wav|0|mei3 tian1 dou1 da3 qiu2 hui4 ying3 xiang3 zhang3 gao1 ma
+custom_character_voice/sichuan/G0007_0232.wav|0|lin2 zhi4 ling2 de ai4 que4 shi4 shen2 me lei4 xing2 de
+custom_character_voice/sichuan/G0007_0485.wav|0|yi1 wei4 de zhui1 qiu2 jin1 qian2 you3 shen2 me dao4 di3 you3 shen2 me hao3 chu4
+custom_character_voice/sichuan/G1106_0229.wav|0|li4 shi3 shang4 you3 ming2 di1 shi4 you3 na3 xie1
+custom_character_voice/sichuan/G1108_0332.wav|0|dong1 fang1 l4 zhou1 zhou1 chang2 hao3 duo1
+custom_character_voice/sichuan/G0001_0373.wav|0|han4 di4 shi4 yi2 zhong3 shen2 me nong2 zuo4 wu4
+custom_character_voice/sichuan/G1106_0583.wav|0|jia1 mi4 gou3 shi4 shen2 me you3 shen2 me zuo4 yong4
+custom_character_voice/sichuan/G0003_0392.wav|0|shen2 me hua1 cao3 xi1 shou1 dian4 nao3 fu2 she4 xiao4 guo3 hao3
+custom_character_voice/sichuan/G1103_0299.wav|0|dian4 nao3 ping2 mu4 de zi4 wei4 shen2 me bu4 qing1 chu3
+custom_character_voice/sichuan/G0008_0412.wav|0|yi1 xue2 ben3 ke1 yao4 kao3 shen2 me nei4 rong2
+custom_character_voice/sichuan/G0051_0144.wav|0|ai4 hu4 yan3 jing1 de fang1 fa3 jing1 yan4 you3 shen2 me
+custom_character_voice/sichuan/G1100_0649.wav|0|ri4 ben3 xin1 su4 de wu4 jia4
+custom_character_voice/sichuan/G1105_0398.wav|0|lu2 bu4 ying1 wen2 suo1 xie3 shi4 shen2 me
+custom_character_voice/sichuan/G1103_0172.wav|0|ying4 pan2 jie1 kou3 you3 na3 xie1 ge4 you3 shen2 me te4 dian3
+custom_character_voice/sichuan/G1100_0640.wav|0|nan2 sheng1 xi3 huan1 shen2 me yang4 de n3 sheng1 ne
+custom_character_voice/sichuan/G1100_0138.wav|0|lian3 shang4 zhang3 man3 le dou4 dou4 shi4 zen3 me hui2 shi4 a
+custom_character_voice/sichuan/G1108_0165.wav|0|nan2 n3 hao3 duo1 sui4 rang4 jie2 hun1
+custom_character_voice/sichuan/G0003_0063.wav|0|qing3 wen4 na3 li3 you3 ming4 ling4 yu3 zheng1 fu2 quan2 xi4 lie4 de han4 hua4 bu3 ding1
+custom_character_voice/sichuan/G0003_0537.wav|0|qing3 wen4 bei4 dong4 xi1 yan1 dui4 yan3 jing1 de wei1 hai4
+custom_character_voice/sichuan/G1100_0341.wav|0|shen2 me pai2 zi de yan3 bu4 xie4 zhuang1 you2 hao3
+custom_character_voice/sichuan/G1100_0387.wav|0|cong2 qing1 dao3 dao4 ru3 shan1 zui4 jin4 zui4 hao3 zou3 de lu4 shi4 shen2 me
+custom_character_voice/sichuan/G0051_0429.wav|0|tou2 fa4 gan1 ku1 qie3 cong2 zhong1 jian4 duan4 yao4 zen3 me zhi4
+custom_character_voice/sichuan/G0007_0165.wav|0|xian4 zai4 mai3 fang2 shou3 fu4 de bai3 fen1 bi3 shi4 duo1 shao3
+custom_character_voice/sichuan/G1100_0697.wav|0|ou1 ruo4 la1 shi4 shen2 me yi4 si pan1 duo1 la1 shi4 shen2 me ni2 cai3 shi4 shui2
+custom_character_voice/sichuan/G0003_0271.wav|0|yuan2 sheng1 da4 die2 shi4 sha2 yi4 si1
+custom_character_voice/sichuan/G1105_0417.wav|0|yi1 xie1 ji1 fang2 de dian4 nao3 dou1 zuo4 guo4 le na3 xie1 she4 zhi4
+custom_character_voice/sichuan/G0007_0231.wav|0|xiang4 yang2 zhe4 ge ming2 zi4 shen2 me yi4 si
+custom_character_voice/sichuan/G0007_0570.wav|0|qin2 liu2 gan3 bing4 du2 ke3 yi3 zai4 gao1 wen1 xia4 bei4 sha1 si3 ma
+custom_character_voice/sichuan/G0001_0369.wav|0|shen2 me shi4 jiang4 gang1 ding4 li4
+custom_character_voice/sichuan/G1108_0621.wav|0|hong2 guan1 he2 wei1 guan1 wei4 sha2 zi xiang1 si4
+custom_character_voice/sichuan/G0001_0683.wav|0|yan3 li3 you3 xue4 kuai4 zen3 me hui2 shi4
+custom_character_voice/sichuan/G1100_0639.wav|0|shang1 ye4 zi1 xun2 de yuan2 ze2 shi4 shen2 me
+custom_character_voice/sichuan/G1100_0601.wav|0|yi4 miao2 wei4 shen2 me ke3 yi3 zai4 shen1 ti3 li3 dai1 hen3 duo1 nian2
+custom_character_voice/sichuan/G0007_0079.wav|0|shui3 huo4 he2 jia3 huo4 you3 shen2 me qu1 bie2
+custom_character_voice/sichuan/G1105_0234.wav|0|gan1 cao3 ke3 yi3 zhi4 sang3 zi si1 ya3 ma
+custom_character_voice/sichuan/G1106_0423.wav|0|gong1 zuo4 le hai2 ke3 yi3 zai4 xue2 xiao4 bao4 kao3 guo2 jia1 si4 liu4 ji2 ma
+custom_character_voice/sichuan/G1103_0466.wav|0|you2 na4 si1 hui4 bu2 hui4 yong4 ren2 ha1 li3 si1 na3 er2 qu4 le
+custom_character_voice/sichuan/G0003_0296.wav|0|shen2 me jiao4 ying1 shou1 zhang4 kuan3 tie1 xian4
+custom_character_voice/sichuan/G0003_0252.wav|0|zen3 yang4 xiu1 gai3 nei4 cun2 de du2 qu3 fang1 shi4
+custom_character_voice/sichuan/G0007_0534.wav|0|hua2 qiang2 xi3 huan1 kan4 shen2 me jie2 mu4
+custom_character_voice/sichuan/G1103_0068.wav|0|shen1 zhen4 you3 mai4 wu3 nei4 chang1 mei3 de man4 hua4 shu1 dian4 zai4 na3 li3
+custom_character_voice/sichuan/G1103_0365.wav|0|shen2 me shi4 xiang1 guan1 han2 shu4
+custom_character_voice/sichuan/G1100_0195.wav|0|you3 bei1 shang1 de shi1 lian4 qing2 ge1 ma
+custom_character_voice/sichuan/G1106_0369.wav|0|da4 hai3 hai3 di3 zui4 shen1 neng2 you3 duo1 shao3 mi3
+custom_character_voice/sichuan/G1108_0385.wav|0|luan4 shi4 niao3 xiong2 lang1 ge4 zen3 me shou1 wu3 shen2
+custom_character_voice/sichuan/G1103_0675.wav|0|tou2 fa4 shi4 zi4 lai2 juan3 you3 shen2 me ban4 fa3 ke3 yi3 zhi4 yi1 zhi4 ma
+custom_character_voice/sichuan/G0007_0063.wav|0|zen3 me chuang4 jian4 tie1 ba zui4 xin1 ba lei1
+custom_character_voice/sichuan/G0051_0314.wav|0|zhou1 wu3 wang2 feng1 duo1 shao3 zhu1 hou2
+custom_character_voice/sichuan/G1105_0053.wav|0|na3 li3 you3 dong4 hua4 pian4 fei2 niu2 niu2 bei4 si1 xia4 zai4
+custom_character_voice/sichuan/G1100_0069.wav|0|zai4 lun4 tan2 kan4 dao4 ren2 bu4 neng2 zhe4 me chen2 kai3 ge1 shi4 shen2 me yi4 si
+custom_character_voice/sichuan/G0051_0142.wav|0|nan2 yang2 fang1 yuan3 dian4 nao3 dao4 di3 hao3 bu4 hao3 ya
+custom_character_voice/sichuan/G1106_0386.wav|0|xian3 shi4 qi4 de ye4 jing1 ping2 ping2 hao3 hai2 shi4 pu3 tong1 ping2 hao3
+custom_character_voice/sichuan/G1103_0630.wav|0|zhen1 ai4 shi4 shen2 me shi4 qin1 qing2 hai2 shi4 ai4 qing2 na3 ge geng4 zhong4 yao4
+custom_character_voice/sichuan/G1103_0524.wav|0|zai4 wang3 shang4 shou1 kan4 shi4 pin2 jie2 mu4 dui4 ying4 pan2 you3 sun3 hai4 ma
+custom_character_voice/sichuan/G1100_0700.wav|0|jing1 chang2 meng4 jian4 yi2 ge4 ren2 shi4 zen3 me hui2 shi4
+custom_character_voice/sichuan/G1106_0646.wav|0|ru2 he2 ba3 wo3 de zhu3 ye4 zuo4 de geng4 you3 te4 se4
+custom_character_voice/sichuan/G1100_0673.wav|0|gong1 an1 pai4 zhi3 de shi4 shui2
+custom_character_voice/sichuan/G1103_0593.wav|0|wo3 guo2 gu3 dai4 dui4 n3 zi3 de shu4 fu4 dou1 biao3 xian4 zai4 na4 xie1 fang1 mian4
+custom_character_voice/sichuan/G0007_0171.wav|0|ru2 he2 shan1 chu2 sheng4 hu2 you2 xi4
+custom_character_voice/sichuan/G1105_0028.wav|0|mu3 qin1 you3 wai4 yu4 wo3 gai1 zen3 me ban4
+custom_character_voice/sichuan/G1100_0106.wav|0|wei4 shen2 me zuo3 shou3 bi3 you4 shou3 da4 yi4 dian3
+custom_character_voice/sichuan/G0007_0661.wav|0|yong4 shen2 me ruan3 jian4 ke3 yi3 dui4 shi4 pin2 jin4 xing2 jian3 qie4 he2 pin1 jie1
+custom_character_voice/sichuan/G0008_0323.wav|0|neng2 gao4 su4 wo3 na3 ge di4 fang1 shi4 xue2 ying1 yu3 de hao3 di4 fang1
+custom_character_voice/sichuan/G1100_0306.wav|0|qing3 wen4 tang2 gu1 da3 gou3 ban4 de dian4 hua4 hao4 ma3
+custom_character_voice/sichuan/G1100_0403.wav|0|wei4 sha2 wo3 de feng1 shan4 chui1 de2 zhen4 tian1 xiang3 a zhen1 shou4 bu4 le le
+custom_character_voice/sichuan/G0008_0103.wav|0|bei3 jing1 na3 you3 mai4 he2 ye4 cha2 de wo3 yao4 jian3 fei2
+custom_character_voice/sichuan/G1103_0232.wav|0|shen2 me shi4 gao1 wei4 jie2 tan1
+custom_character_voice/sichuan/G1103_0210.wav|0|bao3 xian3 lei4 de chu3 bei4 gan4 bu4 shi4 gan4 shen2 me yong4
+custom_character_voice/sichuan/G1106_0382.wav|0|bei3 jing1 you3 lao3 ren2 fu2 zhuang1 zhuan1 mai4 dian4 ma
+custom_character_voice/sichuan/G1103_0364.wav|0|wei4 shen2 me nan2 ren2 xi3 huan1 zai4 wai4 mian4 zhao3 n3 ren2
+custom_character_voice/sichuan/G0003_0254.wav|0|yin1 zen3 me yong4 wu3 bi3 da3
+custom_character_voice/sichuan/G1103_0205.wav|0|ling2 mu4 yu3 yan4 qi4 che1 zhi2 de gou4 mai3 ma
+custom_character_voice/sichuan/G1105_0546.wav|0|huo3 ying3 ren3 zhe3 zhong1 suo3 zhi3 de cha2 ke4 la1 shi4 shen2 me
+custom_character_voice/sichuan/G0008_0066.wav|0|shui4 mian2 zhi4 liang4 bu4 hao3 zen3 me jie3 jue2
+custom_character_voice/sichuan/G0008_0215.wav|0|ming2 cheng2 huang2 hou4 zhu3 ti2 ge1 ying1 wen2 yuan2 ban3 de ge1 ci2
+custom_character_voice/sichuan/G0008_0262.wav|0|shi4 bu2 shi4 jing1 chang2 nie1 bi2 zi bi2 zi hui4 bian4 da4 a
+custom_character_voice/sichuan/G0001_0513.wav|0|he2 chu4 you3 fei4 jia3 chun2 huo4 di1 du4 jia3 chun2 mai4
+custom_character_voice/sichuan/G1106_0611.wav|0|zuo4 huo3 che1 cong2 shang4 hai3 dao4 da4 lian2 yao4 duo1 jiu3
+custom_character_voice/sichuan/G0008_0507.wav|0|lie4 zi4 shen2 me yi4 si
+custom_character_voice/sichuan/G0008_0011.wav|0|zui4 xin1 de zai4 xian4 dian4 ying3 wang3 zhi3 a
+custom_character_voice/sichuan/G0001_0627.wav|0|na3 you3 huang2 shui3 yao2 n3 sheng1 du2 chang4
+custom_character_voice/sichuan/G0003_0015.wav|0|shen2 me shi4 shu4 ju4 ku4 de luo2 ji2 she4 ji4
+custom_character_voice/sichuan/G1106_0681.wav|0|wei4 shen2 me wo3 de dian4 nao3 shang4 bu4 liao3 wang3
+custom_character_voice/sichuan/G1106_0368.wav|0|tian1 jin1 cheng2 kao3 yu4 kao3 kao3 shi4 hui4 hen3 nan2 ma
+custom_character_voice/sichuan/G0051_0327.wav|0|zhe4 jiang1 de ben3 ke1 sheng1 jiu4 ye4 qian2 jing3 zen3 me yang4
+custom_character_voice/sichuan/G0008_0544.wav|0|shen2 me zhuan1 ye4 jiang1 lai2 bu4 ke3 yi3 zhuan1 sheng1 ben3
+custom_character_voice/sichuan/G0003_0389.wav|0|gao4 su4 wo3 ying3 ba shi4 gan4 shen2 me de
+custom_character_voice/sichuan/G0007_0346.wav|0|wei4 shen2 me you3 xie1 mao1 ye3 hui4 zhuang1 si3
+custom_character_voice/sichuan/G0003_0182.wav|0|sha3 gua1 xiang1 ji1 neng2 zhao4 chu1 hao3 zhao4 pian1 er2 ma
+custom_character_voice/sichuan/G1106_0179.wav|0|da4 yi1 xin1 sheng1 ying1 gai1 zhu4 yi4 xie1 shen2 me ne
+custom_character_voice/sichuan/G1108_0696.wav|0|yi4 ban1 bai3 di4 tan1 er2 de ren2 zai4 na3 er2 jin4 huo4 de jia4 wei4 na3 yang4 ai1
+custom_character_voice/sichuan/G0003_0118.wav|0|shen2 me shi4 bai2 qu1 shen2 me shi4 su1 qu1
+custom_character_voice/sichuan/G0008_0368.wav|0|shen2 me shi4 zhong1 yuan2 jie2
+custom_character_voice/sichuan/G0003_0286.wav|0|tian1 kong1 zhi1 cheng2 de wang3 guan3 xin4 xiang1 shi4 duo1 shao3
+custom_character_voice/sichuan/G1103_0622.wav|0|yi2 ge4 zi4 shi4 duo1 shao3 zi4 jie2 a
+custom_character_voice/sichuan/G0003_0448.wav|0|zi4 lai2 shui3 de wen1 du4 wei4 duo1 shao3 she4 shi4 du4
+custom_character_voice/sichuan/G1106_0358.wav|0|jiao4 zhang1 xu4 you3 duo1 shao3
+custom_character_voice/sichuan/G1100_0172.wav|0|wei4 shen2 me wo3 men ban4 gong1 shi4 de dian4 nao3 lun2 liu2 diao4 xian4
+custom_character_voice/sichuan/G1103_0337.wav|0|jie2 shi2 ke3 yi3 jian3 fei2 ma
+custom_character_voice/sichuan/G1103_0362.wav|0|zen3 me ti2 gao1 zi4 xin4
+custom_character_voice/sichuan/G1100_0461.wav|0|wei4 he2 ke1 dao4 zhou3 zi jiu4 gan3 dao4 shou3 ma2
+custom_character_voice/sichuan/G0051_0355.wav|0|wo3 xiang3 gei3 xi1 wang4 gong1 cheng2 juan1 kuan3 gai1 zen3 me zuo4
+custom_character_voice/sichuan/G0008_0056.wav|0|na3 li3 you3 mai4 er4 jin4 zhi4 de shou3 biao3
+custom_character_voice/sichuan/G0003_0556.wav|0|na3 li3 xia4 zai4 zhe4 zhong3 han4 yu3 ci2 dian3 ru2 xia4 mian4 zhe4 zhong3
+custom_character_voice/sichuan/G0001_0276.wav|0|zai4 da4 xue2 you3 lao3 po2 hao3 ma
+custom_character_voice/sichuan/G1108_0278.wav|0|yi1 ka3 lu4 huo2 li4 xi1 you4 guang3 gao4 qu1 ming2 shi4 sha2 zi
+custom_character_voice/sichuan/G0001_0428.wav|0|zen3 yang4 shi3 yong4 liang3 ge4 ke4 lu4 guang1 qu1 zuo4 yi1 zhang1 xi4 tong3 guang1 pan2
+custom_character_voice/sichuan/G1105_0129.wav|0|tai4 bai2 shan1 de zhu3 yao4 bao3 hu4 dui4 xiang4 shi4 shen2 me
+custom_character_voice/sichuan/G1108_0630.wav|0|shen4 zai4 ren2 ti3 de sha2 zi bu4 wei4
+custom_character_voice/sichuan/G1105_0048.wav|0|wang3 shang4 na3 li3 ke3 yi3 kan4 dao4 gu3 piao4 zou3 shi4 tu2
+custom_character_voice/sichuan/G1108_0384.wav|0|nan2 n3 sheng1 zhi1 jian1 shu1 yuan3 yi4 dian3 hao3 ma
+custom_character_voice/sichuan/G0001_0473.wav|0|bai3 du4 sou1 suo3 he2 ya3 hu3 sou1 suo3 xiang1 bi3 you1 dian3 zai4 na3 li3
+custom_character_voice/sichuan/G0008_0569.wav|0|hua2 qiao2 da4 xue2 ji1 xie4 gong1 cheng2 hao3 ma
+custom_character_voice/sichuan/G0008_0114.wav|0|zen3 yang4 shan1 chu2 ye4 mian4 ding3 duan1 de heng2 tiao2
+custom_character_voice/sichuan/G0003_0068.wav|0|na3 li3 you3 wu3 dao3 ai4 hao3 zhe3 de lun4 tan2
+custom_character_voice/sichuan/G1103_0207.wav|0|li2 kai1 ai4 ren2 zen3 me qu4 mian4 dui4 xian4 shi2
+custom_character_voice/sichuan/G0001_0512.wav|0|jin1 nian2 xia4 ji4 tou2 fa4 liu2 xing2 shen2 me yan2 se4
+custom_character_voice/sichuan/G1100_0020.wav|0|xian4 zai4 zui4 jin4 de yin1 yue4 qu4 na3 li3 zhao3 a
+custom_character_voice/sichuan/G1108_0209.wav|0|chuan1 da4 qin3 shi4 shi4 sha2 zi gui1 ge2 de
+custom_character_voice/sichuan/G1108_0668.wav|0|wu3 chang1 na3 li3 you3 ying1 yu3 xie3 zuo4 de pei2 xun4 ban1 er2 ei2
+custom_character_voice/sichuan/G0001_0658.wav|0|zai4 wang3 shang4 ru2 he2 cha2 xun2 ke3 yi3 gui1 hua4 zi4 ji3 zhi2 ye4 de wang3 zhan4
+custom_character_voice/sichuan/G1108_0637.wav|0|l4 bao3 shi2 li3 lang1 ge4 zen3 me wang4 ji4 shan3 guang1 shu4
+custom_character_voice/sichuan/G1103_0642.wav|0|li3 ying1 ai4 chu1 hua4 chuan2 le ma
+custom_character_voice/sichuan/G1108_0647.wav|0|dian4 shi4 ju4 shi2 ba1 luo2 han4 de pian4 wei3 qu1 jiao4 sha2 zi ming2 zi4
+custom_character_voice/sichuan/G0003_0108.wav|0|nei4 jiang1 na3 li3 you3 zuo4 shou4 si1 de juan4 lian2 mai3
+custom_character_voice/sichuan/G0008_0338.wav|0|zen3 yang4 shi3 an1 zhuang1 le hai2 yuan2 ka3 de dian4 nao3 shi1 qu4 huan2 yuan2 gong1 neng2
+custom_character_voice/sichuan/G0051_0507.wav|0|nan2 hai2 hui4 zai4 yi4 n3 hai2 shi4 chu3 n3 ma
+custom_character_voice/sichuan/G0051_0336.wav|0|zhi4 zuo4 wang3 ye4 rong2 yi4 ma
+custom_character_voice/sichuan/G0007_0008.wav|0|wo3 xiang3 zhi1 dao4 ri4 ben3 yin2 xing2 zai4 hang2 zhou1 de di4 zhi3
+custom_character_voice/sichuan/G1100_0401.wav|0|kao3 zhu4 ce4 kuai4 ji4 shi1 you3 shen2 me qi3 dian3 yao1 qiu2 kao3 na3 ji3 men2 er2
+custom_character_voice/sichuan/G1103_0183.wav|0|na3 li3 you3 fa1 jue2 ding4 ling2 de ji4 lu4 pian4 di4 xia4 gong1 dian4 xia4 zai4
+custom_character_voice/sichuan/G0003_0438.wav|0|shen2 me shi4 li4 ci2 chang3 dian4 liu2 zai4 shen2 me shu1 li3 mian4 you3 jie4 shao4
+custom_character_voice/sichuan/G0001_0432.wav|0|zai4 ren4 wu4 lan2 shang4 you3 an1 quan2 jing3 bao4 biao1 zhi4 zen3 me qu4
+custom_character_voice/sichuan/G0051_0629.wav|0|wei4 shen2 me chu3 n3 mo2 po4 le hui4 liu2 xie3 lei
+custom_character_voice/sichuan/G0007_0143.wav|0|yong4 lai2 bao3 shi1 shen2 me pai2 zi de shen2 me chan3 pin3 hao3
+custom_character_voice/sichuan/G0007_0506.wav|0|na3 zhong3 hu4 fu1 pin3 zui4 wu4 lian2 jia4 mei3
+custom_character_voice/sichuan/G1100_0371.wav|0|zui4 jin4 you3 shen2 me hao3 wan2 de you2 xi4
+custom_character_voice/sichuan/G0008_0209.wav|0|you3 na3 ji3 zhong3 zhi4 li3 he2 shui3 wu1 ran3 shi3 shui3 bian4 qing1 jie2 de fang1 fa3
+custom_character_voice/sichuan/G1103_0504.wav|0|dian4 ying3 zai4 na3 li3 xia4 zai4
+custom_character_voice/sichuan/G0003_0220.wav|0|jiao1 huan4 ji1 he2 ji2 xian4 qi4 you3 shen2 me bu4 tong2 a
+custom_character_voice/sichuan/G1105_0180.wav|0|tou2 fa4 fa1 shao1 gan1 ku1 zen3 me jie3 jue2
+custom_character_voice/sichuan/G0003_0579.wav|0|si1 chou2 yi1 fu2 hui4 ran3 ma na3 li3 you3
+custom_character_voice/sichuan/G1108_0636.wav|0|wei4 sha2 zi bai3 du4 bu4 rang4 ren2 tao3 lun4 zheng4 zhi4
+custom_character_voice/sichuan/G1108_0225.wav|0|qing3 wen4 chong2 qing4 na3 er2 you3 guang3 dong1 hua4 yue4 yu3 pei2 xun4 ban1 ne
+custom_character_voice/sichuan/G1105_0630.wav|0|na3 xie1 wang3 zhan4 neng2 kuai4 su4 xia4 zai4 dian4 ying3 a
+custom_character_voice/sichuan/G1100_0633.wav|0|pi2 fu1 an4 huang2 ying1 gai1 zen3 me ban4
+custom_character_voice/sichuan/G1105_0394.wav|0|lian3 shang4 hen3 duo1 hen3 xiao3 de dou4 dou4 zen3 me ban4
+custom_character_voice/sichuan/G1103_0323.wav|0|liu2 de2 hua2 jin1 nian2 shen2 me shi2 hou4 chu1 xin1 chang4 pian4
+custom_character_voice/sichuan/G0001_0023.wav|0|wei4 shen2 me xiao3 hai2 hui4 you3 tian1 yan3 ne
+custom_character_voice/sichuan/G0001_0292.wav|0|qing3 wen4 zai4 na3 xia4 zai4 ou3 xiang4 ma2 que4 you2 xi4
+custom_character_voice/sichuan/G0003_0673.wav|0|zen3 me zuo4 hao3 cai3 gou4 yuan2 he2 suo3 pei2 zhuan1 yuan2
+custom_character_voice/sichuan/G1103_0069.wav|0|yong4 you1 pan2 fang4 chu1 de man3 ping2 you2 xi4 zen3 me yang4 tui4 chu1
+custom_character_voice/sichuan/G1100_0237.wav|0|ya4 mi3 qi4 si1 de ge4 ren2 zi1 liao4
+custom_character_voice/sichuan/G0008_0294.wav|0|mao4 xian3 dao3 zen3 me chong1 dian3 a
+custom_character_voice/sichuan/G1108_0327.wav|0|lang1 ge4 zen3 me xiu1 gai3 ying1 yong4 cheng2 xu4 cuo4 wu4
+custom_character_voice/sichuan/G1100_0357.wav|0|shen2 me shi4 xiang1 guan1 ping2 lun4 wen2 zhang1
+custom_character_voice/sichuan/G1105_0081.wav|0|wo3 bei4 sou1 shen1 le zen3 me ban4
+custom_character_voice/sichuan/G0003_0430.wav|0|mei2 tong2 yin2 hang2 xi4 tong3 zhi1 jian1 ke3 xiang1 hu4 zhuan3 zhang4 ma
+custom_character_voice/sichuan/G0001_0342.wav|0|pi2 bao1 shang4 hua4 le yuan2 zhu1 bi3 yin4 yong4 shen2 me ke3 yi3 ca1 diao4 a
+custom_character_voice/sichuan/G0001_0034.wav|0|sha1 long2 shi4 shen2 me dong1 xi1 ya
+custom_character_voice/sichuan/G1105_0418.wav|0|zui4 jin4 ji3 nan2 you3 shen2 me ge1 chang4 bi3 sai4
+custom_character_voice/sichuan/G0007_0425.wav|0|zen3 yang4 shan1 chu2 diao4 ji4 suan4 ji1 guan3 li3 yuan2 zhang4 hao4
+custom_character_voice/sichuan/G1103_0201.wav|0|tui1 jian4 ge4 bu2 yao4 dian3 ka3 wan2 de ren2 you4 duo1 de xin1 you2 xi4 a
+custom_character_voice/sichuan/G1106_0579.wav|0|ru2 guo3 bei4 fen4 er2 zhu4 ce4 biao3 bei4 fen4 er2 you3 shen2 me yong4
+custom_character_voice/sichuan/G0007_0233.wav|0|qiu2 wang2 ma3 la1 duo1 na4 shi4 na3 ge guo2 jia1 de
+custom_character_voice/sichuan/G0051_0645.wav|0|shi4 jie4 shi2 da4 wen2 hao2 zhi1 shou3 shi4 shui2
+custom_character_voice/sichuan/G0007_0598.wav|0|gou3 gou3 gan3 mao4 le zen3 me ban4
+custom_character_voice/sichuan/G0007_0149.wav|0|shang4 hai3 na3 li3 you3 mai4 zhong1 cui4 fang1 bian4 mian4 de di4 fang1
+custom_character_voice/sichuan/G0007_0032.wav|0|shen2 me shi4 yuan2 dai4 ma3 a
+custom_character_voice/sichuan/G1105_0059.wav|0|shua1 ka3 shi2 ying1 gai1 shu1 ru4 na3 ge xin4 yong4 ka3 mi4 ma3
+custom_character_voice/sichuan/G1108_0058.wav|0|sha2 zi xiang4 mu4 hao3 zhuan4 qian2 ne
+custom_character_voice/sichuan/G0007_0355.wav|0|wo3 xiang3 kuai4 su4 zeng1 jia1 ti3 zhong4
+custom_character_voice/sichuan/G1108_0536.wav|0|zhao3 ming2 wei4 ri4 ben3 de za2 zhi4
+custom_character_voice/sichuan/G0001_0586.wav|0|jin4 wu3 tuan2 zen3 me xia4 zai4 an1 zhuang1
+custom_character_voice/sichuan/G0008_0043.wav|0|ru2 he2 cha2 zhao3 zi4 ji3 xing4 shi4 de zu3 zong1
+custom_character_voice/sichuan/G0007_0033.wav|0|chu3 n3 mo2 mei2 you3 po4 ke3 neng2 huai2 yun4 ma
+custom_character_voice/sichuan/G1106_0539.wav|0|zuo4 wu4 li3 ti2 you3 shen2 me jue2 qiao4 ma2 fan2 ju4 ti3 dian3
+custom_character_voice/sichuan/G1100_0614.wav|0|wo3 xiang3 zhao3 yi1 kuan3 ding4 zhi4 sou1 suo3 xin1 wen2 de ruan3 jian4
+custom_character_voice/sichuan/G0001_0215.wav|0|bei3 jing1 zui4 wu4 mei3 jia4 lian2 de fu2 zhuang1 pi1 fa1 shi4 chang3 zai4 na3
+custom_character_voice/sichuan/G0003_0386.wav|0|da4 xue2 sheng1 mei2 you3 dian4 nao3 ke3 yi3 ma
+custom_character_voice/sichuan/G1100_0589.wav|0|zai4 shui3 hu3 zhuan4 li3 you3 shen2 me ren2
+custom_character_voice/sichuan/G1106_0132.wav|0|he2 yi2 ge4 yi3 you3 ban4 l3 de ren2 xiang1 lian4 le wo3 suan4 shen2 me
+custom_character_voice/sichuan/G0008_0146.wav|0|yu4 yao4 kan4 jiu1 jing4 chu4 chu4 xi4 liu2 xin1 de yi4 si shi4 shen2 me
+custom_character_voice/sichuan/G1100_0199.wav|0|gu4 ti3 yao4 pin3 wei4 shen2 me yi2 ding4 yao4 cun2 fang4 zai4 guang3 kou3 ping2
+custom_character_voice/sichuan/G0003_0071.wav|0|quan2 zheng4 shi4 shen2 me dong1 dong1
+custom_character_voice/sichuan/G1105_0035.wav|0|zen3 yang4 cai2 ke3 yi3 zai4 bai3 du4 shang4 sheng1 ji2 sheng1 ji2
+custom_character_voice/sichuan/G1100_0109.wav|0|na3 li3 you3 mei3 guo2 de dian4 zi shang1 wu4 wang3
+custom_character_voice/sichuan/G1100_0083.wav|0|wo3 xiang3 cha2 zhao3 guan1 yu2 hai3 long2 de ming2 yan2 ming2 ju4
+custom_character_voice/sichuan/G0003_0613.wav|0|dian4 nao3 bu4 ren4 jian4 pan2 zen3 me hui2 shi4
+custom_character_voice/sichuan/G0051_0654.wav|0|wu3 wan4 kuai4 qian2 mai3 shen2 me che1 zui4 hao3 qing3 shuo1 ming2 li3 you2
+custom_character_voice/sichuan/G1100_0051.wav|0|jie2 neng2 de gai4 nian4 shi4 shen2 me
+custom_character_voice/sichuan/G1103_0048.wav|0|te4 se4 she4 hui4 zhu3 yi4 shi4 shen2 me gai4 nian4
+custom_character_voice/sichuan/G0003_0260.wav|0|zai4 chang2 chun1 na3 li3 neng2 mai3 dao4 ya4 dong1 hui4 ji2 xiang2 wu4
+custom_character_voice/sichuan/G0003_0026.wav|0|mao2 kong3 zen3 me bian4 xi4 a
+custom_character_voice/sichuan/G0007_0244.wav|0|er4 shou3 huo4 yong4 ying1 yu3 zen3 me shuo1
+custom_character_voice/sichuan/G0003_0335.wav|0|si1 nian4 ling2 luan4 ling2 luan4 luo4 mo4 de tian1 kong1
+custom_character_voice/sichuan/G1103_0502.wav|0|xian4 zai4 liu2 xing2 shen2 me yin1 yue4
+custom_character_voice/sichuan/G0001_0317.wav|0|qing3 wen4 ru2 he2 ba3 zi1 liao4 cun2 dao4 guang1 pan2 shang4
+custom_character_voice/sichuan/G1108_0442.wav|0|na3 ge di4 fang1 you3 mai4 gan3 lan3 you2 de
+custom_character_voice/sichuan/G0051_0364.wav|0|dan3 zi xiao3 zen3 me yang4 cai2 neng2 dan3 zi da4 xie1 lei
+custom_character_voice/sichuan/G1106_0007.wav|0|tan4 ge1 fa1 yuan2 yu2 na3 ge guo2 jia1
+custom_character_voice/sichuan/G0001_0231.wav|0|shen2 me ruan3 jian4 ke3 yi3 cha2 kan4 quan2 bu4 de wen2 jian4 jia1
+custom_character_voice/sichuan/G0051_0148.wav|0|hui4 wei4 zui4 ai4 de nan2 ren2 fang4 qi4 ni3 de shi4 ye4 ma
+custom_character_voice/sichuan/G0008_0293.wav|0|qing3 wen4 zhen1 san1 guo2 wu2 shuang1 wang3 luo4 ban3 shen2 me shi2 hou4 chu1
+custom_character_voice/sichuan/G1105_0507.wav|0|chu3 n3 mo2 mei2 po4 neng2 bu4 neng2 huai2 yun4
+custom_character_voice/sichuan/G1103_0144.wav|0|zai4 shang4 hai3 mai3 shou3 feng1 qin2 na3 jia1 qin2 xing2 hao3 dian3
+custom_character_voice/sichuan/G0051_0420.wav|0|ru2 he2 cha2 xun2 shi1 ye4 yuan2 gong1 de jiu4 ye4 qing2 kuang4
+custom_character_voice/sichuan/G0007_0019.wav|0|cun2 ming2 jie4 zhi3 duo1 shao3 qian2
+custom_character_voice/sichuan/G1100_0610.wav|0|shang4 hai3 na3 xie1 chang3 suo3 xu1 yao4 zi4 dong4 shou4 huo4 ji1 de
+custom_character_voice/sichuan/G0008_0304.wav|0|wo3 xiang3 zhao3 ji3 shou3 hao3 ting1 de dai3 zu2 yin1 yue4 bang1 wo3
+custom_character_voice/sichuan/G0001_0504.wav|0|yi2 min2 ao4 da4 li4 ya4 xu1 yao4 na3 xie1 cai2 liao4
+custom_character_voice/sichuan/G0008_0278.wav|0|mei3 guo2 guo2 qi2 shang4 you3 duo1 shao3 ke1 xing1 shi4 zen3 yang4 pai2 lie4 de
+custom_character_voice/sichuan/G1105_0132.wav|0|ren2 men chang2 shuo1 de ri4 yu3 gan1 ba die1 shi4 shen2 me yi4 si
+custom_character_voice/sichuan/G1108_0422.wav|0|ren2 wu2 wan2 ren2 de xia4 yi1 ju4 shi4 sha2 zi
+custom_character_voice/sichuan/G1108_0145.wav|0|qing3 wen4 ri4 ben3 fan4 zui4 l4 gao1 ma
+custom_character_voice/sichuan/G0051_0543.wav|0|hong2 yu3 hei1 shi4 shui2 xie3 de
+custom_character_voice/sichuan/G1103_0577.wav|0|fu2 yong4 ma1 fu4 long2 hou4 hui4 gai3 bian4 pai2 luan3 zhou1 qi1 ma
+custom_character_voice/sichuan/G1105_0297.wav|0|shou4 yi1 gong1 zi1 yi4 ban1 shi4 duo1 shao3 qian2
+custom_character_voice/sichuan/G1100_0531.wav|0|ru2 he2 jiang1 shu1 pi2 bao1 chu1 hua1 yang4
+custom_character_voice/sichuan/G1105_0309.wav|0|an1 li4 chan3 pin3 zhen1 de you3 ta1 xuan1 chuan2 de na4 me hao3 ma
+custom_character_voice/sichuan/G0008_0542.wav|0|lan2 ban3 duo1 shao3 qian2 yi1 fu4
+custom_character_voice/sichuan/G0008_0243.wav|0|zen3 yang4 zu3 zhi3 dan4 chu1 de wang3 zhan4
+custom_character_voice/sichuan/G1105_0396.wav|0|shi1 zi zuo4 de liu2 xing1 yu3 duo1 shao3 nian2 yi1 ci4
+custom_character_voice/sichuan/G1105_0074.wav|0|nan2 jing1 zhong1 shan1 ling2 fu4 jin4 you3 na3 xie1 hao3 wan2 er2 de di4 fang1
+custom_character_voice/sichuan/G1103_0608.wav|0|dian4 nao3 zi4 dong4 zhong4 xin1 qi3 dong4 wei4 shen2 me
+custom_character_voice/sichuan/G0007_0482.wav|0|zen3 yang4 qi3 dong4 an1 quan2 zhong1 xin1 fu2 wu4
+custom_character_voice/sichuan/G0001_0447.wav|0|qing3 wen4 chun2 bai2 se4 zhen1 zhu1 shi4 he2 da1 pei4 shen2 me kuan3 xing2 fu2 shi4
+custom_character_voice/sichuan/G0008_0165.wav|0|nei4 xiang4 n3 sheng1 gai1 zen3 yang4 he2 an4 lian4 de nei4 xiang4 nan2 sheng1 shuo1 hua4
+custom_character_voice/sichuan/G1103_0506.wav|0|da4 xue2 sheng1 de sheng1 huo2 ying1 gai1 shi4 zen3 yang4 de ne
+custom_character_voice/sichuan/G1105_0342.wav|0|xue2 xi2 jiang1 xuan3 dao4 di3 xue2 dao4 shen2 me
+custom_character_voice/sichuan/G0008_0533.wav|0|xue2 sheng1 shu1 shen2 me tou2 xing2 hao3 kan4
+custom_character_voice/sichuan/G1103_0222.wav|0|zhong1 guo2 li4 shi3 shang4 you3 na3 xie1 shi3 shi2 yu3 huan2 bao3 xiang1 guan1
+custom_character_voice/sichuan/G0051_0601.wav|0|wei4 shen2 me wo3 yi4 zhi2 si3 ji1 a
+custom_character_voice/sichuan/G0008_0432.wav|0|wo3 xiang3 ci2 zhi2 nei4 xin1 mao2 dun4 le wu3 nian2
+custom_character_voice/sichuan/G1100_0140.wav|0|ai4 fu2 sen1 de zhuan1 ji2 ming2 cheng1 shi4 shen2 me
+custom_character_voice/sichuan/G0008_0032.wav|0|juan3 fa1 qi4 shi4 zen3 me yong4 de
+custom_character_voice/sichuan/G1105_0128.wav|0|wei4 shen2 me cheng1 fa1 xin1 shui3 wei4 guan1 xiang3
+custom_character_voice/sichuan/G0003_0417.wav|0|wei4 sha2 wo3 jia1 de wang3 luo4 hui4 jing1 chang2 duan4
+custom_character_voice/sichuan/G0001_0624.wav|0|wei4 shen2 me fei1 ji1 piao4 hui4 you3 te4 jia4
+custom_character_voice/sichuan/G1108_0581.wav|0|cao2 cao1 de xie2 tian1 zi3 yi3 ling4 zhu1 hou2 shi4 sha2 zi shen2 me yi4 si
+custom_character_voice/sichuan/G0008_0329.wav|0|dian4 nao3 shi4 ru2 he2 shi2 xian4 guan1 ji1 de
+custom_character_voice/sichuan/G0003_0272.wav|0|tian1 yao4 xia4 yu3 niang2 yao4 jia4 ren2 shi4 shen2 me yi4 si
+custom_character_voice/sichuan/G0007_0042.wav|0|xia2 dao4 che1 shou3 sheng4 an1 di4 lie4 si1 zen3 me an1 zhuang1
+custom_character_voice/sichuan/G0001_0490.wav|0|gei3 wo3 ti2 gong1 yi1 xia4 de xi1 an1 shi4 nei4 xin4 xiang1 zhun3 que4 di4 zhi3
+custom_character_voice/sichuan/G1108_0069.wav|0|nan2 ning2 shi4 you3 mei2 you3 mai4 an1 li4 chan3 pin3 de mu4 yu4 lu4 a
+custom_character_voice/sichuan/G0007_0694.wav|0|na3 li3 you3 mian3 fei4 ying3 yuan4 kan4 dian4 ying3
+custom_character_voice/sichuan/G0051_0139.wav|0|zhen1 zhu1 fen3 na3 li3 mai4
+custom_character_voice/sichuan/G0008_0398.wav|0|neng2 zai4 wang3 shang4 kan4 dian4 shi4 de ruan3 jian4 na3 ge hao3 ya
+custom_character_voice/sichuan/G0003_0195.wav|0|zen3 yang4 cai2 neng2 rang4 xin1 lang4 shang4 de bo2 ke4 de shu3 biao1 bian4 yang4
+custom_character_voice/sichuan/G1100_0485.wav|0|cheng2 shi4 zai4 tian1 de lun4 ju4
+custom_character_voice/sichuan/G1103_0503.wav|0|kun1 ming2 you3 duo1 shao3 da4 xue2 sheng1
+custom_character_voice/sichuan/G1108_0280.wav|0|wei4 sha2 zi wo3 de n3 hai2 jin3 li3 jing1 chang2 you3 bu4 xiang3 zhang3 da4 de xuan2 l4
+custom_character_voice/sichuan/G0001_0252.wav|0|re4 xue4 jiang1 hu2 de dao1 ke4 jia1 dian3 ru2 he2 jia1 wei4 shen2 me shi4 fan3 dao1
+custom_character_voice/sichuan/G1106_0099.wav|0|qiong2 ren2 mai3 xia4 li4 na3 li3 zui4 pian2 yi
+custom_character_voice/sichuan/G1100_0362.wav|0|wei4 shen2 me wo3 de zai4 wan2 you2 xi4 shi2 hen3 duo1 zi4 dou1 kan4 bu2 jian4
+custom_character_voice/sichuan/G1106_0674.wav|0|da4 bian4 shi4 chang2 li3 zen3 me xing2 cheng2 de
+custom_character_voice/sichuan/G0003_0207.wav|0|you3 xing2 rong2 mei3 n3 de shi1 ci2 ma
+custom_character_voice/sichuan/G0001_0121.wav|0|wu3 shui4 hou4 shen1 ti3 zhang3 shi2 jian1 fa2 li4 zen3 me ban4
+custom_character_voice/sichuan/G0008_0044.wav|0|shang4 jie3 fang4 jun1 xin4 xi1 gong1 cheng2 da4 xue2 di4 fang1 sheng1 you3 qian2 tu2 ma
+custom_character_voice/sichuan/G0001_0458.wav|0|er4 nai3 zhe4 ge ci2 shi4 zen3 me lai2 de
+custom_character_voice/sichuan/G1100_0383.wav|0|ru2 he2 yu3 qian2 shu1 xie2 zhu3 xi2 shen3 peng2 lian2 xi4
+custom_character_voice/sichuan/G1106_0312.wav|0|fu4 dan4 da4 xue2 zhou1 wei2 hai2 you3 shen2 me you3 ming2 de hao3 da4 xue2
+custom_character_voice/sichuan/G1108_0067.wav|0|xin1 xiang1 shi4 er4 zhong1 xiao4 yuan2 wang3 wang3 zhi3
+custom_character_voice/sichuan/G0008_0079.wav|0|nan2 jing1 zu1 fang2 xin4 xi1 na3 li3 you3 zui4 quan2 mian4 de
+custom_character_voice/sichuan/G0007_0693.wav|0|ren2 wei4 shen2 me xu1 yao4 cheng2 shou4 na4 me duo1 de tong4
+custom_character_voice/sichuan/G1108_0006.wav|0|shuang1 huang2 dan4 fu1 chu1 de shi4 liang3 ge4 xiao3 ji1 bu4
+custom_character_voice/sichuan/G0007_0245.wav|0|mai3 gou3 xu1 yao4 shen2 me o2
+custom_character_voice/sichuan/G0001_0463.wav|0|zu3 chong1 zhi1 bian1 ding4 de li4 fa3 jiao4 shen2 me ming2
+custom_character_voice/sichuan/G1108_0341.wav|0|shang4 hai3 nan2 zhan4 dao4 shang4 hai3 huo3 che1 zhan4 da3 de da4 gai4 yao4 hao3 duo1 qian2
+custom_character_voice/sichuan/G1108_0147.wav|0|xian4 zai4 na3 ge dian4 shi4 tai2 zui4 hao3
+custom_character_voice/sichuan/G1108_0205.wav|0|yi1 xue2 yuan4 de xue2 sheng1 yao4 zai4 yi1 yuan4 shi2 xi2 duo1 shao3 shi2 jian1
+custom_character_voice/sichuan/G0001_0475.wav|0|ru2 he2 shi3 cu1 cao1 pi2 fu1 bian4 xi4 ni4
+custom_character_voice/sichuan/G1108_0295.wav|0|ang2 ran2 shi4 sha2 zi yi4 si
+custom_character_voice/sichuan/G0007_0610.wav|0|bu4 ai4 shuo1 hua4 de ren2 shi4 zen3 yang4 de ren2
+custom_character_voice/sichuan/G0003_0513.wav|0|chu3 bei4 gan4 bu4 shi4 zuo4 sha2 de
+custom_character_voice/sichuan/G0051_0540.wav|0|da4 bian4 gan4 qie3 cheng2 qiu2 zhuang4 shi4 zen3 me hui2 shi4
+custom_character_voice/sichuan/G0003_0606.wav|0|yi2 ge4 liang3 cun4 zhang3 de chong2 zi hen3 xiang4 zhang1 lang2 bu4 zhi1 dao4 shi4 shen2 me
+custom_character_voice/sichuan/G0003_0342.wav|0|ting1 ting1 zhe4 shou3 ge1 jiao4 shen2 me ming2 zi4
+custom_character_voice/sichuan/G0007_0469.wav|0|zen3 yang4 cai2 neng2 wang4 ji4 yi3 qian2 de tong4 ku3 ji4 yi4
+custom_character_voice/sichuan/G1106_0685.wav|0|zui4 pian2 yi de dian4 qi4 shang1 dian4 er2
+custom_character_voice/sichuan/G0008_0673.wav|0|lin2 zhi4 ying3 xian4 zai4 zai4 na3 li3 wo3 de mei4 mei4 shi1 zong1 le qiu2 qiu2 le
+custom_character_voice/sichuan/G1105_0526.wav|0|ru2 he2 neng2 rang4 xue2 xi2 shi4 ban4 gong1 bei4
+custom_character_voice/sichuan/G0051_0402.wav|0|na3 xie1 wai4 hui4 huang2 jin1 jiao1 yi4 xu1 yao4 bao3 zheng4 jin1
+custom_character_voice/sichuan/G0003_0623.wav|0|meng4 huan4 dan4 gao1 wu1 zen3 me xiu1 gai3
+custom_character_voice/sichuan/G1100_0389.wav|0|bei3 jing1 shi4 na3 li3 shou1 gou4 shou3 ji1 chong1 dian4 qi4 he2 dian4 chi2 a
+custom_character_voice/sichuan/G1106_0281.wav|0|cheng2 shi4 gong1 fang1 shi4 zuo4 shen2 me de
+custom_character_voice/sichuan/G1108_0064.wav|0|shan1 dong1 xue2 ye4 shui3 ping2 kao3 shi4 cheng2 ji4 zai4 na3 cha2 xun2
+custom_character_voice/sichuan/G0001_0699.wav|0|na3 ge you2 xi4 qi2 pai2 zhong1 xin1 you3 shang4 hai3 dou4 di4 zhu3
+custom_character_voice/sichuan/G0003_0153.wav|0|qing3 wen4 chou1 xu4 zheng4 shi4 fou3 jiu4 shi4 chou1 dong4 zheng4
+custom_character_voice/sichuan/G0001_0115.wav|0|wo3 shi4 n3 de wo3 de shi4 you3 guo4 sheng1 ri4 song4 shen2 me dong1 xi1
+custom_character_voice/sichuan/G0001_0352.wav|0|mei2 you3 qing2 ren2 de qing2 ren2 jie2 yao4 zen3 me guo4
+custom_character_voice/sichuan/G1105_0327.wav|0|qing3 wen4 jian4 hang2 de long2 ka3 jie4 ka3 ji4 ka3
+custom_character_voice/sichuan/G1106_0405.wav|0|guang1 lan3 gong1 zuo4 yuan2 li3 shi4 shen2 me
+custom_character_voice/sichuan/G1105_0540.wav|0|xian4 zai4 ke3 yi3 yi1 fu1 duo1 qi1 ma
+custom_character_voice/sichuan/G1103_0064.wav|0|shen2 me sha1 du2 ruan3 jian4 shi4 guo2 nei4 zui4 hao3 de
+custom_character_voice/sichuan/G0003_0328.wav|0|gong1 zuo4 tian1 chu1 zheng4 shi4 shen2 me yi4 si
+custom_character_voice/sichuan/G0003_0011.wav|0|zui4 hao3 wan2 de wang3 luo4 you2 xi4 shi4
+custom_character_voice/sichuan/G1106_0171.wav|0|gao4 su4 wo3 ru2 he2 jiang1 zi4 ji3 de dian4 nao3 she4 zhi4 wei4 fu2 wu4 qi4
+custom_character_voice/sichuan/G0051_0405.wav|0|ming2 ming2 ao4 lu4 fei1 bi3 yu2 yao4 piao4 liang4 wei4 shen2 me
+custom_character_voice/sichuan/G0003_0247.wav|0|wei4 shen2 me fan4 he2 rou4 bu4 neng2 tong2 shi2 jin4 xing2
+custom_character_voice/sichuan/G0003_0291.wav|0|ren2 wei4 he2 huo2 zhe ren2 sheng1 you3 he2 yi4 yi4
+custom_character_voice/sichuan/G1103_0255.wav|0|da4 bian4 hei1 se4 fu4 xie4 bian4 bu4 cheng2 xing2 shi4 shen2 me bing4 zheng4
+custom_character_voice/sichuan/G1100_0123.wav|0|gu3 shi2 hou4 yi1 liang3 huang2 jin1 deng3 yu2 duo1 shao3 liang3 bai2 yin2 a
+custom_character_voice/sichuan/G1106_0124.wav|0|qin1 shu3 wei4 wo3 dai4 shen3 jia4 shi3 zheng4 er2 jiao1 jing3 wei4 he2 yao4 kou4 zheng4 er2
+custom_character_voice/sichuan/G0001_0510.wav|0|ru2 he2 tong1 guo4 xun4 lian4 jia1 qiang2 yao1 fu4 ji1 rou4 li4 liang4 he2 dan4 tiao4
+custom_character_voice/sichuan/G0008_0677.wav|0|wo3 jie3 jie3 hao3 pang4 wo3 xiang3 wen4 you3 shen2 me ke3 yi3 jian3 fei2 de fang1 fa3
+custom_character_voice/sichuan/G1108_0532.wav|0|zai4 wu3 han4 tie3 lu4 tuo1 yun4 huo4 wu4 dao4 le lang1 ge4 zen3 me cha2 xun2
+custom_character_voice/sichuan/G0007_0378.wav|0|tou2 fa4 la1 zhi2 he2 ran3 fa1 na3 ge xian1 zuo4 bi3 jiao4 hao3
+custom_character_voice/sichuan/G1100_0368.wav|0|zai4 xian4 dian4 ying3 de wang3 zhi3
+custom_character_voice/sichuan/G1100_0462.wav|0|chuang4 xin1 shi4 na3 liang3 ge4 guo2 jia1 de
+custom_character_voice/sichuan/G1100_0486.wav|0|ru2 he2 zhu4 ce4 wang3 shang4 yin2 xing2
+custom_character_voice/sichuan/G0051_0559.wav|0|duo1 zhong4 zhi2 shu4 mu4 neng2 bao3 hu4 da4 qi4 bu4 shou4 wu1 ran3 huan2 ma
+custom_character_voice/sichuan/G1103_0197.wav|0|xi1 yan1 wei4 he2 yun1 shen4 zhi4 xiang3 ou3 tu4 guo4 fei4
+custom_character_voice/sichuan/G0001_0300.wav|0|n3 zi3 shi2 er4 le4 fang1 de jiu4 zhuan1 ji2 na3 you3 de mai4 a
+custom_character_voice/sichuan/G0051_0115.wav|0|yi4 qu4 wang3 li3 mai4 de dong1 xi1 shi4 bu2 shi4 zhen1 de neng2 bu4 neng2 mai3
+custom_character_voice/sichuan/G1100_0518.wav|0|pi1 sa4 zi4 ji3 ke3 yi3 zuo4 ma
+custom_character_voice/sichuan/G0003_0171.wav|0|cong2 fu4 dan4 da4 xue2 dao4 mei2 long2 zhen4 yi1 shi4 dan1 zen3 me zou3
+custom_character_voice/sichuan/G1103_0035.wav|0|mei3 guo2 you3 na3 xie1 xun2 bao3 tan4 xian3 ti2 cai2 de dian4 ying3
+custom_character_voice/sichuan/G1108_0594.wav|0|na3 ge ji4 jie2 sheng1 bao3 bao3 dui4 ma1 ma1 he2 xiao3 hai2 dou1 hao3
+custom_character_voice/sichuan/G0051_0095.wav|0|zai4 nan2 peng2 you3 mian4 qian2 tai4 ye3 man2 xing2 bu4 xing2
+custom_character_voice/sichuan/G0007_0322.wav|0|ru2 he2 zhi4 zuo4 xi4 tong3 guang1 pan2
+custom_character_voice/sichuan/G0008_0630.wav|0|you3 mei2 you3 na3 li3 you3 kan4 gu3 xiao3 jie2 mu4 de shi4 pin2
+custom_character_voice/sichuan/G0001_0625.wav|0|bei3 jing1 gu4 gong1 xian4 zai4 kai1 fang4 ma jia4 ge2 duo1 shao3
+custom_character_voice/sichuan/G0051_0490.wav|0|tian1 zhu3 jiao4 tian1 zhu3 you3 shen2 me shen2 neng2
+custom_character_voice/sichuan/G0051_0521.wav|0|shuang1 xing1 wu4 yu4 zhong1 de si4 ben3 shu1 shi4 gan4 shen2 me de
+custom_character_voice/sichuan/G0001_0073.wav|0|zui4 xin1 wang3 luo4 liu2 xing2 ge1 qu3 you3 na3 xie1
+custom_character_voice/sichuan/G0007_0213.wav|0|cong2 na3 li3 ke3 yi3 zhao3 dao4 mian3 fei4 de yu3 yin1 qi4
+custom_character_voice/sichuan/G1100_0475.wav|0|jin1 nian2 de ying1 yu3 si4 ji2 cheng2 ji4 shen2 me shi2 hou4 chu1 lai2 a
+custom_character_voice/sichuan/G1108_0118.wav|0|li3 gong1 ke1 de xue2 sheng1 zhen1 de shi4 hen3 lei4 ma
+custom_character_voice/sichuan/G0008_0273.wav|0|quan2 ju2 bian4 liang4 yong4 fang4 zai4 han2 shu4 xing2 can1 zhong1 ma
