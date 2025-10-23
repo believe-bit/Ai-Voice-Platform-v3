@@ -17,10 +17,10 @@ import sys
 app = Flask(__name__)
 CORS(app, resources={r"/api/*": {"origins": "http://localhost:8082"}})
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))  # /data/huangtianle/Ai-Voice-Platform
 MODEL_DIR = os.path.join(BASE_DIR, "models", "ASR_train_models")
 UPLOAD_DIR = os.path.join(BASE_DIR, "Uploads")
-OUTPUT_DIR = os.path.join(BASE_DIR, "outputs")
+OUTPUT_DIR = os.path.join(BASE_DIR, "VITS-fast-fine-tuning", "output")
 VITS_BASE = os.path.join(BASE_DIR, 'VITS-fast-fine-tuning', 'dataset')
 CLEANERS_FILE = os.path.join(BASE_DIR, 'VITS-fast-fine-tuning', 'text', 'cleaners.py')
 CONFIG_DIR = os.path.join(BASE_DIR, 'VITS-fast-fine-tuning', 'configs')
@@ -28,12 +28,28 @@ ALLOWED_EXTENSIONS = {'zip'}
 OFFLINE_MODEL_DIR = os.path.join(BASE_DIR, "models", "ASR_models")  # 新增：离线模型目录
 OFFLINE_UPLOAD_DIR = os.path.join(BASE_DIR, "Uploads", "offline_audio")  # 新增：离线音频上传目录
 ALLOWED_AUDIO_EXTENSIONS = {'wav'}  # 新增：允许的音频文件扩展名
+VITS_INFERENCE_DIR = os.path.join(BASE_DIR, 'VITS-fast-fine-tuning')
+ALLOWED_MODEL_EXTENSIONS = {'pth'}
+ALLOWED_CONFIG_EXTENSIONS = {'json'}
 
+# 创建必要目录并设置权限
+for directory in [UPLOAD_DIR, OUTPUT_DIR, CONFIG_DIR, OFFLINE_UPLOAD_DIR, VITS_INFERENCE_DIR]:
+    os.makedirs(directory, exist_ok=True)
+    try:
+        os.chmod(directory, 0o766)
+    except PermissionError as e:
+        print(f"Warning: Unable to set permissions for {directory}: {str(e)}")
 
-os.makedirs(UPLOAD_DIR, exist_ok=True)
-os.makedirs(OUTPUT_DIR, exist_ok=True)
-os.makedirs(CONFIG_DIR, exist_ok=True)
-os.makedirs(OFFLINE_UPLOAD_DIR, exist_ok=True)  # 新增：创建离线音频目录
+# 初始化日志文件
+log_file = os.path.join(BASE_DIR, "synthesis_log.txt")
+os.makedirs(os.path.dirname(log_file), exist_ok=True)
+try:
+    with open(log_file, 'a', encoding='utf-8') as f:
+        f.write(f"[{time.strftime('%Y-%m-%d %H:%M:%S')}] Server started\n")
+    os.chmod(log_file, 0o666)
+except PermissionError as e:
+    print(f"Warning: Unable to set permissions for {log_file}: {str(e)}")
+
 
 training_process = None
 asr_training_process = None
@@ -893,6 +909,154 @@ def offline_recognize():
         with open(log_file, 'a', encoding='utf-8') as f:
             f.write(f"[{time.strftime('%Y-%m-%d %H:%M:%S')}] Recognition failed: {str(e)}\n")
         return jsonify({"error": f"Recognition failed: {str(e)}"}), 500
+
+###语言合成
+@app.route('/api/custom_languages', methods=['GET'])
+def get_custom_languages():
+    try:
+        inference_files = [f for f in os.listdir(VITS_INFERENCE_DIR) if f.endswith('_inference.py')]
+        languages = ['zhongwen', 'sichuan'] + [f.replace('_inference.py', '') for f in inference_files if f not in ['zhongwen_inference.py', 'sichuan_inference.py']]
+        return jsonify({"languages": languages})
+    except Exception as e:
+        return jsonify({"error": f"获取语言列表失败: {str(e)}"}), 500
+
+@app.route('/api/save_language', methods=['POST'])
+def save_custom_language():
+    data = request.get_json()
+    language = data.get('language')
+    code = data.get('code')
+    delete = data.get('delete', False)
+
+    if not language:
+        return jsonify({"error": "缺少语言名称"}), 400
+
+    inference_file = os.path.join(VITS_INFERENCE_DIR, f"{language}_inference.py")
+
+    if delete:
+        if language in ['zhongwen', 'sichuan']:
+            return jsonify({"error": "不能删除默认语言 zhongwen 或 sichuan"}), 400
+        if os.path.exists(inference_file):
+            try:
+                os.remove(inference_file)
+                return jsonify({"message": f"语言 {language} 已删除"})
+            except Exception as e:
+                return jsonify({"error": f"删除语言失败: {str(e)}"}), 500
+        return jsonify({"error": f"语言 {language} 不存在"}), 400
+
+    if not code:
+        return jsonify({"error": "缺少推理代码"}), 400
+
+    try:
+        with open(inference_file, 'w', encoding='utf-8') as f:
+            f.write(code)
+        return jsonify({"message": f"语言 {language} 保存成功", "file_path": inference_file})
+    except Exception as e:
+        return jsonify({"error": f"保存语言失败: {str(e)}"}), 500
+
+@app.route('/api/synthesize_speech', methods=['POST'])
+def synthesize_speech():
+    if 'model' not in request.files or 'config' not in request.files:
+        return jsonify({"error": "缺少模型文件或配置文件"}), 400
+    model_file = request.files['model']
+    config_file = request.files['config']
+    language = request.form.get('language')
+    text = request.form.get('text')
+    speaker = request.form.get('speaker', '0')
+    length_scale = request.form.get('length_scale', '1.0')
+    noise_scale = request.form.get('noise_scale', '0.3')
+    noise_scale_w = request.form.get('noise_scale_w', '0.5')
+    use_pinyin = request.form.get('use_pinyin', 'false').lower() == 'true'
+    pitch_factor = float(request.form.get('pitch_factor', '1.0'))
+
+    if not language or not text:
+        return jsonify({"error": "缺少语言或合成文本"}), 400
+    if not model_file.filename or not config_file.filename:
+        return jsonify({"error": "未选择模型文件或配置文件"}), 400
+    if not allowed_file(model_file.filename, {'pth'}) or not allowed_file(config_file.filename, {'json'}):
+        return jsonify({"error": "文件格式不支持，仅支持 .pth 和 .json"}), 400
+
+    # 保存上传的文件
+    model_filename = secure_filename(model_file.filename)
+    config_filename = secure_filename(config_file.filename)
+    model_path = os.path.join(UPLOAD_DIR, f"{uuid.uuid4().hex}_{model_filename}")
+    config_path = os.path.join(UPLOAD_DIR, f"{uuid.uuid4().hex}_{config_filename}")
+    model_file.save(model_path)
+    config_file.save(config_path)
+
+    inference_script = os.path.join(VITS_INFERENCE_DIR, f"{language}_inference.py")
+    if not os.path.exists(inference_script):
+        return jsonify({"error": f"推理脚本 {language}_inference.py 不存在"}), 400
+
+    conda_env_path = os.path.join(os.path.expanduser("~"), "anaconda3", "envs", "VITS_train_env")
+    python_executable = os.path.join(conda_env_path, "bin", "python")
+
+    if not os.path.exists(python_executable):
+        return jsonify({"error": f"Python 可执行文件未找到: {python_executable}"}), 500
+
+    unique_id = str(uuid.uuid4())[:8]
+    output_filename = f"{uuid.uuid4().hex}.wav"
+    output_path = os.path.join(OUTPUT_DIR, output_filename)
+
+    cmd = [
+        python_executable,
+        inference_script,
+        "-m", model_path,
+        "-c", config_path,
+        "-t", text,
+        "-s", speaker,
+        "-l", language,
+        "-ls", str(length_scale),
+        "--noise_scale", str(float(noise_scale) * pitch_factor),
+        "--noise_scale_w", str(float(noise_scale_w) * pitch_factor),
+        "--output", output_path
+    ]
+    if use_pinyin:
+        cmd.append("--use_pinyin")
+
+    env = os.environ.copy()
+    env["PYTHONUNBUFFERED"] = "1"
+    env["PATH"] = f"{os.path.join(conda_env_path, 'bin')}:{env['PATH']}"
+    env["LD_LIBRARY_PATH"] = f"{os.path.join(conda_env_path, 'lib')}:/usr/lib/x86_64-linux-gnu:{env.get('LD_LIBRARY_PATH', '')}"
+    env["CUDA_VISIBLE_DEVICES"] = os.environ.get("CUDA_VISIBLE_DEVICES", "0")
+
+    log_file = os.path.join(BASE_DIR, "synthesis_log.txt")
+    with open(log_file, 'a', encoding='utf-8') as f:
+        f.write(f"[{time.strftime('%Y-%m-%d %H:%M:%S')}] Executing synthesis command: {' '.join(cmd)}\n")
+
+    try:
+        process = subprocess.run(
+            cmd,
+            env=env,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            text=True,
+            timeout=60,
+            cwd=VITS_INFERENCE_DIR
+        )
+        with open(log_file, 'a', encoding='utf-8') as f:
+            f.write(f"[{time.strftime('%Y-%m-%d %H:%M:%S')}] STDOUT: {process.stdout}\n")
+            f.write(f"[{time.strftime('%Y-%m-%d %H:%M:%S')}] STDERR: {process.stderr}\n")
+
+        if process.returncode == 0:
+            audio_url = f"/outputs/{output_filename}"
+            return jsonify({"message": "语音合成成功", "audio_url": audio_url})
+        else:
+            error_msg = f"语音合成失败，退出码 {process.returncode}: {process.stderr}"
+            with open(log_file, 'a', encoding='utf-8') as f:
+                f.write(f"[{time.strftime('%Y-%m-%d %H:%M:%S')}] {error_msg}\n")
+            return jsonify({"error": error_msg, "raw_output": process.stderr}), 500
+    except subprocess.TimeoutExpired:
+        with open(log_file, 'a', encoding='utf-8') as f:
+            f.write(f"[{time.strftime('%Y-%m-%d %H:%M:%S')}] 语音合成超时\n")
+        return jsonify({"error": "语音合成超时"}), 500
+    except Exception as e:
+        with open(log_file, 'a', encoding='utf-8') as f:
+            f.write(f"[{time.strftime('%Y-%m-%d %H:%M:%S')}] 语音合成失败: {str(e)}\n")
+        return jsonify({"error": f"语音合成失败: {str(e)}"}), 500
+
+@app.route('/outputs/<filename>', methods=['GET'])
+def serve_audio(filename):
+    return send_from_directory(OUTPUT_DIR, filename)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
