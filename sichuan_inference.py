@@ -37,8 +37,9 @@ def main():
     parser.add_argument('-l', '--language', default='Sichuanese', help='Language')
     parser.add_argument('-ls', '--length_scale', type=float, default=1.0, help='Length scale')
     parser.add_argument('--noise_scale', type=float, default=0.3, help='Noise scale')
-    parser.add_argument('--noise_scale_w', type=float, default=0.5, help='Noise scale for duration')
+    parser.add_argument('--noise_scale_w', type=float, default=1.0, help='Noise scale for duration')
     parser.add_argument('--use_pinyin', action='store_true', help='Use pinyin input')
+    parser.add_argument("--output", default="/data/huangtianle/Ai-Voice-Platform/VITS-fast-fine-tuning/output/sichuan_0_sichuan.wav")
     args = parser.parse_args()
 
     hps = utils.get_hparams_from_file(args.config)
