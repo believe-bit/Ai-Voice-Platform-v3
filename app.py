@@ -29,8 +29,8 @@ from passlib.hash import bcrypt  # 添加密码哈希支持
 
 
 app = Flask(__name__)
-CORS(app, resources={r"/api/*": {"origins": "http://localhost:8082"}})
-socketio = SocketIO(app, cors_allowed_origins="http://localhost:8082")
+CORS(app, resources={r"/api/*": {"origins": "*"}})
+socketio = SocketIO(app, cors_allowed_origins="http://192.168.1.124:8082")
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 MODEL_DIR = os.path.join(BASE_DIR, "models", "ASR_train_models")
