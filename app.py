@@ -1,5 +1,6 @@
 from flask import Flask, request, jsonify, Response, send_from_directory
 from flask_cors import CORS
+from flask_socketio import SocketIO, emit
 import os
 import subprocess
 import json
@@ -13,11 +14,25 @@ import queue
 import time
 import signal
 import sys
+import sqlite3
+from datetime import datetime, timedelta
+from contextlib import contextmanager
+from reportlab.lib.pagesizes import A4
+from reportlab.pdfgen import canvas
+from reportlab.lib.utils import simpleSplit
+from reportlab.pdfbase import pdfmetrics
+from reportlab.pdfbase.ttfonts import TTFont
+import logging
+import jwt  # 添加 JWT 依赖
+from functools import wraps  # 添加装饰器支持
+from passlib.hash import bcrypt  # 添加密码哈希支持
+
 
 app = Flask(__name__)
 CORS(app, resources={r"/api/*": {"origins": "http://localhost:8082"}})
+socketio = SocketIO(app, cors_allowed_origins="http://localhost:8082")
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))  # /data/huangtianle/Ai-Voice-Platform
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 MODEL_DIR = os.path.join(BASE_DIR, "models", "ASR_train_models")
 UPLOAD_DIR = os.path.join(BASE_DIR, "Uploads")
 OUTPUT_DIR = os.path.join(BASE_DIR, "VITS-fast-fine-tuning", "output")
@@ -25,15 +40,21 @@ VITS_BASE = os.path.join(BASE_DIR, 'VITS-fast-fine-tuning', 'dataset')
 CLEANERS_FILE = os.path.join(BASE_DIR, 'VITS-fast-fine-tuning', 'text', 'cleaners.py')
 CONFIG_DIR = os.path.join(BASE_DIR, 'VITS-fast-fine-tuning', 'configs')
 ALLOWED_EXTENSIONS = {'zip'}
-OFFLINE_MODEL_DIR = os.path.join(BASE_DIR, "models", "ASR_models")  # 新增：离线模型目录
-OFFLINE_UPLOAD_DIR = os.path.join(BASE_DIR, "Uploads", "offline_audio")  # 新增：离线音频上传目录
-ALLOWED_AUDIO_EXTENSIONS = {'wav'}  # 新增：允许的音频文件扩展名
+OFFLINE_MODEL_DIR = os.path.join(BASE_DIR, "models", "ASR_models")
+OFFLINE_UPLOAD_DIR = os.path.join(BASE_DIR, "Uploads", "offline_audio")
+ALLOWED_AUDIO_EXTENSIONS = {'wav'}
 VITS_INFERENCE_DIR = os.path.join(BASE_DIR, 'VITS-fast-fine-tuning')
 ALLOWED_MODEL_EXTENSIONS = {'pth'}
 ALLOWED_CONFIG_EXTENSIONS = {'json'}
+GUIDE_DIR = os.path.join(BASE_DIR, "Guides")
+# USERS_FILE = os.path.join(BASE_DIR, "users.json")  # 用户 JSON 文件
+
+# JWT 配置
+SECRET_KEY = '4079ba7c3c6f7edc7e821316c6c086a1a653fe376ca4c0d0cfa229792e4169a2'  # 请替换为强密钥（建议使用随机生成）
+TOKEN_EXPIRY = 3600 * 24  # Token 有效期 1 小时（秒）
 
 # 创建必要目录并设置权限
-for directory in [UPLOAD_DIR, OUTPUT_DIR, CONFIG_DIR, OFFLINE_UPLOAD_DIR, VITS_INFERENCE_DIR]:
+for directory in [UPLOAD_DIR, OUTPUT_DIR, CONFIG_DIR, OFFLINE_UPLOAD_DIR, VITS_INFERENCE_DIR, GUIDE_DIR]:
     os.makedirs(directory, exist_ok=True)
     try:
         os.chmod(directory, 0o766)
@@ -43,13 +64,120 @@ for directory in [UPLOAD_DIR, OUTPUT_DIR, CONFIG_DIR, OFFLINE_UPLOAD_DIR, VITS_I
 # 初始化日志文件
 log_file = os.path.join(BASE_DIR, "synthesis_log.txt")
 os.makedirs(os.path.dirname(log_file), exist_ok=True)
-try:
-    with open(log_file, 'a', encoding='utf-8') as f:
-        f.write(f"[{time.strftime('%Y-%m-%d %H:%M:%S')}] Server started\n")
-    os.chmod(log_file, 0o666)
-except PermissionError as e:
-    print(f"Warning: Unable to set permissions for {log_file}: {str(e)}")
+logging.basicConfig(
+    filename=log_file,
+    level=logging.DEBUG,
+    format='[%(asctime)s] %(levelname)s: %(message)s',
+    datefmt='%Y-%m-%d %H:%M:%S'
+)
+# 把 Flask 默认日志也打到同一个文件
+logging.getLogger('werkzeug').setLevel(logging.DEBUG)
+logging.getLogger('werkzeug').addHandler(logging.FileHandler(log_file))
+logger = logging.getLogger(__name__)
 
+# 替换所有 print 为 logger
+for directory in [UPLOAD_DIR, OUTPUT_DIR, CONFIG_DIR, OFFLINE_UPLOAD_DIR, VITS_INFERENCE_DIR]:
+    os.makedirs(directory, exist_ok=True)
+    try:
+        os.chmod(directory, 0o766)
+    except PermissionError as e:
+        logger.warning(f"Unable to set permissions for {directory}: {str(e)}")
+
+logger.info("Server started")
+
+# 初始化用户 JSON 文件
+# if not os.path.exists(USERS_FILE):
+#     with open(USERS_FILE, 'w', encoding='utf-8') as f:
+#         json.dump([{"ip": "127.0.0.1", "role": "admin"}], f)
+#     os.chmod(USERS_FILE, 0o666)
+
+# 数据库连接
+def get_db():
+    db_path = os.path.join(BASE_DIR, 'projects.db')
+    logger.debug(f"Opening database at: {db_path}")
+    if not os.path.exists(db_path):
+        logger.error(f"Database file {db_path} does not exist")
+        raise sqlite3.OperationalError(f"Database file {db_path} does not exist")
+    try:
+        conn = sqlite3.connect(db_path, check_same_thread=False)
+        conn.row_factory = sqlite3.Row
+        # ★★★ 每次新连接都强制打开外键 ★★★
+        conn.execute('PRAGMA foreign_keys = ON')
+        # 顺手再验证一次，方便排错
+        fk_status = conn.execute('PRAGMA foreign_keys').fetchone()[0]
+        logger.info(f"Foreign keys status for this connection: {fk_status}")
+        return conn
+    except sqlite3.OperationalError as e:
+        logger.error(f"Failed to connect to database {db_path}: {str(e)}")
+        raise
+
+# 初始化用户表
+def init_db():
+    with get_db() as conn:
+        c = conn.cursor()
+        # 启用外键约束
+        c.execute('PRAGMA foreign_keys = ON')
+        
+        # 创建 users 表
+        c.execute('''
+            CREATE TABLE IF NOT EXISTS users (
+                username TEXT PRIMARY KEY,
+                password TEXT NOT NULL,
+                role TEXT NOT NULL
+            )
+        ''')
+        # 创建 projects 表
+        c.execute('''
+            CREATE TABLE IF NOT EXISTS projects (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                name TEXT NOT NULL,
+                type TEXT NOT NULL,
+                level TEXT NOT NULL,
+                created_at TEXT NOT NULL,
+                guide_path TEXT
+            )
+        ''')
+        # 创建 distributed_projects 表
+        c.execute('''
+            CREATE TABLE IF NOT EXISTS distributed_projects (
+                project_id INTEGER,
+                student_ip TEXT,
+                PRIMARY KEY (project_id, student_ip),
+                FOREIGN KEY (project_id) REFERENCES projects(id) ON DELETE CASCADE
+            )
+        ''')
+        # 创建 student_ips 表
+        c.execute('''
+            CREATE TABLE IF NOT EXISTS student_ips (
+                ip TEXT PRIMARY KEY
+            )
+        ''')
+        # 插入默认用户
+        default_users = [
+            ('admin', '$2b$12$jOFP6O.zz/AK6x/hppKyWeGd4Mams/Yarl6QRPR/3/7fLZ9F89Req', 'admin'),
+            ('student1', '$2b$12$8PkJ8o7mgZo1ZIHTh60C6uE99fiFTeyujLn5MmvrKOKbbp0WHnA0m', 'student')
+        ]
+        for username, password, role in default_users:
+            c.execute('INSERT OR IGNORE INTO users (username, password, role) VALUES (?, ?, ?)',
+                      (username, password, role))
+        conn.commit()
+        # 验证表创建
+        c.execute("SELECT name FROM sqlite_master WHERE type='table'")
+        tables = [row['name'] for row in c.fetchall()]
+        logger.info(f"Database initialized with tables: {tables}")
+
+# 注册 Ubuntu 自带中文字体
+try:
+    # 优先使用 WenQuanYi Zen Hei
+    font_path = '/usr/share/fonts/truetype/wqy/wqy-zenhei.ttc'
+    if os.path.exists(font_path):
+        pdfmetrics.registerFont(TTFont('WenQuanYiZenHei', font_path))
+    else:
+        # 回退到 Noto Sans CJK
+        font_path = '/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc'
+        pdfmetrics.registerFont(TTFont('NotoSansCJK', font_path))
+except Exception as e:
+    print(f"Error registering font: {str(e)}")
 
 training_process = None
 asr_training_process = None
@@ -64,8 +192,10 @@ def allowed_file(filename, allowed_extensions=ALLOWED_EXTENSIONS):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in allowed_extensions
 
 def extract_zip(zip_path, extract_to):
+    logger.debug(f"Extracting ZIP: {zip_path} to {extract_to}")
     try:
         with zipfile.ZipFile(zip_path, 'r') as zip_ref:
+            zip_ref.testzip()  # 测试 ZIP 文件完整性
             zip_ref.extractall(extract_to)
         items = os.listdir(extract_to)
         if len(items) == 1 and os.path.isdir(os.path.join(extract_to, items[0])):
@@ -73,9 +203,69 @@ def extract_zip(zip_path, extract_to):
             for item in os.listdir(inner_dir):
                 shutil.move(os.path.join(inner_dir, item), extract_to)
             shutil.rmtree(inner_dir)
+        logger.debug(f"Extracted ZIP to {extract_to}: {items}")
         return True
+    except zipfile.BadZipFile as e:
+        logger.error(f"Bad ZIP file: {str(e)}")
+        return f"Bad ZIP file: {str(e)}"
     except Exception as e:
+        logger.error(f"Extract error: {str(e)}")
         return str(e)
+
+###添加 JWT 装饰器
+def require_auth(role=None):
+    def decorator(f):
+        @wraps(f)
+        def decorated_function(*args, **kwargs):
+            auth_header = request.headers.get('Authorization')
+            if not auth_header or not auth_header.startswith('Bearer '):
+                return jsonify({'error': '缺少令牌'}), 401
+            token = auth_header.split(' ')[1]
+            try:
+                payload = jwt.decode(token, SECRET_KEY, algorithms=['HS256'])
+                request.user = payload
+                if role and payload.get('role') != role:
+                    return jsonify({'error': '无权限执行此操作'}), 403
+                return f(*args, **kwargs)
+            except jwt.ExpiredSignatureError:
+                return jsonify({'error': '令牌已过期'}), 401
+            except jwt.InvalidTokenError:
+                return jsonify({'error': '无效令牌'}), 401
+        return decorated_function
+    return decorator
+
+###登录端点
+@app.route('/api/login', methods=['POST'])
+def login():
+    try:
+        data = request.get_json()
+        username = data.get('username')
+        password = data.get('password')
+        logging.debug(f"Login attempt: username={username}")
+        if not username or not password:
+            logging.warning("Missing username or password")
+            return jsonify({'error': '缺少用户名或密码'}), 400
+        with get_db() as conn:
+            c = conn.cursor()
+            c.execute('SELECT username, password, role FROM users WHERE username = ?', (username,))
+            user = c.fetchone()
+            if not user or not bcrypt.verify(password, user['password']):
+                logging.warning(f"Invalid credentials for username={username}")
+                return jsonify({'error': '用户名或密码错误'}), 401
+            token = jwt.encode({
+                'username': username,
+                'role': user['role'],
+                'exp': datetime.utcnow() + timedelta(seconds=TOKEN_EXPIRY)
+            }, SECRET_KEY, algorithm='HS256')
+
+            user_dir = Path(__file__).with_name('User') / username   # 同级/User/账号
+            user_dir.mkdir(parents=True, exist_ok=True)              # 存在即跳过
+
+            logging.info(f"Login successful: username={username}, role={user['role']}")
+            return jsonify({'token': token, 'role': user['role']})
+    except Exception as e:
+        logging.error(f"Login error: {str(e)}")
+        return jsonify({'error': '服务器内部错误'}), 500
 
 @app.route('/api/models', methods=['GET'])
 def get_models():
@@ -106,162 +296,201 @@ def upload_dataset():
     return jsonify({"error": "文件格式不支持"}), 400
 
 @app.route('/api/upload_vits_dataset', methods=['POST'])
+@require_auth()
 def upload_vits_dataset():
+    logger.debug("Received upload_vits_dataset request")
     if 'file' not in request.files:
+        logger.error("No file part in request")
         return jsonify({'error': '没有上传文件'}), 400
     file = request.files['file']
     if file.filename == '':
+        logger.error("No file selected")
         return jsonify({'error': '未选择文件'}), 400
-    filename = secure_filename(file.filename)
-    if not filename.lower().endswith('.zip'):
-        return jsonify({'error': '文件格式不支持，需为 zip'}), 400
-
-    name = os.path.splitext(filename)[0]
-    upload_path = os.path.join(UPLOAD_DIR, filename)
-    file.save(upload_path)
-
-    tmp_extract = os.path.join(UPLOAD_DIR, f"{name}_tmp")
-    os.makedirs(tmp_extract, exist_ok=True)
-
-    result = extract_zip(upload_path, tmp_extract)
-    if result is not True:
-        shutil.rmtree(tmp_extract, ignore_errors=True)
-        return jsonify({'error': f'解压失败: {result}'}), 500
-
-    target_base = VITS_BASE
-    os.makedirs(target_base, exist_ok=True)
-
-    for entry in os.listdir(target_base):
-        path = os.path.join(target_base, entry)
+    if file and allowed_file(file.filename, ALLOWED_EXTENSIONS):
+        filename = secure_filename(file.filename)
+        name = os.path.splitext(filename)[0]
+        upload_path = os.path.join(UPLOAD_DIR, filename)
+        logger.debug(f"Saving file to {upload_path}")
         try:
-            if os.path.isdir(path):
-                shutil.rmtree(path)
-            else:
-                os.remove(path)
+            file.save(upload_path)
+            os.chmod(upload_path, 0o666)
         except Exception as e:
-            print(f"警告: 无法删除 {path}: {e}")
+            logger.error(f"Error saving file {upload_path}: {str(e)}")
+            return jsonify({'error': f'文件保存失败: {str(e)}'}), 500
 
-    target_dir = os.path.join(target_base, name)
-    if os.path.exists(target_dir):
-        shutil.rmtree(target_dir)
-    os.makedirs(target_dir, exist_ok=True)
+        tmp_extract = os.path.join(UPLOAD_DIR, f"{name}_tmp")
+        os.makedirs(tmp_extract, exist_ok=True)
+        try:
+            os.chmod(tmp_extract, 0o766)
+        except PermissionError as e:
+            logger.warning(f"Unable to set permissions for {tmp_extract}: {str(e)}")
 
-    for item in os.listdir(tmp_extract):
-        s = os.path.join(tmp_extract, item)
-        d = os.path.join(target_dir, item)
-        shutil.move(s, d)
-    shutil.rmtree(tmp_extract, ignore_errors=True)
+        logger.debug(f"Extracting ZIP to {tmp_extract}")
+        result = extract_zip(upload_path, tmp_extract)
+        if result is not True:
+            shutil.rmtree(tmp_extract, ignore_errors=True)
+            logger.error(f"Extraction failed: {result}")
+            return jsonify({'error': f'解压失败: {result}'}), 500
 
-    subfolders = sorted([d for d in os.listdir(target_dir) if os.path.isdir(os.path.join(target_dir, d))])
+        target_base = VITS_BASE
+        os.makedirs(target_base, exist_ok=True)
+        try:
+            os.chmod(target_base, 0o766)
+        except PermissionError as e:
+            logger.warning(f"Unable to set permissions for {target_base}: {str(e)}")
 
-    debug_info = {
-        'top_level': sorted(os.listdir(target_dir)),
-        'subfolders': {}
-    }
-
-    train_lines = []
-    val_lines = []
-
-    for idx, sub in enumerate(subfolders):
-        sub_path = os.path.join(target_dir, sub)
-        wavs = sorted([f for f in os.listdir(sub_path) if f.lower().endswith('.wav')])
-        txts = sorted([f for f in os.listdir(sub_path) if f.lower().endswith('.txt') or f.lower().endswith('.lab') or f.lower().endswith('.text')])
-        debug_info['subfolders'][sub] = {'wav_count': len(wavs), 'txt_count': len(txts)}
-
-        pairs = []
-        missing_txt = []
-        for wav in wavs:
-            base = os.path.splitext(wav)[0]
-            txt_path = os.path.join(sub_path, base + '.txt')
-            if not os.path.exists(txt_path):
-                for ext in ['.lab', '.text']:
-                    if os.path.exists(os.path.join(sub_path, base + ext)):
-                        txt_path = os.path.join(sub_path, base + ext)
-                        break
-            if not os.path.exists(txt_path):
-                missing_txt.append(wav)
-                continue
-
+        logger.debug(f"Clearing old contents in {target_base}")
+        for entry in os.listdir(target_base):
+            path = os.path.join(target_base, entry)
             try:
-                with open(txt_path, 'r', encoding='utf-8') as f:
-                    lines = [ln.strip() for ln in f.readlines() if ln.strip()]
-                text_line = lines[1] if len(lines) > 1 else (lines[0] if lines else '')
-            except Exception:
-                text_line = ''
-            rel_path = f"./dataset/{name}/{sub}/{wav}"
-            pairs.append((rel_path, str(idx), text_line))
+                if os.path.isdir(path):
+                    shutil.rmtree(path)
+                else:
+                    os.remove(path)
+            except Exception as e:
+                logger.warning(f"无法删除 {path}: {e}")
 
-        debug_info['subfolders'][sub]['missing_txt'] = missing_txt
+        target_dir = os.path.join(target_base, name)
+        if os.path.exists(target_dir):
+            shutil.rmtree(target_dir, ignore_errors=True)
+        os.makedirs(target_dir, exist_ok=True)
+        try:
+            os.chmod(target_dir, 0o766)
+        except PermissionError as e:
+            logger.warning(f"Unable to set permissions for {target_dir}: {str(e)}")
 
-        n = len(pairs)
-        if n == 0:
-            continue
-        split = int(n * 0.9)
-        if split < 1:
-            split = n - 1 if n > 1 else 1
-        for i, item in enumerate(pairs):
-            line = '|'.join(item)
-            if i < split:
-                train_lines.append(line)
-            else:
-                val_lines.append(line)
-
-    if not train_lines and not val_lines:
-        return jsonify({'error': '未找到有效的 wav-txt 配对样本', 'debug': debug_info}), 400
-
-    train_file = os.path.join(target_base, f"{name}_train.txt")
-    val_file = os.path.join(target_base, f"{name}_val.txt")
-    try:
-        with open(train_file, 'w', encoding='utf-8') as f:
-            for ln in train_lines:
-                f.write(ln + '\n')
-        with open(val_file, 'w', encoding='utf-8') as f:
-            for ln in val_lines:
-                f.write(ln + '\n')
-    except Exception as e:
-        return jsonify({'error': f'写入 train/val 文件失败: {str(e)}', 'debug': debug_info}), 500
-
-    def generate_symbols(train_file_path, val_file_path):
-        symbols = set()
-        for file_path in [train_file_path, val_file_path]:
+        logger.debug(f"Moving files from {tmp_extract} to {target_dir}")
+        for item in os.listdir(tmp_extract):
+            s = os.path.join(tmp_extract, item)
+            d = os.path.join(target_dir, item)
             try:
-                with open(file_path, 'r', encoding='utf-8') as f:
-                    for line in f:
-                        parts = line.strip().split('|')
-                        if len(parts) < 3:
-                            continue
-                        text = parts[2].strip()
-                        if not text:
-                            continue
-                        tokens = text.split()
-                        for t in tokens:
-                            if t:
-                                symbols.add(t)
-            except Exception:
+                shutil.move(s, d)
+            except Exception as e:
+                logger.error(f"Error moving {s} to {d}: {str(e)}")
+                shutil.rmtree(tmp_extract, ignore_errors=True)
+                return jsonify({'error': f'文件移动失败: {str(e)}'}), 500
+        shutil.rmtree(tmp_extract, ignore_errors=True)
+
+        subfolders = sorted([d for d in os.listdir(target_dir) if os.path.isdir(os.path.join(target_dir, d))])
+        debug_info = {
+            'top_level': sorted(os.listdir(target_dir)),
+            'subfolders': {}
+        }
+
+        logger.debug(f"Processing subfolders: {subfolders}")
+        train_lines = []
+        val_lines = []
+
+        for idx, sub in enumerate(subfolders):
+            sub_path = os.path.join(target_dir, sub)
+            wavs = sorted([f for f in os.listdir(sub_path) if f.lower().endswith('.wav')])
+            txts = sorted([f for f in os.listdir(sub_path) if f.lower().endswith(('.txt', '.lab', '.text'))])
+            debug_info['subfolders'][sub] = {'wav_count': len(wavs), 'txt_count': len(txts)}
+
+            pairs = []
+            missing_txt = []
+            for wav in wavs:
+                base = os.path.splitext(wav)[0]
+                txt_path = os.path.join(sub_path, base + '.txt')
+                if not os.path.exists(txt_path):
+                    for ext in ['.lab', '.text']:
+                        if os.path.exists(os.path.join(sub_path, base + ext)):
+                            txt_path = os.path.join(sub_path, base + ext)
+                            break
+                if not os.path.exists(txt_path):
+                    missing_txt.append(wav)
+                    continue
+
+                try:
+                    with open(txt_path, 'r', encoding='utf-8') as f:
+                        lines = [ln.strip() for ln in f.readlines() if ln.strip()]
+                    text_line = lines[1] if len(lines) > 1 else (lines[0] if lines else '')
+                except Exception as e:
+                    logger.error(f"Error reading {txt_path}: {str(e)}")
+                    text_line = ''
+                rel_path = f"./dataset/{name}/{sub}/{wav}"
+                pairs.append((rel_path, str(idx), text_line))
+
+            debug_info['subfolders'][sub]['missing_txt'] = missing_txt
+
+            n = len(pairs)
+            if n == 0:
                 continue
-        return sorted(list(symbols))
+            split = int(n * 0.9)
+            if split < 1:
+                split = n - 1 if n > 1 else 1
+            for i, item in enumerate(pairs):
+                line = '|'.join(item)
+                if i < split:
+                    train_lines.append(line)
+                else:
+                    val_lines.append(line)
 
-    symbols = generate_symbols(train_file, val_file)
-    symbols_file = os.path.join(target_base, f"{name}_symbols.txt")
-    try:
-        with open(symbols_file, 'w', encoding='utf-8') as f:
-            f.write('[\n')
-            for i, s in enumerate(symbols):
-                comma = ',' if i != len(symbols) - 1 else ''
-                f.write(f'  "{s}"{comma}\n')
-            f.write(']\n')
-    except Exception as e:
-        return jsonify({'error': f'写入 symbols 文件失败: {str(e)}', 'debug': debug_info}), 500
+        if not train_lines and not val_lines:
+            logger.error("No valid wav-txt pairs found")
+            return jsonify({'error': '未找到有效的 wav-txt 配对样本', 'debug': debug_info}), 400
 
-    return jsonify({
-        'message': '上传并处理成功',
-        'dataset_name': name,
-        'dataset_dir': os.path.abspath(target_dir),
-        'train_file': os.path.abspath(train_file),
-        'val_file': os.path.abspath(val_file),
-        'symbols_file': os.path.abspath(symbols_file),
-        'debug': debug_info
-    })
+        train_file = os.path.join(target_base, f"{name}_train.txt")
+        val_file = os.path.join(target_base, f"{name}_val.txt")
+        logger.debug(f"Writing train file: {train_file}")
+        try:
+            with open(train_file, 'w', encoding='utf-8') as f:
+                for ln in train_lines:
+                    f.write(ln + '\n')
+            with open(val_file, 'w', encoding='utf-8') as f:
+                for ln in val_lines:
+                    f.write(ln + '\n')
+        except Exception as e:
+            logger.error(f"Error writing train/val files: {str(e)}")
+            return jsonify({'error': f'写入 train/val 文件失败: {str(e)}', 'debug': debug_info}), 500
+
+        def generate_symbols(train_file_path, val_file_path):
+            symbols = set()
+            for file_path in [train_file_path, val_file_path]:
+                try:
+                    with open(file_path, 'r', encoding='utf-8') as f:
+                        for line in f:
+                            parts = line.strip().split('|')
+                            if len(parts) < 3:
+                                continue
+                            text = parts[2].strip()
+                            if not text:
+                                continue
+                            tokens = text.split()
+                            for t in tokens:
+                                if t:
+                                    symbols.add(t)
+                except Exception as e:
+                    logger.error(f"Error reading {file_path} for symbols: {str(e)}")
+                    continue
+            return sorted(list(symbols))
+
+        symbols = generate_symbols(train_file, val_file)
+        symbols_file = os.path.join(target_base, f"{name}_symbols.txt")
+        logger.debug(f"Writing symbols file: {symbols_file}")
+        try:
+            with open(symbols_file, 'w', encoding='utf-8') as f:
+                f.write('[\n')
+                for i, s in enumerate(symbols):
+                    comma = ',' if i != len(symbols) - 1 else ''
+                    f.write(f'  "{s}"{comma}\n')
+                f.write(']\n')
+        except Exception as e:
+            logger.error(f"Error writing symbols file: {str(e)}")
+            return jsonify({'error': f'写入 symbols 文件失败: {str(e)}', 'debug': debug_info}), 500
+
+        logger.info(f"Dataset uploaded: {target_dir}")
+        return jsonify({
+            'message': '上传并处理成功',
+            'dataset_name': name,
+            'dataset_dir': os.path.abspath(target_dir),
+            'train_file': os.path.abspath(train_file),
+            'val_file': os.path.abspath(val_file),
+            'symbols_file': os.path.abspath(symbols_file),
+            'debug': debug_info
+        })
+    logger.error(f"File type not allowed: {file.filename}")
+    return jsonify({'error': '文件格式不支持，需为 zip'}), 400
 
 @app.route('/api/confirm_vits_params', methods=['POST'])
 def confirm_vits_params():
@@ -358,6 +587,7 @@ def {text_cleaners}_cleaners(text: str) -> str:
         return jsonify({'error': f'参数处理失败: {str(e)}'}), 500
 
 @app.route('/api/train_vits', methods=['POST'])
+@require_auth()
 def train_vits_model():
     global training_process, process_killed, training_thread
     data = request.get_json()
@@ -1058,5 +1288,236 @@ def synthesize_speech():
 def serve_audio(filename):
     return send_from_directory(OUTPUT_DIR, filename)
 
+###实验项目
+# --- 新增实验项目相关路由 ---
+@app.route('/api/user', methods=['GET'])
+@require_auth()
+def get_user():
+    return jsonify({
+        'username': request.user['username'],
+        'role': request.user['role']
+    })
+
+# 获取项目列表
+@app.route('/api/projects', methods=['GET'])
+@require_auth()
+def get_projects():
+    try:
+        client_ip = request.headers.get('X-Forwarded-For', request.remote_addr)
+        logging.debug(f"Projects requested by user: {request.user['username']}, role: {request.user['role']}, IP: {client_ip}")
+        with get_db() as conn:
+            c = conn.cursor()
+            if request.user['role'] == 'admin':
+                c.execute('SELECT id, name, type, level, created_at, guide_path FROM projects')
+            else:
+                c.execute('''
+                    SELECT p.id, p.name, p.type, p.level, p.created_at, p.guide_path
+                    FROM projects p
+                    JOIN distributed_projects dp ON p.id = dp.project_id
+                    WHERE dp.student_ip = ?
+                ''', (client_ip,))
+            projects = c.fetchall()
+            return jsonify([dict(row) for row in projects])
+    except Exception as e:
+        logging.error(f"Error in /api/projects: {str(e)}")
+        return jsonify({'error': '服务器内部错误'}), 500
+
+# 创建项目
+@app.route('/api/projects', methods=['POST'])
+# @require_auth('admin')
+def create_project():
+    print('【后端】收到 Authorization:', request.headers.get('Authorization'))
+    data = request.get_json()
+    name = data.get('name')
+    project_type = data.get('type')
+    level = data.get('level')
+    if not all([name, project_type, level]):
+        return jsonify({'error': '缺少必要字段'}), 400
+    with get_db() as conn:
+        c = conn.cursor()
+        c.execute('INSERT INTO projects (name, type, level, created_at) VALUES (?, ?, ?, ?)',
+                  (name, project_type, level, datetime.now().strftime('%Y-%m-%d %H:%M:%S')))
+        conn.commit()
+        ###
+        row = c.execute(
+            'SELECT id, name, type, level, created_at, guide_path FROM projects WHERE id = ?',
+            (c.lastrowid,)
+        ).fetchone()
+        return jsonify(dict(row))      # 包含所有字段
+
+# 更新项目
+@app.route('/api/projects/<int:id>', methods=['PUT'])
+@require_auth('admin')
+def update_project(id):
+    data = request.get_json()
+    name = data.get('name')
+    project_type = data.get('type')
+    level = data.get('level')
+    if not all([name, project_type, level]):
+        return jsonify({'error': '缺少必要字段'}), 400
+    with get_db() as conn:
+        c = conn.cursor()
+        c.execute('UPDATE projects SET name = ?, type = ?, level = ? WHERE id = ?',
+                  (name, project_type, level, id))
+        if c.rowcount == 0:
+            return jsonify({'error': '项目不存在'}), 404
+        conn.commit()
+        return jsonify({'message': '项目更新成功'})
+
+# 删除项目
+@app.route('/api/projects/<int:id>', methods=['DELETE'])
+@require_auth('admin')
+def delete_project(id):
+    logger.debug(f"Attempting to delete project with ID: {id}")
+    try:
+        with get_db() as conn:
+            c = conn.cursor()
+            c.execute('PRAGMA foreign_keys = ON')
+            
+            # 删除关联记录
+            c.execute('DELETE FROM distributed_projects WHERE project_id = ?', (id,))
+            logger.debug(f"Deleted {c.rowcount} records from distributed_projects")
+
+            # 删除项目
+            c.execute('DELETE FROM projects WHERE id = ?', (id,))
+            if c.rowcount == 0:
+                logger.warning(f"Project ID {id} not found")
+                return jsonify({'error': '项目不存在'}), 404
+
+            # 提交事务
+            try:
+                conn.commit()
+                logger.info(f"Project ID {id} DELETED and COMMITTED successfully")
+                return jsonify({'message': '项目删除成功'})
+            except Exception as e:
+                logger.error(f"COMMIT FAILED for project ID {id}: {str(e)}")
+                conn.rollback()
+                return jsonify({'error': f'事务提交失败: {str(e)}'}), 500
+
+    except Exception as e:
+        logger.error(f"Delete project error: {str(e)}")
+        return jsonify({'error': str(e)}), 500
+
+# 保存指导书
+@app.route('/api/guides', methods=['POST'])
+@require_auth('admin')
+def save_guide():
+    data = request.get_json()
+    project_id = data.get('project_id')
+    steps = data.get('steps')
+    if not project_id or not steps:
+        return jsonify({'error': '缺少必要字段'}), 400
+
+    try:
+        # 1. 查出项目基本信息
+        with get_db() as conn:
+            c = conn.cursor()
+            c.execute('SELECT name, type, level FROM projects WHERE id = ?', (project_id,))
+            row = c.fetchone()
+            if not row:
+                return jsonify({'error': '项目不存在'}), 404
+            proj_name, proj_type, proj_level = row
+
+        # 2. 组装要落盘的字典
+        guide_json = {
+            "project_name": proj_name,
+            "project_type": proj_type,
+            "project_level": proj_level,
+            "steps": steps          # 前端传来的数组
+        }
+
+        # 3. 生成文件名并确保个人目录存在
+        user_dir = Path(__file__).with_name('User') / request.user['username']
+        user_dir.mkdir(parents=True, exist_ok=True)
+        json_path = user_dir / f"guide_{project_id}.json"
+
+        # 4. 写入 JSON（UTF-8，中文可读）
+        with open(json_path, 'w', encoding='utf-8') as f:
+            json.dump(guide_json, f, ensure_ascii=False, indent=2)
+
+        # 5. 把路径写回数据库，方便前端“进入实验”时下载
+        with get_db() as conn:
+            c = conn.cursor()
+            c.execute('UPDATE projects SET guide_path = ? WHERE id = ?', (str(json_path), project_id))
+            conn.commit()
+
+        return jsonify({'message': '指导书保存成功', 'guide_path': str(json_path)})
+    except Exception as e:
+        logger.exception('save_guide error')
+        return jsonify({'error': str(e)}), 500
+
+@app.route('/api/guides/<path:filename>')
+def serve_guide(filename):
+    return send_from_directory(GUIDE_DIR, filename)
+
+# 获取学生IP
+@app.route('/api/student_ips', methods=['GET'])
+@require_auth('admin')  # ← 改为 JWT 鉴权
+def get_student_ips():
+    try:
+        with get_db() as conn:
+            c = conn.cursor()
+            c.execute('SELECT ip FROM student_ips')
+            ips = [row['ip'] for row in c.fetchall()]
+            return jsonify({'ips': ips})
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+# 下发项目
+@app.route('/api/projects/<int:id>/distribute', methods=['POST'])
+@require_auth('admin')
+def distribute_project(id):
+    data = request.get_json()
+    ips = data.get('ips', [])
+    if not ips:
+        return jsonify({'error': '未选择学生IP'}), 400
+    with get_db() as conn:
+        c = conn.cursor()
+        c.execute('SELECT id, name, type, level, created_at, guide_path FROM projects WHERE id = ?', (id,))
+        project = c.fetchone()
+        if not project:
+            return jsonify({'error': '项目不存在'}), 404
+        for ip in ips:
+            c.execute('INSERT OR REPLACE INTO distributed_projects (project_id, student_ip) VALUES (?, ?)', (id, ip))
+            socketio.emit('project_distributed', {
+                'id': project['id'],
+                'name': project['name'],
+                'type': project['type'],
+                'level': project['level'],
+                'created_at': project['created_at'],
+                'guide_path': project['guide_path']
+            }, to=ip)
+        conn.commit()
+        return jsonify({'message': '项目下发成功'})
+
+# WebSocket 事件
+@socketio.on('connect')
+def handle_connect():
+    client_ip = request.headers.get('X-Forwarded-For', request.remote_addr)
+    logging.debug(f'客户端连接: {client_ip}')
+    with get_db() as conn:
+        c = conn.cursor()
+        c.execute('INSERT OR IGNORE INTO student_ips (ip) VALUES (?)', (client_ip,))
+        conn.commit()
+
+@socketio.on('disconnect')
+def handle_disconnect():
+    client_ip = request.headers.get('X-Forwarded-For', request.remote_addr)
+    print(f'客户端断开连接: {client_ip}')
+
+# 启动时自动初始化数据库
+def init_db_on_startup():
+    try:
+        init_db()
+        logger.info("Database initialized successfully on startup")
+    except Exception as e:
+        logger.error(f"Failed to initialize database on startup: {str(e)}")
+
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    import eventlet
+    eventlet.monkey_patch()
+    
+    # 启动前初始化数据库（关键！）
+    init_db_on_startup()
+    
+    socketio.run(app, host='0.0.0.0', port=5000, debug=False)
