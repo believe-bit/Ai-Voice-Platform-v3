@@ -93,9 +93,22 @@ logger.info("Server started")
 # 数据库连接
 def get_db():
     db_path = os.path.join(BASE_DIR, 'projects.db')
-    conn = sqlite3.connect(db_path, check_same_thread=False)
-    conn.row_factory = sqlite3.Row
-    return conn
+    logger.debug(f"Opening database at: {db_path}")
+    if not os.path.exists(db_path):
+        logger.error(f"Database file {db_path} does not exist")
+        raise sqlite3.OperationalError(f"Database file {db_path} does not exist")
+    try:
+        conn = sqlite3.connect(db_path, check_same_thread=False)
+        conn.row_factory = sqlite3.Row
+        # ★★★ 每次新连接都强制打开外键 ★★★
+        conn.execute('PRAGMA foreign_keys = ON')
+        # 顺手再验证一次，方便排错
+        fk_status = conn.execute('PRAGMA foreign_keys').fetchone()[0]
+        logger.info(f"Foreign keys status for this connection: {fk_status}")
+        return conn
+    except sqlite3.OperationalError as e:
+        logger.error(f"Failed to connect to database {db_path}: {str(e)}")
+        raise
 
 # 初始化用户表
 def init_db():
@@ -203,21 +216,20 @@ def require_auth(role=None):
     def decorator(f):
         @wraps(f)
         def decorated_function(*args, **kwargs):
-            token = request.headers.get('Authorization')
-            if not token:
-                return jsonify({'error': '缺少 Authorization 头'}), 401
+            auth_header = request.headers.get('Authorization')
+            if not auth_header or not auth_header.startswith('Bearer '):
+                return jsonify({'error': '缺少令牌'}), 401
+            token = auth_header.split(' ')[1]
             try:
-                if token.startswith('Bearer '):
-                    token = token[7:]
                 payload = jwt.decode(token, SECRET_KEY, algorithms=['HS256'])
                 request.user = payload
                 if role and payload.get('role') != role:
-                    return jsonify({'error': '无权限访问'}), 403
+                    return jsonify({'error': '无权限执行此操作'}), 403
+                return f(*args, **kwargs)
             except jwt.ExpiredSignatureError:
-                return jsonify({'error': 'Token 已过期'}), 401
+                return jsonify({'error': '令牌已过期'}), 401
             except jwt.InvalidTokenError:
-                return jsonify({'error': '无效的 Token'}), 401
-            return f(*args, **kwargs)
+                return jsonify({'error': '无效令牌'}), 401
         return decorated_function
     return decorator
 
@@ -1351,54 +1363,35 @@ def update_project(id):
 @app.route('/api/projects/<int:id>', methods=['DELETE'])
 @require_auth('admin')
 def delete_project(id):
-    logger.debug(f"Attempting to delete project with ID: {id}, User: {request.user['username']}, Role: {request.user['role']}")
+    logger.debug(f"Attempting to delete project with ID: {id}")
     try:
         with get_db() as conn:
             c = conn.cursor()
-            # 启用外键约束
             c.execute('PRAGMA foreign_keys = ON')
             
-            # 检查项目是否存在
-            c.execute('SELECT id, name FROM projects WHERE id = ?', (id,))
-            project = c.fetchone()
-            if not project:
-                logger.warning(f"Project with ID {id} does not exist")
+            # 删除关联记录
+            c.execute('DELETE FROM distributed_projects WHERE project_id = ?', (id,))
+            logger.debug(f"Deleted {c.rowcount} records from distributed_projects")
+
+            # 删除项目
+            c.execute('DELETE FROM projects WHERE id = ?', (id,))
+            if c.rowcount == 0:
+                logger.warning(f"Project ID {id} not found")
                 return jsonify({'error': '项目不存在'}), 404
 
-            # 删除关联的 distributed_projects 记录
-            c.execute('DELETE FROM distributed_projects WHERE project_id = ?', (id,))
-            distributed_count = c.rowcount
-            logger.debug(f"Deleted {distributed_count} records from distributed_projects for project_id {id}")
-
-            # 删除 projects 表中的记录
-            c.execute('DELETE FROM projects WHERE id = ?', (id,))
-            project_count = c.rowcount
-            logger.debug(f"Deleted {project_count} records from projects for project_id {id}")
-
-            if project_count == 0:
-                logger.warning(f"Failed to delete project with ID {id}: No records affected")
-                return jsonify({'error': '项目删除失败：未找到记录'}), 500
-
             # 提交事务
-            conn.commit()
-            logger.info(f"Project with ID {id} (Name: {project['name']}) deleted successfully")
-            
-            # 验证删除是否生效
-            c.execute('SELECT id FROM projects WHERE id = ?', (id,))
-            if c.fetchone():
-                logger.error(f"Project with ID {id} still exists after deletion")
-                return jsonify({'error': '项目删除失败：记录仍存在'}), 500
-                
-            return jsonify({'message': '项目删除成功'})
-    except sqlite3.OperationalError as e:
-        logger.error(f"Database error deleting project with ID {id}: {str(e)}")
-        return jsonify({'error': f'数据库错误: {str(e)}'}), 500
-    except sqlite3.DatabaseError as e:
-        logger.error(f"Database integrity error deleting project with ID {id}: {str(e)}")
-        return jsonify({'error': f'数据库完整性错误: {str(e)}'}), 500
+            try:
+                conn.commit()
+                logger.info(f"Project ID {id} DELETED and COMMITTED successfully")
+                return jsonify({'message': '项目删除成功'})
+            except Exception as e:
+                logger.error(f"COMMIT FAILED for project ID {id}: {str(e)}")
+                conn.rollback()
+                return jsonify({'error': f'事务提交失败: {str(e)}'}), 500
+
     except Exception as e:
-        logger.error(f"Unexpected error deleting project with ID {id}: {str(e)}")
-        return jsonify({'error': f'删除项目失败: {str(e)}'}), 500
+        logger.error(f"Delete project error: {str(e)}")
+        return jsonify({'error': str(e)}), 500
 
 # 保存指导书
 @app.route('/api/guides', methods=['POST'])
@@ -1440,15 +1433,13 @@ def serve_guide(filename):
 
 # 获取学生IP
 @app.route('/api/student_ips', methods=['GET'])
+@require_auth('admin')  # ← 改为 JWT 鉴权
 def get_student_ips():
-    role = request.headers.get('X-User-Role', 'student')
-    if role != 'admin':
-        return jsonify({'error': '仅管理员可查看学生IP'}), 403
     try:
         with get_db() as conn:
             c = conn.cursor()
             c.execute('SELECT ip FROM student_ips')
-            ips = [row['ip'] for row in c.fetchall()]  # 使用 row['ip']，依赖 row_factory
+            ips = [row['ip'] for row in c.fetchall()]
             return jsonify({'ips': ips})
     except Exception as e:
         return jsonify({'error': str(e)}), 500
@@ -1495,7 +1486,19 @@ def handle_disconnect():
     client_ip = request.headers.get('X-Forwarded-For', request.remote_addr)
     print(f'客户端断开连接: {client_ip}')
 
+# 启动时自动初始化数据库
+def init_db_on_startup():
+    try:
+        init_db()
+        logger.info("Database initialized successfully on startup")
+    except Exception as e:
+        logger.error(f"Failed to initialize database on startup: {str(e)}")
+
 if __name__ == '__main__':
     import eventlet
-    eventlet.monkey_patch()          # 打补丁
+    eventlet.monkey_patch()
+    
+    # 启动前初始化数据库（关键！）
+    init_db_on_startup()
+    
     socketio.run(app, host='0.0.0.0', port=5000, debug=False)
