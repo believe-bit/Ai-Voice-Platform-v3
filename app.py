@@ -26,11 +26,12 @@ import logging
 import jwt  # 添加 JWT 依赖
 from functools import wraps  # 添加装饰器支持
 from passlib.hash import bcrypt  # 添加密码哈希支持
+import threading
 
 
 app = Flask(__name__)
-CORS(app, resources={r"/api/*": {"origins": "http://localhost:8082"}})
-socketio = SocketIO(app, cors_allowed_origins="http://localhost:8082")
+CORS(app, resources={r"/api/*": {"origins": "*"}})
+socketio = SocketIO(app, cors_allowed_origins="http://192.168.1.124:8082",logger=True)
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 MODEL_DIR = os.path.join(BASE_DIR, "models", "ASR_train_models")
@@ -48,6 +49,13 @@ ALLOWED_MODEL_EXTENSIONS = {'pth'}
 ALLOWED_CONFIG_EXTENSIONS = {'json'}
 GUIDE_DIR = os.path.join(BASE_DIR, "Guides")
 # USERS_FILE = os.path.join(BASE_DIR, "users.json")  # 用户 JSON 文件
+
+STREAM_ASR_PROC = None          # 子进程句柄
+STREAM_ASR_LOCK = threading.Lock()
+
+# ====== WebSocket 实时 ASR 推流新增 ======
+ASR_LOG_Q = queue.Queue()          # 留给前端轮询备用，可忽略
+STREAM_ASR_THREAD = None           # 读 stdout 线程句柄
 
 # JWT 配置
 SECRET_KEY = '4079ba7c3c6f7edc7e821316c6c086a1a653fe376ca4c0d0cfa229792e4169a2'  # 请替换为强密钥（建议使用随机生成）
@@ -234,6 +242,70 @@ def require_auth(role=None):
         return decorated_function
     return decorator
 
+
+# ====== 读取 speed_test.py stdout 并推送到 WebSocket ======
+def _asr_reader():
+    global STREAM_ASR_PROC
+    while True:
+        if STREAM_ASR_PROC is None or STREAM_ASR_PROC.poll() is not None:
+            time.sleep(0.1)
+            continue
+
+        line = STREAM_ASR_PROC.stdout.readline()
+        if not line:
+            time.sleep(0.1)
+            continue
+
+        line = line.strip()
+        if not line:
+            continue
+
+        logger.debug(f"[DEBUG _asr_reader] raw line: {repr(line)}")
+
+        # 提取 [start - end] text 格式
+        import re
+        match = re.search(r'\[.*?\]\s*(.+)', line)
+        if match:
+            text = match.group(1).strip()
+            if text:
+                logger.debug(f"[DEBUG socketio] emit asr_text: {text}")
+                socketio.emit('asr_text', {'text': text})
+        else:
+            # 其他日志也发过去（可选）
+            pass
+
+# ===== 协程安全版：使用 socketio.start_background_task 启动 =====
+def asr_reader_task():
+    """在 eventlet 协程中读取子进程 stdout 并推送 asr_text 事件"""
+    import re
+    while True:
+        # 进程已结束或未启动
+        if not STREAM_ASR_PROC or STREAM_ASR_PROC.poll() is not None:
+            time.sleep(0.1)
+            continue
+
+        line = STREAM_ASR_PROC.stdout.readline()
+        if not line:
+            time.sleep(0.1)
+            continue
+
+        line = line.strip()
+        if not line:
+            continue
+
+        logger.debug(f"[ASR_READER] raw: {line}")
+
+        # 提取 [时间] 文本 格式
+        match = re.search(r'\[.*?\]\s*(.+)', line)
+        if match:
+            text = match.group(1).strip()
+            if text:
+                logger.debug(f"[EMIT] asr_text: {text}")
+                socketio.emit('asr_text', {'text': text})
+        # 可选：过滤启动日志
+        elif any(phrase in line for phrase in ['正在加载模型', '实时语音识别启动', '请说']):
+            pass
+
 ###登录端点
 @app.route('/api/login', methods=['POST'])
 def login():
@@ -267,6 +339,99 @@ def login():
         logging.error(f"Login error: {str(e)}")
         return jsonify({'error': '服务器内部错误'}), 500
 
+# ① 获取模型列表
+@app.route('/api/stream_asr/models', methods=['GET'])
+def stream_asr_models():
+    asr_model_dir = Path(__file__).with_name('models') / 'ASR_models'
+    if not asr_model_dir.exists():
+        return jsonify({'models': []})
+    ms = [d.name for d in asr_model_dir.iterdir() if d.is_dir()]
+    return jsonify({'models': ms})
+
+# ② 启动识别（后台挂起 speed_test.py）
+@app.route('/api/stream_asr/start', methods=['POST'])
+@require_auth()
+def stream_asr_start():
+    global STREAM_ASR_PROC
+
+    try:
+        data = request.get_json(force=True)
+        model = data.get('model')
+        if not model:
+            return jsonify({'error': '缺少 model 参数'}), 400
+
+        with STREAM_ASR_LOCK:
+            if STREAM_ASR_PROC and STREAM_ASR_PROC.poll() is None:
+                return jsonify({'error': '已有识别任务在运行'}), 400
+
+            # ===== 启动 speed_test.py 子进程 =====
+            cli_py = Path(BASE_DIR) / 'speed_test.py'
+            python_exe = sys.executable  # 当前 Python 环境
+
+            # 动态设置模型路径（如果你支持多模型）
+            env = os.environ.copy()
+            env['MODEL_PATH'] = str(Path(MODEL_DIR) / model)
+
+            STREAM_ASR_PROC = subprocess.Popen(
+                [python_exe, '-u', str(cli_py)],
+                cwd=BASE_DIR,
+                stdout=subprocess.PIPE,
+                stderr=subprocess.STDOUT,
+                text=True,
+                bufsize=1,
+                env=env
+            )
+            logger.info(f'[STREAM-ASR] 子进程启动，PID={STREAM_ASR_PROC.pid}')
+
+            # 关键：使用 eventlet 协程安全启动读取任务
+            socketio.start_background_task(asr_reader_task)
+
+        return jsonify({'message': '实时识别已启动'})
+
+    except Exception as e:
+        logger.error(f"[STREAM-ASR] 启动失败: {str(e)}")
+        return jsonify({'error': str(e)}), 500
+
+# ③ 停止识别
+@app.route('/api/stream_asr/stop', methods=['POST'])
+@require_auth()
+def stream_asr_stop():
+    global STREAM_ASR_PROC
+    with STREAM_ASR_LOCK:
+        if STREAM_ASR_PROC and STREAM_ASR_PROC.poll() is None:
+            STREAM_ASR_PROC.terminate()
+            try:
+                STREAM_ASR_PROC.wait(timeout=3)
+            except subprocess.TimeoutExpired:
+                STREAM_ASR_PROC.kill()
+            logger.info("[STREAM-ASR] 子进程已终止")
+        STREAM_ASR_PROC = None
+    return jsonify({'message': '已停止'})
+
+# ④ SSE 推送识别结果（speed_test.py 每输出一行就推）
+@app.route('/api/stream_asr/listen', methods=['GET'])
+def stream_asr_listen():
+    def generate():
+        proc = STREAM_ASR_PROC
+        if not proc or proc.poll() is not None:
+            yield f"data: {json.dumps({'text': ''})}\n\n"
+            return
+        while True:
+            line = proc.stdout.readline()
+            print(f"[DEBUG] raw line from speed_test: {repr(line)}")
+            if not line:
+                time.sleep(0.1)
+                continue
+            # speed_test.py 的 print 格式： "[ 0.00s - 1.20s] 你好语音识别"
+            if ']' in line:
+                text = line.split(']', 1)[-1].strip()
+                yield f"data: {json.dumps({'text': text})}\n\n"
+    return Response(generate(), mimetype="text/event-stream")
+
+
+
+
+###获取模型
 @app.route('/api/models', methods=['GET'])
 def get_models():
     try:
@@ -1501,16 +1666,53 @@ def distribute_project(id):
             return jsonify({'error': '项目不存在'}), 404
         for ip in ips:
             c.execute('INSERT OR REPLACE INTO distributed_projects (project_id, student_ip) VALUES (?, ?)', (id, ip))
+            # ✅ 用“账号名”代替 IP 当目录名
+            username = request.user['username']          # ← 新增
+            student_dir = Path(__file__).with_name('User') / username   # ← 改这里
+            student_dir.mkdir(parents=True, exist_ok=True)
+            dst_path = student_dir / f'guide_{id}.json'
+            src_path = Path(project['guide_path'])
+            if src_path.exists():
+                shutil.copyfile(src_path, dst_path)
+            else:
+                empty = {
+                    "project_name": project['name'],
+                    "project_type": project['type'],
+                    "project_level": project['level'],
+                    "steps": [{"title": "暂未设计步骤", "content": ""}]
+                }
+                with open(dst_path, 'w', encoding='utf-8') as f:
+                    json.dump(empty, f, ensure_ascii=False, indent=2)
             socketio.emit('project_distributed', {
                 'id': project['id'],
                 'name': project['name'],
                 'type': project['type'],
                 'level': project['level'],
                 'created_at': project['created_at'],
-                'guide_path': project['guide_path']
+                'guide_path': str(dst_path)          # ← 学生端用新路径
             }, to=ip)
         conn.commit()
         return jsonify({'message': '项目下发成功'})
+
+# 学生端读取自己目录下的指导书
+@app.route('/api/student/guide/<int:project_id>', methods=['GET'])
+@require_auth()
+def get_student_guide(project_id):
+    try:
+        username = request.user['username']          # 学生账号
+        student_dir = Path(__file__).with_name('User') / username
+        guide_path = student_dir / f'guide_{project_id}.json'
+
+        if not guide_path.exists():
+            return jsonify({'error': '指导书未下发或不存在'}), 404
+
+        with open(guide_path, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+        return jsonify(data)
+    except Exception as e:
+        logger.exception('get_student_guide error')
+        return jsonify({'error': str(e)}), 500
+
 
 # WebSocket 事件
 @socketio.on('connect')
@@ -1525,7 +1727,7 @@ def handle_connect():
 @socketio.on('disconnect')
 def handle_disconnect():
     client_ip = request.headers.get('X-Forwarded-For', request.remote_addr)
-    print(f'客户端断开连接: {client_ip}')
+    print(f'[DEBUG] 客户端断开: {client_ip} , sid={request.sid}')
 
 # 启动时自动初始化数据库
 def init_db_on_startup():
@@ -1534,6 +1736,7 @@ def init_db_on_startup():
         logger.info("Database initialized successfully on startup")
     except Exception as e:
         logger.error(f"Failed to initialize database on startup: {str(e)}")
+
 
 if __name__ == '__main__':
     import eventlet
